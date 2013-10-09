@@ -1,0 +1,220 @@
+@import url("alternative-styles.css");
+
+/**** slide credits ****/
+
+.slides a[rel] p, .slides address, .slides .license {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.slides address, .slides .license {
+    font-size: 80%;
+}
+
+.slides a[rel=license] p {
+    margin-top: 40px;
+}
+
+
+
+/**** source and rendered HTML ****/
+
+pre, .rendered {
+  border: 1px solid black;
+  border-radius: .5em;
+  padding: 1ex 1em;
+  font-size: 100%;
+}
+
+.slide .highlight pre, .slide .highlighttable .linenos pre {
+  font-size: 75%;
+}
+
+/* also force padding-top to be consistent with the above,
+   so that line numbers are still aligned with the lines */
+td.linenos pre {
+  padding-top: 1ex;
+}
+
+pre {
+  background-color: WhiteSmoke;
+}
+
+.rendered {
+  background-color: Snow;
+  font-family: serif
+}
+
+section.rendered {
+  margin: 0;
+  margin-top: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.rendered img {
+  display: inline;
+  max-width: 10%;
+}
+
+.rendered.floatingimg img {
+    float: right;
+}
+
+.rendered a {
+  color: blue;
+}
+
+.rendered q, .rendered q:before, .rendered q:after {
+    font-size: inherit;
+    margin: inherit;
+    display: inline;
+    position: inherit;
+    color: inherit;
+    line-height: inherit;
+    width: inherit;
+    text-align: inherit;
+}
+
+.rendered kbd, .rendered code, .rendered samp {
+    font-family: FreeMono, monospace;
+    color: inherit;
+}
+
+.rendered ul, .rendered ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* ensures that box-drawing character connect with each other */
+.big.tree pre {
+    line-height: 1.1em;
+}
+
+
+
+/**** custom classes ****/
+
+.shadow {
+    box-shadow: 3px 3px 5px #bbb;
+}
+
+
+ul.css-values {
+    display: inline;
+}
+ul.css-values>li {
+    display: inline;
+}
+ul.css-values>li:before {
+    display: none;
+}
+ul.css-values>li:after {
+    content: ", ";
+}
+ul.css-values>li:last-child:after  {
+    content: none;
+}
+table.css-values {
+    margin-top: 0;
+}
+table.css-values td {
+    border: none;
+    padding: 2px 2px 16px;
+}
+
+
+
+/**** fixing some bugs in 'nature' theme ****/
+
+.highlighttable td, .highlighttable th {
+    border: 0px;
+}
+
+td.linenos pre {
+    box-shadow: none;
+    font-weigh: bold;
+}
+
+a abbr {
+    text-decoration: none;
+}
+
+*[lang=fr] q:before {
+    content: "« ";
+}
+
+*[lang=fr] q:after {
+    content: " »";
+}
+
+
+
+/**** Better looking admonitions ****/
+
+.admonition .admonition-title:before {
+    font-size: 150%;
+    font-weight: normal;
+    font-family: FreeSerif, serif;
+}
+
+
+.admonition-question .admonition-title:before {
+    content: "❓ ";
+}
+
+.admonition-vocabulaire .admonition-title:before {
+    content: "✍ "; /* alternative symbole: 📖 (open book) */
+}
+
+.hint .admonition-title:before {
+    content: "☝ ";
+}
+
+.note .admonition-title:before {
+    content: "✎ ";
+}
+
+.warning .admonition-title:before {
+    content: "⚠ ";
+}
+
+.tip .admonition-title:before {
+    content: "☝ ";
+}
+
+.todo .admonition-title:before {
+    content: "⚒ "; /* alternative: 👷 (construction worker) */
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+
+/**** Override theme's custom bullets ****/
+
+.slide ul li:before {
+    display: none;
+}
+
+.slide ul {
+    list-style-type: disc;
+}
+
+.slide ul ul {
+    list-style-type: circle;
+}
+
+.slide ul ul ul {
+    list-style-type: square;
+}
+
+
+/**** Special slides ****/
+
+.slide.nav-seance {
+    background-color: lightBlue;
+}
+

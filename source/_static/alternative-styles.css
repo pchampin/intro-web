@@ -1,0 +1,103 @@
+/** Je définis des styles alternatifs de rendu pour montrer
+    la polyvalence d'un même code HTML **/
+
+
+.rendered.alt {
+    font-family: Nimbus Sans L, sans; ! important
+}
+
+
+/**** alternative q ****/
+
+.rendered.alt q {
+    display: block;
+    margin-left: 1em;
+    font-family: Times New Roman, serif;
+    font-style: italic;
+    padding-top: .5ex;
+}
+
+.rendered.alt q:after {
+    content: "";
+}
+
+.rendered.alt q:before {
+    content: "“";
+    font-size: 350%;
+    position: relative;
+    left: 0px;
+    top: 20px;
+    color: #BBB;
+}
+
+/* since q is in italic, q>em should be normal */
+.rendered.alt q em {
+    font-style: normal;
+}
+
+
+/**** alternative dfn ****/
+
+.rendered.alt dfn {
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+/**** alternative computer-related tags ****/
+
+.rendered.alt code {
+    color: black;
+    font-weight: bold;
+}
+
+.rendered.alt samp {
+    color: blue;
+}
+
+.rendered.alt var {
+    font-family: FreeMono, monospace;
+}
+
+
+/***** alternative ins and del ****/
+
+.rendered.alt del {
+    color: red;
+    display: none;
+}
+
+.rendered.alt:hover del {
+    display: inline;
+}
+
+.rendered.alt ins {
+    color: inherit;
+    text-decoration: none;
+}
+
+.rendered.alt:hover ins {
+    color: green;
+    text-decoration: underline;
+}
+
+/***** alternative ul ****/
+
+
+.rendered.alt ul {
+    list-style: square;
+    text-align: center;
+}
+
+/* remove custom bullet from hieroglyph theme */
+.rendered.alt ul li:before {
+    display: none;
+}
+
+
+/***** alternative ul ****/
+
+
+.rendered.alt ol {
+    list-style: lower-alpha;
+}

@@ -57,7 +57,7 @@ on ajoute dans l'élément `<head>`:html: une balise `<link>`:html:
 
 * Les valeurs des attributs `rel`:html: et `type`:html: sont fixées.
 * L'attribut `href`:html: contient l'URL de la feuille de style.
-* On peut avoir *plusieur* feuilles de style (leurs effets se cumulent).
+* On peut avoir *plusieurs* feuilles de style (leurs effets se cumulent).
 
 Déclarer une feuille de style (2)
 ---------------------------------
@@ -112,7 +112,7 @@ Dans le menu contextuel (clic droit) sur n'importe quel élément,
 *Inspect Element* ouvre une interface d'inspection qui permet :
 
 * de naviguer dans l'arbre HTML,
-* les règles qui s'appliquent à chaque élément,
+* de voir les règles qui s'appliquent à chaque élément,
 * de modifier dynamiquement le code HTML et la feuille de style. 
 
 
@@ -148,7 +148,7 @@ Principe
 
 * En CSS, la mise en forme est spécifiée par un ensemble de **règles**.
 
-* Une règle typique se comporte de trois parties :
+* Une règle typique est composée de trois parties :
 
   - un **sélecteur**,
   - une **propriété**,
@@ -272,7 +272,7 @@ Police avec ``font-family``
 
 Lorsqu'on publie sur le Web,
 on ne peut pas faire l'hypothèse que
-tous les clients auront les mêmes polices installées sur leurs système.
+tous les clients auront les mêmes polices installées sur leur système.
 
 Si on veut utiliser une police spécifique,
 il faut donc indiquer au navigateur comment la charger :
@@ -546,7 +546,7 @@ Bonne utilisation des identifiants
 
   - mais il peut se répéter d'un document à l'autre ;
 
-  - par exemple, l'identifiant ``contents`` est peut être utilisé
+  - par exemple, l'identifiant ``contents`` est peut-être utilisé
     pour identifier la table des matière sur toutes les pages d'un site.
 
 * Il y a donc un intérêt à mutualiser les règles de présentation
@@ -598,7 +598,7 @@ Réponse
    <p class="summary rendered">This summary
    is <em style="font-style: normal; font-weight: bold">short</em>.</p>
 
-Intuitivement, la règle *la plus spécifique* a toujouts priorité.
+Intuitivement, la règle *la plus spécifique* a toujours la priorité.
 
 La manière dont CSS détermine la priorité (`cascading`:eng:) sont complexes,
 mais elles satisfont la plupart du temps cette intuition.
@@ -739,7 +739,7 @@ Positionnement flottant
 
 Par défaut, les images appartiennent au flux de texte. Ainsi ::
 
-  La Joconde <img src="_static/monalisa.jpg"> est
+  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
   probablement le tableau le plus connu au monde.
 
 sera affiché comme suit :
@@ -747,7 +747,7 @@ sera affiché comme suit :
 .. raw:: html
 
  <p class="rendered" style="font-size: 100% ! important">
-  La Joconde <img src="_static/monalisa.jpg"> est
+  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
   probablement le tableau le plus connu au monde.
  </p>
 
@@ -773,7 +773,7 @@ le HTML précédent s'affichera ainsi :
 .. raw:: html
 
  <p class="rendered floatingimg" style="font-size: 100% ! important">
-  La Joconde <img src="_static/monalisa.jpg"> est
+  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
   probablement le tableau le plus connu au monde.
  </p>
 
@@ -865,7 +865,7 @@ Propriétés ``border`` (suite)
 `````````````````````````````
 
 Il est aussi possible de donner des propriétés différentes
-aux quatres cotés du bord :
+aux quatre cotés du bord :
 
 * `border-top`:css:\ : (largeur) (style) (couleur)
 * `border-right`:css:\ : (largeur) (style) (couleur)
@@ -885,7 +885,7 @@ par exemple :
 `Padding`:eng:
 --------------
 
-Le **padding** est l'espace entre le contenu et le bord exéterieur de l'élément.
+Le **padding** est l'espace entre le contenu et le bord extérieur de l'élément.
 
 En général, on utilise un `padding`:eng: > 0 uniquement lorsque le bord de l'élément est visible (`border`:css:, `background-color`:css:).
 
@@ -898,10 +898,10 @@ Propriétés ``padding``
 Comme pour la marge,
 on peut spécifier le `padding`:eng: par quatre propriétés (une par coté) :
 
-* `padding-top`:css: (longuer)
-* `padding-right`:css: (longuer)
-* `padding-bottom`:css: (longuer)
-* `padding-left`:css: (longuer)
+* `padding-top`:css: (longueur)
+* `padding-right`:css: (longueur)
+* `padding-bottom`:css: (longueur)
+* `padding-left`:css: (longueur)
 
 ou par une propriété synthétique acceptant 1 à 4 valeurs :
 

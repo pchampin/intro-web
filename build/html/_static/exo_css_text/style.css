@@ -1,0 +1,31 @@
+h1, h1+p {
+    color: red;
+    text-align: right;
+}
+
+h1 {
+    font-family: sans;
+    text-transform: capitalize;
+}
+
+h2 {
+    background-color: lightGray;
+    font-size: 100%;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-variant: small-caps;
+    font-weight: normal;
+}
+
+strong {
+    font-weight: normal;
+    text-decoration: underline;
+    color: green;
+}
+
+section section strong {
+    color: black;
+    font-style: italic;
+}

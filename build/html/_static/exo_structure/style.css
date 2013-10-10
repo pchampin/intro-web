@@ -1,0 +1,63 @@
+body {
+    column-count: 2;
+    column-gap: 2em;
+    -moz-column-count: 2;
+    -moz-column-gap: 2em;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2em;
+    margin: 3em;
+
+    font-family: Times New Roman;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    counter-reset: ch2;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 0px;
+}
+
+h3:before {
+    counter-increment: ch2;
+    content: counter(ch2) ". ";
+}
+
+p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    text-align: justify;
+}
+
+cite {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/**** Met en évidence les balises interdites ****/
+
+h4, h5, h6, /* niveaux de titre interdits dans cet exercice */
+ins,        /* utilisé par certains pour faire du souligné */
+b, i, u, br /* interdit toujours */
+{
+    color: red;
+    background-color: yellow;
+    text-decoration: line-through;
+}
+
+/* Neutralise les <br> */
+br { display: none; }
+/* TODO je préférerait afficher quelque chose,
+   mais le code suivant ne marche pas :-(
+br {
+    display: inline;
+}
+br:before {
+    content: "<br>";
+}
+*/

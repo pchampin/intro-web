@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CSS &mdash; Introduction au Web</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/slides.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/../../_static/sab-slides.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="top" title="Introduction au Web" href="index.html" />
+    <link rel="next" title="Scripts" href="scripts.html" />
+    <link rel="prev" title="HTML" href="html.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="css">
+<h1>CSS<a class="headerlink" href="../css.html#css" title="View HTML">§</a></h1>
+<!-- NB: using raw:: directive in order to accurately tag metadata -->
+
+  <a rel="author"
+        href="http://champin.net/#pa"
+        ><p>Pierre-Antoine Champin</p></a>
+  <address>Département Informatique,
+    <a href="http://iut.univ-lyon1.fr/">IUT Lyon 1</a></address>
+
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.fr">
+     <p><img alt="Creative Commons License" style="border-width:0"
+          src="_static/cc.png" /></p></a>
+
+  <p class="license">Ce travail est sous licence
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.fr">
+     Creative Commons Attribution-ShareAlike 3.0 France</a>.</p>
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="feuille-de-style">
+<span id="index-0"></span><h2>Feuille de style<a class="headerlink" href="../css.html#feuille-de-style" title="View HTML">§</a></h2>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="slide level-3" id="rappels">
+<h3>Rappels<a class="headerlink" href="../css.html#rappels" title="View HTML">§</a></h3>
+<ul class="simple">
+<li>CSS signifie <span class="eng">Cascading StyleSheet</span>.</li>
+<li>HTML ne décrit que la structure logique (le fond) des documents,<ul>
+<li>la structure physique (la forme) est spécifiée par une feuille de style
+en CSS.</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="slide level-4" id="avantages">
+<h4>Avantages<a class="headerlink" href="../css.html#avantages" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>cohérence au sein du document</li>
+<li>cohérence au sein d'un ensemble de documents (charte graphique)<ul>
+<li>mutualisation de la feuille de style</li>
+</ul>
+</li>
+<li>séparation des tâches (développeur web&nbsp;/ graphiste)</li>
+</ul>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="slide level-3" id="declarer-une-feuille-de-style">
+<span id="index-1"></span><h3>Déclarer une feuille de style<a class="headerlink" href="../css.html#declarer-une-feuille-de-style" title="View HTML">§</a></h3>
+<p>Pour attacher une feuille de style à un document HTML,
+on ajoute dans l'élément <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;head&gt;</span></span></tt> une balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;link&gt;</span></span></tt></p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span>
+        <span class="na">href=</span><span class="s">&quot;mystyle.css&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Les valeurs des attributs <tt class="code html docutils literal"><span class="pre">rel</span></tt> et <tt class="code html docutils literal"><span class="pre">type</span></tt> sont fixées.</li>
+<li>L'attribut <tt class="code html docutils literal"><span class="pre">href</span></tt> contient l'URL de la feuille de style.</li>
+<li>On peut avoir <em>plusieurs</em> feuilles de style (leurs effets se cumulent).</li>
+</ul>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="slide level-4" id="declarer-une-feuille-de-style-2">
+<h4>Déclarer une feuille de style (2)<a class="headerlink" href="../css.html#declarer-une-feuille-de-style-2" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>On peut également spécifier la feuille de style
+directement dans le document HTML, à l'aide de la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;style&gt;</span></span></tt>&nbsp;;<ul>
+<li>mais on perd le bénéfice de la mutualisation.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+    <span class="c">/* your CSS here */</span>
+  <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cela peut malgré tout être utile en phase de test,
+ou si on souhaite minimiser le nombre de requêtes HTTP.</p>
+</div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="slide level-3" id="outils">
+<h3>Outils<a class="headerlink" href="../css.html#outils" title="View HTML">§</a></h3>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#valideur" id="id9">Valideur</a></li>
+<li><a class="reference internal" href="#inspecteur" id="id10">Inspecteur</a></li>
+<li><a class="reference internal" href="#liens-utiles" id="id11">Liens utiles</a></li>
+</ul>
+</div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="slide level-4" id="valideur">
+<h4>Valideur<a class="headerlink" href="../css.html#valideur" title="View HTML">§</a></h4>
+<p>Comme pour le HTML, le W3C fournit un service en ligne de validation de CSS&nbsp;:</p>
+<blockquote>
+<div><a class="reference external" href="http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/</a></div></blockquote>
+<p>Son utilisation vous est <em>vivement</em> recommandée.</p>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="slide level-4" id="inspecteur">
+<h4>Inspecteur<a class="headerlink" href="../css.html#inspecteur" title="View HTML">§</a></h4>
+<p>Certains navigateurs (notamment Firefox et Chrome) offrent
+des outils puissants pour les développeurs web.</p>
+<p>Dans le menu contextuel (clic droit) sur n'importe quel élément,
+<em>Inspect Element</em> ouvre une interface d'inspection qui permet&nbsp;:</p>
+<ul class="simple">
+<li>de naviguer dans l'arbre HTML,</li>
+<li>de voir les règles qui s'appliquent à chaque élément,</li>
+<li>de modifier dynamiquement le code HTML et la feuille de style.</li>
+</ul>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="slide level-4" id="liens-utiles">
+<h4>Liens utiles<a class="headerlink" href="../css.html#liens-utiles" title="View HTML">§</a></h4>
+<p>Référence et apprentissage&nbsp;:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.w3.org/Style/CSS/">http://www.w3.org/Style/CSS/</a></li>
+<li><a class="reference external" href="http://www.w3schools.com/css/">http://www.w3schools.com/css/</a></li>
+<li><a class="reference external" href="http://caniuse.com/">http://caniuse.com/</a></li>
+</ul>
+<p>Démonstrations&nbsp;:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.csszengarden.com/">http://www.csszengarden.com/</a></li>
+<li><a class="reference external" href="http://css1k.com/">http://css1k.com/</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Les deux sites de démonstration ci-dessus
+sont construits sur le même principe&nbsp;:
+la page HTML est toujours la même, seule la feuille de style change.</p>
+</div>
+
+<div class="slide-no">10</div>
+
+</article>
+<article class="slide level-2" id="regle">
+<h2>Règle<a class="headerlink" href="../css.html#regle" title="View HTML">§</a></h2>
+
+<div class="slide-no">11</div>
+
+</article>
+<article class="slide level-3" id="principe">
+<span id="index-2"></span><h3>Principe<a class="headerlink" href="../css.html#principe" title="View HTML">§</a></h3>
+<ul class="simple">
+<li>En CSS, la mise en forme est spécifiée par un ensemble de <strong>règles</strong>.</li>
+<li>Une règle typique est composée de trois parties&nbsp;:<ul>
+<li>un <strong>sélecteur</strong>,</li>
+<li>une <strong>propriété</strong>,</li>
+<li>une <strong>valeur</strong></li>
+</ul>
+</li>
+</ul>
+<p>Exemple&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span> <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">}</span>
+<span class="c">/* le contenu des balises &lt;em&gt; devrait être en italique */</span>
+</pre></div>
+</div>
+
+<div class="slide-no">12</div>
+
+</article>
+<article class="slide level-3" id="combinaison-de-regles">
+<h3>Combinaison de règles<a class="headerlink" href="../css.html#combinaison-de-regles" title="View HTML">§</a></h3>
+<p>Plusieurs règles similaires peuvent coexister&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span>   <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">}</span>
+<span class="nt">em</span>   <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span> <span class="p">}</span>
+<span class="nt">cite</span> <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">}</span>
+<span class="nt">cite</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span> <span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">13</div>
+
+</article>
+<article class="slide level-4" id="regroupement-par-selecteur">
+<h4>Regroupement par sélecteur<a class="headerlink" href="../css.html#regroupement-par-selecteur" title="View HTML">§</a></h4>
+<p>On peut regrouper les règles ayant le même sélecteur,
+en séparant les couples propriété-valeur par un point-virgule («&nbsp;;&nbsp;»).</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span>   <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">;</span> <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span> <span class="p">}</span>
+<span class="nt">cite</span> <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">;</span> <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span> <span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">14</div>
+
+</article>
+<article class="slide level-4" id="regroupement-par-contenu">
+<h4>Regroupement par contenu<a class="headerlink" href="../css.html#regroupement-par-contenu" title="View HTML">§</a></h4>
+<p>On peut regrouper des règles ayant le même contenu,
+en séparant les sélecteurs par une virgule («&nbsp;,&nbsp;»).</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span><span class="o">,</span> <span class="nt">cite</span> <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">;</span> <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span> <span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">15</div>
+
+</article>
+<article class="slide level-4" id="sensibilite-aux-espaces">
+<h4>Sensibilité aux espaces<a class="headerlink" href="../css.html#sensibilite-aux-espaces" title="View HTML">§</a></h4>
+<p>CSS est insensible aux espaces et aux sauts de ligne.
+On peut donc en ajouter autant que nécessaire pour faciliter la mise en page.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span><span class="o">,</span>
+<span class="nt">cite</span>
+<span class="p">{</span>
+    <span class="k">font-style</span> <span class="o">:</span> <span class="k">italic</span> <span class="p">;</span>
+    <span class="k">color</span>      <span class="o">:</span> <span class="nb">blue</span>   <span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>NB&nbsp;: on peut également rajouter un point-virgule
+après le dernier couple propriété-valeur,
+ce qui favorise l'évolutivité de la feuille de style.</p>
+
+<div class="slide-no">16</div>
+
+</article>
+<article class="slide level-2" id="proprietes-du-texte">
+<h2>Propriétés du texte<a class="headerlink" href="../css.html#proprietes-du-texte" title="View HTML">§</a></h2>
+
+<div class="slide-no">17</div>
+
+</article>
+<article class="slide level-3" id="proprietes-sur-la-police">
+<span id="index-3"></span><h3>Propriétés sur la police<a class="headerlink" href="../css.html#proprietes-sur-la-police" title="View HTML">§</a></h3>
+<ul>
+ <li><tt class="literal code css">font-style</tt> :
+     <ul class="css-values">
+     <li style="font-style: normal">normal</li>
+     <li style="font-style: italic">italic</li>
+     <li style="font-style: oblique">oblique</li>
+     </ul></li>
+ <li><tt class="literal code css">font-weight</tt> :
+     <ul class="css-values">
+     <li style="font-weight: normal">normal</li>
+     <li style="font-weight: bold">bold</li>
+     <li style="font-weight: bolder">bolder</li>
+     <li style="font-weight: lighter">lighter</li>
+     </ul>
+     <ul>
+       <li> ou une valeur entre 100 et 900 (400 = normal)</li>
+       <li> NB: beaucoup de polices ne supportent que normal et bold</li>
+     </ul></li>
+ <li><tt class="literal code css">font-variant</tt> :
+     <ul class="css-values">
+     <li style="font-variant: normal">normal</li>
+     <li style="font-variant: small-caps">small-caps</li>
+     </ul>
+     <ul>
+       <li> NB: les small-caps sont plus petite que les majuscules :
+         <span style="font-variant: small-caps"
+         >Pierre-Antoine Champin</span></li>
+     </ul></li>
+ <li><tt class="literal code css">font-family</tt> :
+     <ul class="css-values"><li>(voir ci-après)</ul></li>
+ <li><tt class="literal code css">font-size</tt> :
+     <ul class="css-values"><li>(voir ci-après)</ul></li>
+</ul>
+<div class="slide-no">18</div>
+
+</article>
+<article class="slide level-3" id="police-avec-font-family">
+<h3>Police avec <tt class="docutils literal"><span class="pre">font-family</span></tt><a class="headerlink" href="../css.html#police-avec-font-family" title="View HTML">§</a></h3>
+<p>Lorsqu'on publie sur le Web,
+on ne peut pas faire l'hypothèse que
+tous les clients auront les mêmes polices installées sur leur système.</p>
+<p>Si on veut utiliser une police spécifique,
+il faut donc indiquer au navigateur comment la charger&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="k">@font-face</span>
+<span class="p">{</span>
+  <span class="nt">font-family</span><span class="o">:</span> <span class="nt">MyNiftyFont</span><span class="o">;</span>
+  <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;http://example.org/nifty-font.ttf&#39;</span><span class="o">),</span>
+       <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;http://example.org/nifty-font.eot&#39;</span><span class="o">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Comme le montre l'exemple,
+il peut être nécessaire de fournir la police dans plusieurs formats,
+afin de maximiser les chances de compatibilité avec différents navigateurs.</p>
+</div>
+
+<div class="slide-no">19</div>
+
+</article>
+<article class="slide level-4" id="polices-generiques">
+<h4>Polices génériques<a class="headerlink" href="../css.html#polices-generiques" title="View HTML">§</a></h4>
+<p>CSS définit des polices génériques&nbsp;:</p>
+<ul class="css-values small">
+<li style="font-family: serif ! important">serif</li>
+<li style="font-family: sans-serif ! important">sans-serif</li>
+<li style="font-family: cursive ! important">cursive</li>
+<li style="font-family: fantasy ! important">fantasy</li>
+<li style="font-family: monospace ! important">monospace</li>
+</ul><p>Inconvénient&nbsp;: leur apparence varie d'un système à l'autre
+(et d'un navigateur à l'autre).</p>
+<p>Avantage&nbsp;: elles garantissent un affichage
+pas <em>trop différent</em> des intentions de l'auteur.</p>
+
+<div class="slide-no">20</div>
+
+</article>
+<article class="slide level-4" id="bonne-pratique">
+<h4>Bonne pratique<a class="headerlink" href="../css.html#bonne-pratique" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Spécifier une <em>liste</em> de polices,</li>
+<li>par ordre croissant de probabilité qu'elle soit disponible,</li>
+<li>et en terminant toujours pas une police générique.</li>
+</ul>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">font-family</span><span class="o">:</span> <span class="nt">MyNiftyFont</span><span class="o">,</span> <span class="nt">Times</span> <span class="nt">New</span> <span class="nt">Roman</span><span class="o">,</span> <span class="nt">serif</span>
+</pre></div>
+</div>
+
+<div class="slide-no">21</div>
+
+</article>
+<article class="slide level-3" id="taille-du-texte-avec-font-size">
+<h3>Taille du texte avec <tt class="docutils literal"><span class="pre">font-size</span></tt><a class="headerlink" href="../css.html#taille-du-texte-avec-font-size" title="View HTML">§</a></h3>
+<p>La taille de police est générallement exprimée en points pica&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">body</span> <span class="p">{</span>  <span class="k">font-size</span><span class="o">:</span> <span class="m">12pt</span> <span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>ou relativement à la taille de la police dans l'élément englobant.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">h1</span> <span class="p">{</span>  <span class="k">font-size</span><span class="o">:</span> <span class="m">150</span><span class="o">%</span> <span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Mais toutes les <a class="reference internal" href="#longueur"><em>unités de mesures</em></a> reconnues par CSS
+sont en théorie utilisables.</p>
+
+<div class="slide-no">22</div>
+
+</article>
+<article class="slide level-3" id="autres-prorietes">
+<span id="index-4"></span><h3>Autres proriétés<a class="headerlink" href="../css.html#autres-prorietes" title="View HTML">§</a></h3>
+<ul>
+ <li><tt class="literal code css">text-decoration</tt> :
+     <ul class="css-values" style="display: block">
+     <li><span style="text-decoration: none">none</span></li>
+     <li><span style="text-decoration: underline">underline</span></li>
+     <li><span style="text-decoration: overline">overline</span></li>
+     <li><span style="text-decoration: line-through">line-through</span></li>
+     <li><span style="text-decoration: blink">blink</span></li>
+     </ul></li>
+ <li><tt class="literal code css">text-transform</tt> :
+     <ul class="css-values" style="display: inline-block">
+     <li style="text-transform: none">none</li>
+     <li style="text-transform: capitalize">capitalize</li>
+     <li style="text-transform: uppercase">uppercase</li>
+     <li style="text-transform: lowercase">lowercase</li>
+     </ul>
+     <ul><li>NB: <span style="text-transform: uppercase">uppercase</span> est
+     différent de <span style="font-variant:
+     small-caps">small-caps</span></ul></li>
+ <li><tt class="literal code css">text-align</tt> : <ul class="css-values">
+     <li>left</li>
+     <li>center</li>
+     <li>right</li>
+     <li>justify</li>
+     </ul>
+ <li><tt class="literal code css">color</tt> :
+     (<span style="color: red">voir</span>
+      <span style="color: green">ci-</span
+      ><span style="color: blue">après</span>)</li>
+ <li><tt class="literal code css">background-color</tt> :
+     (<span style="background-color: #8FF">voir</span>
+      <span style="background-color: #F8F">ci-</span
+      ><span style="background-color: #FF8">après</span>)</li>
+</ul>
+<div class="slide-no">23</div>
+
+</article>
+<article class="slide level-3" id="couleurs-en-css-rgb">
+<span id="index-5"></span><h3>Couleurs en CSS&nbsp;: RGB<a class="headerlink" href="../css.html#couleurs-en-css-rgb" title="View HTML">§</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/RGB_illumination.jpg"><img alt="_images/RGB_illumination.jpg" src="_images/RGB_illumination.jpg" style="width: 40%;" /></a>
+<p class="caption">Source image <a class="reference external" href="&lt;http://commons.wikimedia.org/wiki/File:RGB_illumination.jpg&gt;`">Wiki commons</a></p>
+<div class="legend">
+</div>
+</div>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="m">#f00</span> <span class="p">}</span>                 <span class="c">/* #rgb */</span>
+<span class="nt">em</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="m">#ff0000</span> <span class="p">}</span>           <span class="c">/* #rrggbb */</span>
+<span class="nt">em</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="k">rgb</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="p">)</span> <span class="p">}</span>
+<span class="nt">em</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="k">rgb</span><span class="p">(</span><span class="m">100</span><span class="o">%,</span> <span class="m">0</span><span class="o">%,</span> <span class="m">0</span><span class="o">%</span><span class="p">)</span> <span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">24</div>
+
+</article>
+<article class="slide level-4" id="couleurs-en-css-autres-moyens">
+<h4>Couleurs en CSS&nbsp;: autres moyens<a class="headerlink" href="../css.html#couleurs-en-css-autres-moyens" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>couleurs pré-définies:
+<tt class="code css html docutils literal"><span class="pre">black</span></tt>, <tt class="code css html docutils literal"><span class="pre">white</span></tt>, <tt class="code css html docutils literal"><span class="pre">red</span></tt>, <tt class="code css html docutils literal"><span class="pre">green</span></tt>, <tt class="code css html docutils literal"><span class="pre">blue</span></tt>,
+<tt class="code css html docutils literal"><span class="pre">yellow</span></tt>...<ul>
+<li>mais aussi <tt class="code css html docutils literal"><span class="pre">transparent</span></tt></li>
+<li>la liste est <em>très</em> longue</li>
+</ul>
+</li>
+<li>transparence (alpha): <tt class="docutils literal"><span class="pre">rgba(r,g,b,a)</span></tt>
+où <em>a</em> varie entre 0.0 (invisible) and 1.0 (opaque)</li>
+<li>pour en savoir plus&nbsp;: <a class="reference external" href="http://www.w3.org/TR/css3-color/">http://www.w3.org/TR/css3-color/</a></li>
+</ul>
+
+<div class="slide-no">25</div>
+
+</article>
+<article class="slide level-2" id="selecteurs-complexes">
+<h2>Sélecteurs complexes<a class="headerlink" href="../css.html#selecteurs-complexes" title="View HTML">§</a></h2>
+
+<div class="slide-no">26</div>
+
+</article>
+<article class="slide level-3" id="id2">
+<h3>Principe<a class="headerlink" href="../css.html#id2" title="View HTML">§</a></h3>
+<p>On a souvent besoin d'appliquer des règles de présentations différentes
+à la même balise en fonction de son <em>contexte</em>.</p>
+<p>Ceci peut s'exprimer en combinant plusieurs sélecteurs&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">X</span> <span class="nt">Y</span> <span class="p">{</span> <span class="c">/* s&#39;applique à tout élément Y situé</span>
+<span class="c">         à l&#39;intérieur d&#39;un X — même indirectement */</span> <span class="p">}</span>
+
+<span class="nt">X</span><span class="o">&gt;</span><span class="nt">Y</span> <span class="p">{</span> <span class="c">/* s&#39;applique à tout élément Y situé</span>
+<span class="c">         directement à l&#39;intérieur d&#39;un X */</span> <span class="p">}</span>
+
+<span class="nt">X</span><span class="o">+</span><span class="nt">Y</span> <span class="p">{</span> <span class="c">/* s&#39;applique à tout élément Y situé</span>
+<span class="c">         immédiatement après un X */</span> <span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">27</div>
+
+</article>
+<article class="slide level-4" id="principe-suite">
+<h4>Principe (suite)<a class="headerlink" href="../css.html#principe-suite" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Les sélecteurs complexes peuvent bien sûr être combinés à leur tour.</li>
+<li>On peut également utiliser dans les combinaisons le sélecteur <tt class="docutils literal"><span class="pre">*</span></tt>,
+qui est satisfait par <em>n'importe quelle</em> balise.</li>
+</ul>
+
+<div class="slide-no">28</div>
+
+</article>
+<article class="slide level-4" id="exemples">
+<h4>Exemples<a class="headerlink" href="../css.html#exemples" title="View HTML">§</a></h4>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">q</span>        <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">q</span> <span class="nt">em</span>     <span class="p">{</span> <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">q</span> <span class="nt">strong</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="o">:</span> <span class="k">underline</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">body</span><span class="o">&gt;</span><span class="nt">h1</span>  <span class="p">{</span> <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">h1</span><span class="o">+*</span> <span class="p">{</span> <span class="k">font-variant</span><span class="o">:</span> <span class="k">small-caps</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">ul</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">80</span><span class="o">%</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">29</div>
+
+</article>
+<article class="slide level-4" id="exercice">
+<h4>Exercice<a class="headerlink" href="../css.html#exercice" title="View HTML">§</a></h4>
+<p>Reprenez le code HTML que vous avez écrit pour
+<a class="reference internal" href="html.html#exo-catane3"><em>cet exercice</em></a>,
+et attachez le à une nouvelle feuille de style.</p>
+<p><em>Sans toucher au code HTML</em>,
+ajoutez à votre feuille de style les règles qui permettront d'obtenir
+le résultat disponible <a class="reference external" href="_static/exo_css_text/sujet.png">ici</a>.</p>
+
+<div class="slide-no">30</div>
+
+</article>
+<article class="slide level-3" id="classes-et-identifiant">
+<span id="index-6"></span><h3>Classes et identifiant<a class="headerlink" href="../css.html#classes-et-identifiant" title="View HTML">§</a></h3>
+<p>HTML autorise les attributs suivant dans n'importe quelle balise&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code html docutils literal"><span class="pre">id</span></tt> accepte comme valeur un nom <em>unique</em>
+(il est interdit d'utiliser le même <tt class="code html docutils literal"><span class="pre">id</span></tt>
+à deux endroits du même document)&nbsp;;</li>
+<li><tt class="code html docutils literal"><span class="pre">class</span></tt> accepte comme valeur une liste de noms séparés par des espaces
+(le même nom de classe peut être présent dans plusieurs balises).</li>
+</ul>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ol</span> <span class="na">id=</span><span class="s">&quot;contents&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;post funny&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/article&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">31</div>
+
+</article>
+<article class="slide level-4" id="selecteurs-associes">
+<h4>Sélecteurs associés<a class="headerlink" href="../css.html#selecteurs-associes" title="View HTML">§</a></h4>
+<p>CSS permet de sélectionner un élément par son identifiant ou sa classe,
+en spécifiant ou non le type de la balise.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">article</span><span class="nc">.post</span> <span class="p">{</span> <span class="c">/* tout &lt;article&gt; de la classe &#39;post&#39; */</span> <span class="p">}</span>
+
+<span class="nc">.funny</span>       <span class="p">{</span> <span class="c">/* tout élement de la classe &#39;funny&#39; */</span> <span class="p">}</span>
+
+<span class="nt">ol</span><span class="nf">#contents</span>  <span class="p">{</span> <span class="c">/* toute &lt;ol&gt; avec l&#39;id &#39;contents&#39; */</span> <span class="p">}</span>
+
+<span class="nf">#contents</span>    <span class="p">{</span> <span class="c">/* tout élément avec l&#39;id &#39;contents&#39; */</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>On peut bien sûr utiliser ces sélecteurs dans des sélecteurs complexes.</p>
+
+<div class="slide-no">32</div>
+
+</article>
+<article class="slide level-4" id="bonne-utilisation-des-identifiants">
+<h4>Bonne utilisation des identifiants<a class="headerlink" href="../css.html#bonne-utilisation-des-identifiants" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Un identifiant est unique au sein d'un document,<ul>
+<li>mais il peut se répéter d'un document à l'autre&nbsp;;</li>
+<li>par exemple, l'identifiant <tt class="docutils literal"><span class="pre">contents</span></tt> est peut-être utilisé
+pour identifier la table des matière sur toutes les pages d'un site.</li>
+</ul>
+</li>
+<li>Il y a donc un intérêt à mutualiser les règles de présentation
+pour un identifiant dans une feuille de style globale.</li>
+</ul>
+
+<div class="slide-no">33</div>
+
+</article>
+<article class="slide level-4" id="bonne-utilisation-des-classes">
+<h4>Bonne utilisation des classes<a class="headerlink" href="../css.html#bonne-utilisation-des-classes" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Les classes permettent de définir des catégories sémantiques plus précises
+que celles fournies par HTML&nbsp;; soit<ul>
+<li>un cas particulier par rapport à une balise existante (<em>e.g.</em> <tt class="docutils literal"><span class="pre">post</span></tt>),</li>
+<li>une catégorie transverse (<em>e.g.</em> <tt class="docutils literal"><span class="pre">funny</span></tt>).</li>
+</ul>
+</li>
+<li>Le nom de la classe doit décrire ce que <em>signifie</em> la classe,
+et non la mise en forme qui lui sera appliquée&nbsp;:<ul>
+<li>éviter par exemple <tt class="docutils literal"><span class="pre">rouge-souligné</span></tt> ou <tt class="docutils literal"><span class="pre">centré-16pt</span></tt>,</li>
+<li>qui deviendront obsolètes dès que votre charte graphique changera.</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-no">34</div>
+
+</article>
+<article class="slide level-3" id="priorite">
+<h3>Priorité<a class="headerlink" href="../css.html#priorite" title="View HTML">§</a></h3>
+<p>Considérons&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">em</span> <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span> <span class="p">}</span>
+
+<span class="nc">.summary</span> <span class="nt">em</span> <span class="p">{</span> <span class="k">font-style</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+              <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Quelle serait la mise en forme du HTML suivant&nbsp;?</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;summary&quot;</span><span class="nt">&gt;</span>This summary
+is <span class="nt">&lt;em&gt;</span>short<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">35</div>
+
+</article>
+<article class="slide level-4" id="reponse">
+<h4>Réponse<a class="headerlink" href="../css.html#reponse" title="View HTML">§</a></h4>
+<p class="summary rendered">This summary
+is <em style="font-style: normal; font-weight: bold">short</em>.</p><p>Intuitivement, la règle <em>la plus spécifique</em> a toujours la priorité.</p>
+<p>La manière dont CSS détermine la priorité (<span class="eng">cascading</span>) sont complexes,
+mais elles satisfont la plupart du temps cette intuition.</p>
+
+<div class="slide-no">36</div>
+
+</article>
+<article class="slide level-4" id="id4">
+<h4>Exercice<a class="headerlink" href="../css.html#id4" title="View HTML">§</a></h4>
+
+<div class="slide-no">37</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <a class="reference internal" href="seances.html#seance3"><em>Séance 3</em></a></h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance4"><em>Séance 4</em></a>.</p>
+
+<div class="slide-no">38</div>
+
+</article>
+<article class="slide level-2" id="position-et-espacement">
+<span id="position"></span><h2>Position et espacement<a class="headerlink" href="../css.html#position-et-espacement" title="View HTML">§</a></h2>
+
+<div class="slide-no">39</div>
+
+</article>
+<article class="slide level-3" id="marge">
+<span id="index-7"></span><h3>Marge<a class="headerlink" href="../css.html#marge" title="View HTML">§</a></h3>
+<p>La <strong>marge</strong> d'un élément est
+l'espace libre <em>minimum</em> qui doit être laissé autour de cet élément.</p>
+<p>L'espace effectif entre deux éléments voisins est déterminé en prenant
+la plus grande des deux marges.</p>
+
+<div class="slide-no">40</div>
+
+</article>
+<article class="slide level-4" id="proprietes-margin">
+<span id="index-8"></span><h4>Propriétés <tt class="docutils literal"><span class="pre">margin</span></tt><a class="headerlink" href="../css.html#proprietes-margin" title="View HTML">§</a></h4>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">margin-top</span></tt>&nbsp;: (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">margin-right</span></tt>&nbsp;: (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">margin-bottom</span></tt>&nbsp;: (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">margin-left</span></tt>&nbsp;: (longueur)</li>
+</ul>
+<p>On peut aussi utiliser la version synthétique, qui accepte 1 à 4 valeurs&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">margin</span></tt>&nbsp;: (top) (right) (bottom) (left)<ul>
+<li>si <tt class="docutils literal"><span class="pre">left</span></tt> est omis, il hérite de <tt class="docutils literal"><span class="pre">right</span></tt></li>
+<li>si <tt class="docutils literal"><span class="pre">bottom</span></tt> est omis, il hérite de <tt class="docutils literal"><span class="pre">top</span></tt></li>
+<li>si <tt class="docutils literal"><span class="pre">right</span></tt> est omis, il hérite de <tt class="docutils literal"><span class="pre">top</span></tt></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Lorsqu'une propriété CSS prend plusieurs valeurs,
+elles sont généralement séparées par des espaces.</li>
+<li>Ce principe d'héritage est utilisé par d'autres propriétés
+(par exemple <tt class="code css html docutils literal"><span class="pre">padding</span></tt>).</li>
+</ul>
+</div>
+
+<div class="slide-no">41</div>
+
+</article>
+<article class="slide level-4" id="longueurs-en-css">
+<span id="longueur"></span><h4>Longueurs en CSS<a class="headerlink" href="../css.html#longueurs-en-css" title="View HTML">§</a></h4>
+<p>CSS reconnait les unités de longueur suivantes&nbsp;:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>cm</td>
+<td>centimètre</td>
+</tr>
+<tr class="row-even"><td>mm</td>
+<td>millimètre</td>
+</tr>
+<tr class="row-odd"><td>in</td>
+<td>pouce (<span class="eng">inch</span>)</td>
+</tr>
+<tr class="row-even"><td>pt</td>
+<td>point pica (1/72 in)</td>
+</tr>
+<tr class="row-odd"><td>em</td>
+<td>taille de la police courante</td>
+</tr>
+<tr class="row-even"><td>ex</td>
+<td>hauteur du caractère <em>x</em> dans la police courante</td>
+</tr>
+<tr class="row-odd"><td>px</td>
+<td>«&nbsp;pixel CSS&nbsp;» (varie avec le niveau de zoom)</td>
+</tr>
+</tbody>
+</table>
+<p>Pour en savoir plus, voir <a class="reference external" href="http://www.w3.org/TR/css3-values/#lengths">ici</a>.</p>
+
+<div class="slide-no">42</div>
+
+</article>
+<article class="slide level-3" id="taille">
+<span id="index-9"></span><h3>Taille<a class="headerlink" href="../css.html#taille" title="View HTML">§</a></h3>
+<p>La taille d'un élément peut être fixée
+grâce aux propriétés <tt class="code css html docutils literal"><span class="pre">width</span></tt> et <tt class="code css html docutils literal"><span class="pre">height</span></tt>.</p>
+<p>Ces propriétés acceptent des longueurs</p>
+<ul class="simple">
+<li>absolues, ou</li>
+<li>en pourcentage (par rapport à l'élément englobant).</li>
+</ul>
+<p style="width: 50%">Par exemple, ce paragraphe a la propriété
+  <span class="code css">width: 50%</span>,
+  il occupe donc la moitié de la largeur de la page.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Certains éléments ignorent
+les propriétés <tt class="code css html docutils literal"><span class="pre">width</span></tt> et <tt class="code css html docutils literal"><span class="pre">height</span></tt>,
+typiquement ceux représentant
+un mot ou un groupe de mot à l'intérieur d'une phrase
+(par exemple <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;em&gt;</span></span></tt> ou <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;a&gt;</span></span></tt>).</p>
+<p class="last">On peut cependant les forcer à en tenir compte,
+en fixant leur propriété <tt class="code css html docutils literal"><span class="pre">display</span></tt> à <tt class="code css html docutils literal"><span class="pre">inline-block</span></tt>.</p>
+</div>
+
+<div class="slide-no">43</div>
+
+</article>
+<article class="slide level-4" id="intervalles-de-taille">
+<h4>Intervalles de taille<a class="headerlink" href="../css.html#intervalles-de-taille" title="View HTML">§</a></h4>
+<p>On peut également contraindre un élément de manière plus souple
+avec les propriétés
+<tt class="code css html docutils literal"><span class="pre">min-width</span></tt>, <tt class="code css html docutils literal"><span class="pre">max-width</span></tt>, <tt class="code css html docutils literal"><span class="pre">min-height</span></tt> et <tt class="code css html docutils literal"><span class="pre">max-height</span></tt>.</p>
+<p>C'est utile lorsqu'on ne connaît pas à l'avance
+le contenu des éléments concernés&nbsp;:</p>
+<ul class="simple">
+<li>feuille de style mutualisée,</li>
+<li>contenu dynamique,</li>
+<li><span class="eng">reponsive design</span>.</li>
+</ul>
+
+<div class="slide-no">44</div>
+
+</article>
+<article class="slide level-3" id="positionnement-flottant">
+<h3>Positionnement flottant<a class="headerlink" href="../css.html#positionnement-flottant" title="View HTML">§</a></h3>
+<p>Par défaut, les images appartiennent au flux de texte. Ainsi&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre>La Joconde <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;_static/monalisa.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Portrait de Mona Lisa&quot;</span><span class="nt">&gt;</span> est
+probablement le tableau le plus connu au monde.
+</pre></div>
+</div>
+<p>sera affiché comme suit&nbsp;:</p>
+<p class="rendered" style="font-size: 100% ! important">
+ La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
+ probablement le tableau le plus connu au monde.
+</p>
+<div class="slide-no">45</div>
+
+</article>
+<article class="slide level-4" id="positionnement-flottant-2">
+<span id="index-10"></span><h4>Positionnement flottant (2)<a class="headerlink" href="../css.html#positionnement-flottant-2" title="View HTML">§</a></h4>
+<p>La propriété <tt class="code css html docutils literal"><span class="pre">float</span></tt>,
+qui peut prendre comme valeur <tt class="code css html docutils literal"><span class="pre">left</span></tt> ou <tt class="code css html docutils literal"><span class="pre">right</span></tt>,
+fait «&nbsp;flotter&nbsp;» un élément au bord de la page.</p>
+<p>Ainsi, avec le CSS suivant&nbsp;:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">img</span> <span class="p">{</span> <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>le HTML précédent s'affichera ainsi&nbsp;:</p>
+<p class="rendered floatingimg" style="font-size: 100% ! important">
+ La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
+ probablement le tableau le plus connu au monde.
+</p><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Surtout utilisée pour les images,
+cette propriété peut également être utilisée pour tout type de figure
+(tableaux, notamment)
+ou certains contenus textuels (<tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;aside&gt;</span></span></tt>).</p>
+</div>
+
+<div class="slide-no">46</div>
+
+</article>
+<article class="slide level-3" id="positionnement-fin">
+<h3>Positionnement fin<a class="headerlink" href="../css.html#positionnement-fin" title="View HTML">§</a></h3>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">position</span></tt>&nbsp;: <tt class="code css html docutils literal"><span class="pre">relative</span></tt>, <tt class="code css html docutils literal"><span class="pre">absolute</span></tt>, <tt class="code css html docutils literal"><span class="pre">static</span></tt></li>
+<li><tt class="code css html docutils literal"><span class="pre">top</span></tt>&nbsp;: (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">right</span></tt>&nbsp;: (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">bottom</span></tt>&nbsp;: (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">left</span></tt>&nbsp;: (longueur)</li>
+</ul>
+
+<div class="slide-no">47</div>
+
+</article>
+<article class="slide level-2" id="personnalisation-des-boites">
+<span id="boite"></span><h2>Personnalisation des boîtes<a class="headerlink" href="../css.html#personnalisation-des-boites" title="View HTML">§</a></h2>
+
+<div class="slide-no">48</div>
+
+</article>
+<article class="slide level-3" id="boites-css">
+<h3>Boîtes CSS<a class="headerlink" href="../css.html#boites-css" title="View HTML">§</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/box.png"><img alt="_images/box.png" src="_images/box.png" style="width: 80%;" /></a>
+<p class="caption">Source image <a class="reference external" href="http://www.w3.org/TR/css3-box/">W3C</a></p>
+<div class="legend">
+</div>
+</div>
+
+<div class="slide-no">49</div>
+
+</article>
+<article class="slide level-3" id="cadre">
+<h3>Cadre<a class="headerlink" href="../css.html#cadre" title="View HTML">§</a></h3>
+<p>On peut souhaiter tracer un cadre autour de certains éléments.</p>
+
+<div class="slide-no">50</div>
+
+</article>
+<article class="slide level-4" id="proprietes-border">
+<span id="index-11"></span><h4>Propriétés <tt class="docutils literal"><span class="pre">border</span></tt><a class="headerlink" href="../css.html#proprietes-border" title="View HTML">§</a></h4>
+<ul>
+<li><p class="first"><tt class="code css html docutils literal"><span class="pre">border</span></tt>&nbsp;: (largeur) (style) (couleur)</p>
+<p>ou <em>style</em> peut être&nbsp;:</p>
+<table class="css-values">
+<tr>
+<td><span style="border: 1px none blue">none</span></td>
+<td><span style="border: 1px solid blue">solid</span></td>
+<td><span style="border: 1px dashed blue">dashed</span></td>
+</tr><tr>
+<td><span style="border: 1px dotted blue">dotted</span></td>
+<td><span style="border: 7px double blue">double</span></td>
+<td><span style="border: 7px groove blue">groove</span></td>
+<tr>
+<td><span style="border: 7px ridge blue">ridge</span></td>
+<td><span style="border: 7px inset blue">inset</span></td>
+<td><span style="border: 7px outset blue">outset</span></td>
+</tr>
+</table></li>
+</ul>
+<p>On peut aussi séparer ces 3 propriétés&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">border-width</span></tt> (largeur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-style</span></tt> (style)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-color</span></tt> (couleur)</li>
+</ul>
+
+<div class="slide-no">51</div>
+
+</article>
+<article class="slide level-5" id="proprietes-border-suite">
+<h5>Propriétés <tt class="docutils literal"><span class="pre">border</span></tt> (suite)<a class="headerlink" href="../css.html#proprietes-border-suite" title="View HTML">§</a></h5>
+<p>Il est aussi possible de donner des propriétés différentes
+aux quatre cotés du bord&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">border-top</span></tt>&nbsp;: (largeur) (style) (couleur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-right</span></tt>&nbsp;: (largeur) (style) (couleur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-bottom</span></tt>&nbsp;: (largeur) (style) (couleur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-left</span></tt>&nbsp;: (largeur) (style) (couleur)</li>
+</ul>
+<p>De la même manière,
+chacune de ces propriétés peut se décliner en sous-propriétés,
+par exemple&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">border-top-width</span></tt> (largeur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-top-style</span></tt> (style)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-top-color</span></tt> (couleur)</li>
+</ul>
+
+<div class="slide-no">52</div>
+
+</article>
+<article class="slide level-4" id="padding">
+<h4><span class="eng">Padding</span><a class="headerlink" href="../css.html#padding" title="View HTML">§</a></h4>
+<p>Le <strong>padding</strong> est l'espace entre le contenu et le bord extérieur de l'élément.</p>
+<p>En général, on utilise un <span class="eng">padding</span> &gt; 0 uniquement lorsque le bord de l'élément est visible (<tt class="code css html docutils literal"><span class="pre">border</span></tt>, <tt class="code css html docutils literal"><span class="pre">background-color</span></tt>).</p>
+
+<div class="slide-no">53</div>
+
+</article>
+<article class="slide level-5" id="proprietes-padding">
+<span id="index-12"></span><h5>Propriétés <tt class="docutils literal"><span class="pre">padding</span></tt><a class="headerlink" href="../css.html#proprietes-padding" title="View HTML">§</a></h5>
+<p>Comme pour la marge,
+on peut spécifier le <span class="eng">padding</span> par quatre propriétés (une par coté)&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">padding-top</span></tt> (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">padding-right</span></tt> (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">padding-bottom</span></tt> (longueur)</li>
+<li><tt class="code css html docutils literal"><span class="pre">padding-left</span></tt> (longueur)</li>
+</ul>
+<p>ou par une propriété synthétique acceptant 1 à 4 valeurs&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">padding</span></tt> (top) (right) (bottom) (left)</li>
+</ul>
+
+<div class="slide-no">54</div>
+
+</article>
+<article class="slide level-3" id="coins-arrondis">
+<span id="index-13"></span><h3>Coins arrondis<a class="headerlink" href="../css.html#coins-arrondis" title="View HTML">§</a></h3>
+<p>Il est possible d'arrondir les coins du bord grace aux propriétés suivante&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">border-top-left-radius</span></tt> (rayon)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-top-right-radius</span></tt> (rayon)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-bottom-right-radius</span></tt> (rayon)</li>
+<li><tt class="code css html docutils literal"><span class="pre">border-bottom-left-radius</span></tt> (rayon)</li>
+</ul>
+<p>ou par une propriété synthétique acceptant 1 à 4 valeurs&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">border-radius</span></tt> (tl) (tr) (br) (bl)</li>
+</ul>
+
+<div class="slide-no">55</div>
+
+</article>
+<article class="slide level-4" id="remarques">
+<h4>Remarques<a class="headerlink" href="../css.html#remarques" title="View HTML">§</a></h4>
+<img src="_static/monalisa.jpg"
+     style="height: 6em; border-radius: 50%; float: right; margin: .2em" /><ul class="simple">
+<li>On peut également exprimer le rayon en pourcentage de la taille de l'élément&nbsp;;<ul>
+<li>avec un rayon de 50%, on a une éllipse.</li>
+</ul>
+</li>
+<li>On peut utiliser ces propriétés <em>même sans cadre</em>,
+pour rogner le contenu le contenu ce certains éléments,<ul>
+<li>par exemple une image.</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-no">56</div>
+
+</article>
+<article class="slide level-3" id="images-de-fond">
+<h3>Images de fond<a class="headerlink" href="../css.html#images-de-fond" title="View HTML">§</a></h3>
+
+<div class="slide-no">57</div>
+
+</article>
+<article class="slide level-3" id="display">
+<h3>Display<a class="headerlink" href="../css.html#display" title="View HTML">§</a></h3>
+
+<div class="slide-no">58</div>
+
+</article>
+<article class="slide level-3" id="id7">
+<h3>Exercice<a class="headerlink" href="../css.html#id7" title="View HTML">§</a></h3>
+
+<div class="slide-no">59</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <a class="reference internal" href="seances.html#seance4"><em>Séance 4</em></a></h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance5"><em>Séance 5</em></a>.</p>
+
+<div class="slide-no">60</div>
+
+</article>
+<article class="slide level-2" id="pseudo-classes-et-pseudo-elements">
+<span id="pseudos"></span><h2>Pseudo-classes et pseudo-éléments<a class="headerlink" href="../css.html#pseudo-classes-et-pseudo-elements" title="View HTML">§</a></h2>
+<p>TODO</p>
+
+<div class="slide-no">61</div>
+
+</article>
+<article class="slide level-3" id="pseudo-classes">
+<span id="index-14"></span><h3>Pseudo-classes<a class="headerlink" href="../css.html#pseudo-classes" title="View HTML">§</a></h3>
+<p>Les <strong>pseudo-classes</strong> sont similaires aux classes HTML,
+mais elles sont attachées <em>automatiquement</em> aux éléments
+qui correspondent à leur définition.</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">:link</span></tt>&nbsp;:  lien non encore visité</li>
+<li><tt class="code css html docutils literal"><span class="pre">:visited</span></tt>&nbsp;:  lien déjà visité</li>
+<li><tt class="code css html docutils literal"><span class="pre">:active</span></tt>&nbsp;: élément en train d'être cliqué</li>
+<li><tt class="code css html docutils literal"><span class="pre">:focus</span></tt>&nbsp;: élément ayant le focus clavier</li>
+<li><tt class="code css html docutils literal"><span class="pre">:hover</span></tt>&nbsp;: élément survolé par la souris</li>
+<li><tt class="code css html docutils literal"><span class="pre">:target</span></tt>&nbsp;: élément <a class="reference internal" href="html.html#lien-interne"><em>ciblé</em></a> par l'URL courante</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>⚠ Comme les pseudo-classes ont toute la même priorité,
+il faut être attentif à l'ordre dans lequel les règles sont déclarée.
+Par exemple&nbsp;:</p>
+<div class="last highlight-css"><div class="highlight"><pre><span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">purple</span> <span class="p">}</span>
+<span class="nt">a</span><span class="nd">:focus</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">green</span> <span class="p">}</span> <span class="c">/* even if :visited */</span>
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">red</span> <span class="p">}</span> <span class="c">/* even if :visited or :focus */</span>
+<span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">yellow</span> <span class="p">}</span> <span class="c">/* even if :visited, :focus or :hover */</span>
+</pre></div>
+</div>
+</div>
+
+<div class="slide-no">62</div>
+
+</article>
+<article class="slide level-4" id="ordre-des-elements">
+<h4>Ordre des éléments<a class="headerlink" href="../css.html#ordre-des-elements" title="View HTML">§</a></h4>
+<p>TODO firs-child and co.</p>
+
+<div class="slide-no">63</div>
+
+</article>
+<article class="slide level-3" id="pseudo-elements">
+<span id="index-15"></span><h3>Pseudo-éléments<a class="headerlink" href="../css.html#pseudo-elements" title="View HTML">§</a></h3>
+<p>Les <strong>pseudo-éléments</strong> sont des éléments virtuels contenant
+un <em>sous-ensemble</em> d'un élément existant.</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">::first-letter</span></tt>&nbsp;:  première lettre du contenu</li>
+<li><tt class="code css html docutils literal"><span class="pre">::first-line</span></tt>&nbsp;:  première ligne du contenu</li>
+<li><tt class="code css html docutils literal"><span class="pre">::before</span></tt>&nbsp;: emplacement avant le contenu</li>
+<li><tt class="code css html docutils literal"><span class="pre">::after</span></tt>&nbsp;: emplacement après le contenu</li>
+</ul>
+<p>Les pseudo-éléments <tt class="code css html docutils literal"><span class="pre">::before</span></tt> et <tt class="code css html docutils literal"><span class="pre">::after</span></tt> sont vides par défaut,
+mais on peut leur ajouter du contenu grâce à la propriété <tt class="code css html docutils literal"><span class="pre">:content</span></tt>.</p>
+
+<div class="slide-no">64</div>
+
+</article>
+<article class="slide level-4" id="contenu-genere">
+<span id="index-16"></span><h4>Contenu généré<a class="headerlink" href="../css.html#contenu-genere" title="View HTML">§</a></h4>
+<p>La propriété <tt class="code css html docutils literal"><span class="pre">content</span></tt> accepte
+une ou plusieurs valeurs séparées par des espaces.
+Ces valeurs peuvent notamment être de la forme&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code css html docutils literal"><span class="pre">&quot;texte&quot;</span></tt>&nbsp;: affichera le texte tel quel</li>
+<li><tt class="code css html docutils literal"><span class="pre">url(&quot;url-image&quot;)</span></tt>&nbsp;: affichera l'image dont l'URL est passée en paramètres</li>
+</ul>
+
+<div class="slide-no">65</div>
+
+</article>
+<article class="slide level-3" id="compteurs">
+<h3>Compteurs<a class="headerlink" href="../css.html#compteurs" title="View HTML">§</a></h3>
+<p>TODO</p>
+
+<div class="slide-no">66</div>
+
+</article>
+<article class="slide level-3" id="id8">
+<h3>Exercice<a class="headerlink" href="../css.html#id8" title="View HTML">§</a></h3>
+
+<div class="slide-no">67</div>
+
+</article>
+<article class="slide level-2" id="transitions">
+<span id="transition"></span><h2>Transitions<a class="headerlink" href="../css.html#transitions" title="View HTML">§</a></h2>
+<p>TODO</p>
+
+<div class="slide-no">68</div>
+
+</article>
+<article class="slide level-2" id="adaptation-au-media">
+<span id="media"></span><h2>Adaptation au média<a class="headerlink" href="../css.html#adaptation-au-media" title="View HTML">§</a></h2>
+<p>TODO TRANSLATE &amp; ADAPT</p>
+<p>Different stylesheet can be specified for different media types:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span>
+      <span class="na">media=</span><span class="s">&quot;screen&quot;</span> <span class="na">href=</span><span class="s">&quot;sans-serif.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span>
+      <span class="na">media=</span><span class="s">&quot;print&quot;</span> <span class="na">href=</span><span class="s">&quot;serif.css&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p>NB: this can be specified directly in the CSS as well:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="k">@media</span> <span class="nt">screen</span> <span class="p">{</span>
+   <span class="o">*</span> <span class="p">{</span> <span class="k">font-family</span><span class="o">:</span> <span class="k">sans-serif</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">69</div>
+
+</article>
+<article class="slide level-3" id="media-types-for-stylesheets">
+<h3>Media types for stylesheets<a class="headerlink" href="../css.html#media-types-for-stylesheets" title="View HTML">§</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aural</td>
+</tr>
+<tr class="row-even"><td>braille</td>
+</tr>
+<tr class="row-odd"><td>handheld</td>
+</tr>
+<tr class="row-even"><td>print</td>
+</tr>
+<tr class="row-odd"><td>projection</td>
+</tr>
+<tr class="row-even"><td>screen</td>
+</tr>
+<tr class="row-odd"><td>tty</td>
+</tr>
+<tr class="row-even"><td>tv</td>
+</tr>
+</tbody>
+</table>
+<p>For more details, see <a class="reference external" href="http://dev.w3.org/csswg/css3-mediaqueries/">CSS3 Media Queries</a></p>
+
+<div class="slide-no">70</div>
+
+</article>
+<article class="slide level-4" id="hiding-elements-in-some-stylesheets">
+<h4>Hiding elements in some stylesheets<a class="headerlink" href="../css.html#hiding-elements-in-some-stylesheets" title="View HTML">§</a></h4>
+<p>CSS allows to completely remove some elements. This can be used in media-specific stylesheets (for example, hiding a site menu in the <tt class="docutils literal"><span class="pre">print</span></tt> media):</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="k">@media</span> <span class="nt">print</span> <span class="p">{</span>
+  <span class="nt">ul</span><span class="nc">.menu</span> <span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="slide-no">71</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <a class="reference internal" href="seances.html#seance7"><em>Séance 7</em></a></h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance8"><em>Séance 8</em></a>.</p>
+
+<div class="slide-no">72</div>
+
+</article>
+
+
+</section>
+
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2013-10-10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+  </body>
+</html>

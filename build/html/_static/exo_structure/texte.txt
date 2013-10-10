@@ -1,0 +1,35 @@
+
+Règles du jeu
+
+Extrait des règles du jeu Colons de Catane par Klaus Teuber
+
+Les mots ou groupes de mots suivis d'une astérisque (*) sont expliqués plus en détail dans ce manuel.
+Déroulement général de la partie
+
+Le joueur le plus agé commence. Le jouer dont c'est le tour peut effectuer les actions suivantes, en respectant l'ordre indiqué :
+
+Il doit lancer les dés pour savoir où il y a des revenus en matières premières* (ce résultat concerne tous les joueurs).
+
+Il peut faire du commerce* : il échange des cartes Matière première avec les autres joueurs.
+
+Il peut effectuer des constructions* : routes*, colonies*, ou villes*, et/ou acheter des cartes de développement*.
+
+De plus, il peut jouer une (et une seule) carte Développement* à n'importe quel moment pendant son tour.
+
+Dès qu'un joueur a fini, le joueur situé à sa gauche commence son tour de jeu.
+
+Déroulement du jeu en détail
+
+Revenus des matières premières
+
+Chaque joueur commence son tour en lançant les deux dés. On fait la somme des dés et le résultat désigne la ou les régions où il y a des matières premières à obtenir !
+
+Chaque joueur qui possède une colonie* située au croisement* d'une région désignée par le dé reçoit une carte Matière première correspondant à cette région.
+
+Important : Si le résultat des dés désigne la case où se trouve le brigand noir*, cette case ne produit aucun revenu de matières premières ce tour-là. Le brigand reste sur place.
+
+(N.B. Pour des exemples, voir Revenus des matières premières* dans le Manuel.)
+
+Commerce*
+
+Le joueur dont c'est le tour peut faire ensuite du commerce, c'est à dire échanger des cartes Matière première. Il existe deux formes de commerce : ...

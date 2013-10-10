@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HTML &mdash; Introduction au Web</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/slides.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/../../_static/sab-slides.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="top" title="Introduction au Web" href="index.html" />
+    <link rel="next" title="CSS" href="css.html" />
+    <link rel="prev" title="Historique et présentation" href="intro.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="html">
+<h1>HTML<a class="headerlink" href="../html.html#html" title="View HTML">§</a></h1>
+<!-- NB: using raw:: directive in order to accurately tag metadata -->
+
+  <a rel="author"
+        href="http://champin.net/#pa"
+        ><p>Pierre-Antoine Champin</p></a>
+  <address>Département Informatique,
+    <a href="http://iut.univ-lyon1.fr/">IUT Lyon 1</a></address>
+
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.fr">
+     <p><img alt="Creative Commons License" style="border-width:0"
+          src="_static/cc.png" /></p></a>
+
+  <p class="license">Ce travail est sous licence
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.fr">
+     Creative Commons Attribution-ShareAlike 3.0 France</a>.</p>
+<div class="slide-no">1</div>
+
+</article>
+<article class="slide level-2" id="un-langage-a-balises">
+<h2>Un langage à balises<a class="headerlink" href="../html.html#un-langage-a-balises" title="View HTML">§</a></h2>
+
+<div class="slide-no">2</div>
+
+</article>
+<article class="slide level-3" id="notion-de-balise">
+<span id="index-0"></span><h3>Notion de balise<a class="headerlink" href="../html.html#notion-de-balise" title="View HTML">§</a></h3>
+<ul class="simple">
+<li>HTML est un format textuel,<ul>
+<li>il peut donc être édité dans n'importe quel éditeur de texte.</li>
+</ul>
+</li>
+<li>Le texte normal sera affiché tel quel.</li>
+<li>Les <strong>balises</strong> sont des codes, qui ne sont pas affichés tels quels,
+mais servent à indiquer le rôle du texte balisé,<ul>
+<li>et donc <em>indirectement</em> comment il sera présenté.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition-vocabulaire admonition">
+<p class="first admonition-title">Vocabulaire</p>
+<p class="last">En anglais, les balises sont appelées <span class="eng">tags</span>;
+«&nbsp;langage à balise&nbsp;» se traduit par <span class="eng">markup language</span>.</p>
+</div>
+
+<div class="slide-no">3</div>
+
+</article>
+<article class="slide level-4" id="exemple">
+<h4>Exemple<a class="headerlink" href="../html.html#exemple" title="View HTML">§</a></h4>
+<p>Si vous écrivez&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre>Qu&#39;est-ce qu&#39;une <span class="nt">&lt;em&gt;</span>balise<span class="nt">&lt;/em&gt;</span>?
+</pre></div>
+</div>
+<div class="build container">
+<div class="container">
+<p>... vous verrez&nbsp;:</p>
+<p class="rendered">
+  Qu'est-ce qu'une <em>balise</em>?
+</p><p>Le mot «&nbsp;balise&nbsp;» est marqué comme important (em&nbsp;=&nbsp;emphase),
+c'est pourquoi il est affiché en italique.</p>
+</div>
+</div>
+
+<div class="slide-no">4</div>
+
+</article>
+<article class="slide level-3" id="structure-des-balises">
+<span id="index-1"></span><h3>Structure des balises<a class="headerlink" href="../html.html#structure-des-balises" title="View HTML">§</a></h3>
+<div class="highlight-html"><div class="highlight"><pre>Qu&#39;est-ce qu&#39;une <span class="nt">&lt;em&gt;</span>balise<span class="nt">&lt;/em&gt;</span>?
+</pre></div>
+</div>
+<ul class="simple">
+<li>Tout texte entre les <strong>chevrons</strong> (en anglais <span class="eng">brackets</span>) <tt class="docutils literal"><span class="pre">&lt;</span></tt> et <tt class="docutils literal"><span class="pre">&gt;</span></tt>
+est considéré une balise.</li>
+<li><tt class="docutils literal"><span class="pre">&lt;em&gt;</span></tt> est une balise <em>ouvrante</em>,
+<tt class="docutils literal"><span class="pre">&lt;/em&gt;</span></tt> est la balise <em>fermante</em> qui lui correspond;
+elles délimitent le texte concerné.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Astuce</p>
+<p class="last">Les éditeurs de texte reconnaissent les balises,
+et les mettent automatiquement en couleur
+pour faciliter la lecture du code HTML.</p>
+</div>
+
+<div class="slide-no">5</div>
+
+</article>
+<article class="slide level-4" id="emboitement">
+<span id="index-2"></span><h4>Emboîtement<a class="headerlink" href="../html.html#emboitement" title="View HTML">§</a></h4>
+<a class="float-right reference internal image-reference" href="_images/matroshka.jpg"><img alt="http://commons.wikimedia.org/wiki/File:Russian-Matroshka2.jpg" class="float-right align-right" src="_images/matroshka.jpg" style="height: 15ex;" /></a>
+<p>On peut appliquer plusieurs balises au même texte,
+à condition de respecter la règle d'<strong>emboîtement</strong>&nbsp;:</p>
+<p>toute balise B ouverte à l'intérieur d'une balise A
+doit également être fermée à l'intérieur de A.</p>
+<p>Exemples&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;X&gt;</span>Emboîtement <span class="nt">&lt;Y&gt;</span>correct<span class="nt">&lt;/Y&gt;&lt;/X&gt;</span>.
+</pre></div>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;X&gt;</span>Emboîtement <span class="nt">&lt;Y&gt;</span>incorrect<span class="nt">&lt;/X&gt;&lt;/Y&gt;</span>.
+</pre></div>
+</div>
+
+<div class="slide-no">6</div>
+
+</article>
+<article class="slide level-4" id="structure-en-arbre">
+<span id="index-3"></span><h4>Structure en arbre<a class="headerlink" href="../html.html#structure-en-arbre" title="View HTML">§</a></h4>
+<p>De la règle d'emboîtement,
+il découle que les balises confèrent une structure d'<strong>arbre</strong> au document&nbsp;:</p>
+<div class="big highlight-html"><div class="highlight"><pre><span class="nt">&lt;X&gt;&lt;Y&gt;</span>Lorem <span class="nt">&lt;Z&gt;</span>ipsum<span class="nt">&lt;/Z&gt;&lt;/Y&gt;</span> dolor <span class="nt">&lt;X&gt;</span>sit.<span class="nt">&lt;/X&gt;&lt;/X&gt;</span>
+</pre></div>
+</div>
+<div class="big tree highlight-html"><div class="highlight"><pre><span class="nt">&lt;X&gt;</span>
+├ <span class="nt">&lt;Y&gt;</span>
+│ ├ &quot;Lorem &quot;
+│ └ <span class="nt">&lt;Z&gt;</span>
+│   └ &quot;ipsum&quot;
+├ &quot; dolor &quot;
+└ <span class="nt">&lt;X&gt;</span>
+  └ &quot;sit.&quot;
+</pre></div>
+</div>
+
+<div class="slide-no">7</div>
+
+</article>
+<article class="slide level-4" id="attributs">
+<span id="index-4"></span><h4>Attributs<a class="headerlink" href="../html.html#attributs" title="View HTML">§</a></h4>
+<p>Certaines balises, en plus du contenu textuel qu'elles délimitent,
+ont besoin d'information supplémentaire
+(mais qui n'apparaîtra pas dans le document).</p>
+<p>Cette information est donnée par des <strong>attributs</strong>,
+qui ont la forme <tt class="docutils literal"><span class="pre">nom=valeur</span></tt>
+et sont placés <em>entre les chevrons</em> de la balise ouvrante,
+après son nom.</p>
+<p>Par exemple&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://champin.net/&quot;</span><span class="nt">&gt;</span>P-A. Champin<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>n'affichera que le texte «&nbsp;P-A. Champin&nbsp;».</p>
+
+<div class="slide-no">8</div>
+
+</article>
+<article class="slide level-4" id="balises-vides">
+<span id="balisevide"></span><span id="index-5"></span><h4>Balises vides<a class="headerlink" href="../html.html#balises-vides" title="View HTML">§</a></h4>
+<p>Certaines balises particulières n'attendent pas de contenu textuel.
+Ces balises <strong>vides</strong> n'ont donc pas de balise fermante correspondante&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre>Cette balise <span class="nt">&lt;Y</span> <span class="na">a=</span><span class="s">&quot;v&quot;</span><span class="nt">&gt;</span> n&#39;a pas de contenu.
+</pre></div>
+</div>
+<p>On peut (mais ce n'est pas une obligation) indiquer explicitement
+l'absence de balise fermante en ajoutant la barre oblique
+à la fin de la balise ouvrante&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre>Cette balise <span class="nt">&lt;Y</span> <span class="na">a=</span><span class="s">&quot;v&quot;</span><span class="nt">/&gt;</span> n&#39;a pas de contenu.
+</pre></div>
+</div>
+
+<div class="slide-no">9</div>
+
+</article>
+<article class="slide level-3" id="gestion-des-espaces">
+<h3>Gestion des espaces<a class="headerlink" href="../html.html#gestion-des-espaces" title="View HTML">§</a></h3>
+<p>Si vous écrivez&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre>Gestion      des
+espaces.
+</pre></div>
+</div>
+<div class="build container">
+<div class="container">
+<p>... vous verrez&nbsp;:</p>
+<p class="rendered">
+  Gestion      des
+  espaces.
+</p></div>
+</div>
+
+<div class="slide-no">10</div>
+
+</article>
+<article class="slide level-4" id="explication">
+<span id="index-6"></span><h4>Explication<a class="headerlink" href="../html.html#explication" title="View HTML">§</a></h4>
+<p>HTML considère tous les caractères d'espacements
+(espaces, retours à la ligne...)
+comme des séparations entre mots,
+et les affiche comme une <em>simple espace</em>.</p>
+<p>Cela donne de la souplesse dans la mise en page du <em>code</em> HTML
+(notamment en utilisant l'<em>indentation</em>, comme en programmation).</p>
+<p>On va voir dans la suite comment faire afficher des retours à la ligne.</p>
+
+<div class="slide-no">11</div>
+
+</article>
+<article class="slide level-3" id="separation-fond-forme">
+<span id="index-7"></span><h3>Séparation fond&nbsp;/ forme<a class="headerlink" href="../html.html#separation-fond-forme" title="View HTML">§</a></h3>
+<p>Depuis la version 4, HTML vise a décrire la <em>structure logique</em> du document,
+c'est à dire le <strong>fond</strong> et non la <strong>forme</strong>.</p>
+<p>La mise en forme (qu'on appelle parfois <em>structure physique</em>) est gérée par
+une <strong>feuille de style</strong> qui sera décrite en <a class="reference internal" href="css.html"><em>CSS</em></a>.</p>
+
+<div class="slide-no">12</div>
+
+</article>
+<article class="slide level-2" id="structure-d-un-document">
+<h2>Structure d'un document<a class="headerlink" href="../html.html#structure-d-un-document" title="View HTML">§</a></h2>
+
+<div class="slide-no">13</div>
+
+</article>
+<article class="slide level-3" id="structure-globale">
+<h3>Structure globale<a class="headerlink" href="../html.html#structure-globale" title="View HTML">§</a></h3>
+<div class="highlight-html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Titre du document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    ...
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</td></tr></table></div>
+
+<div class="slide-no">14</div>
+
+</article>
+<article class="slide level-4" id="index-8">
+<span id="id1"></span><h4>Explication<a class="headerlink" href="../html.html#index-8" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>La 1e ligne indique la version de HTML (ici, HTML5).</li>
+<li>Tout document html (<tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;html&gt;</span></span></tt>) comprend deux parties.<ul>
+<li>La tête (<tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;head&gt;</span></span></tt>) contient les méta-données,
+qui ne sont pas directement affichées&nbsp;:<ul>
+<li>le titre (<tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;title&gt;</span></span></tt>) est obligatoire,</li>
+<li>l'indication d'encodage (ligne 5) est facultative,
+mais recommandée&nbsp;;</li>
+</ul>
+</li>
+<li>Le corps (<tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;body&gt;</span></span></tt>) contient
+le contenu à proprement parler du document.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On remarque que l'indication d'encodage est un exemple
+de balise sans contenu et possédant un attribut.</p>
+</div>
+
+<div class="slide-no">15</div>
+
+</article>
+<article class="slide level-4" id="valideur">
+<h4>Valideur<a class="headerlink" href="../html.html#valideur" title="View HTML">§</a></h4>
+<p>Le W3C fournit un service de validation en ligne&nbsp;:</p>
+<blockquote>
+<div><a class="reference external" href="http://validator.w3.org/">http://validator.w3.org/</a></div></blockquote>
+<p>Son utilisation vous est <em>vivement</em> recommandée.</p>
+
+<div class="slide-no">16</div>
+
+</article>
+<article class="slide level-3" id="titres-et-paragraphes">
+<h3>Titres et paragraphes<a class="headerlink" href="../html.html#titres-et-paragraphes" title="View HTML">§</a></h3>
+<p>Un document typique est une séquence de</p>
+<ul class="simple">
+<li>titres (ou en-tête, en anglais <span class="eng">heading</span>), et de</li>
+<li>paragraphes.</li>
+</ul>
+<p>Les titres ont différents niveaux d'importance,
+repérables à leur typographie (et parfois à leur numérotation).</p>
+<div class="build container">
+<div class="admonition-question admonition">
+<p class="first admonition-title">Question</p>
+<p class="last">Identifiez-vous les différents niveaux de titre dans l'exemple suivant&nbsp;?</p>
+</div>
+</div>
+
+<div class="slide-no">17</div>
+
+</article>
+<article class="slide level-4" id="id2">
+<h4>Exemple<a class="headerlink" href="../html.html#id2" title="View HTML">§</a></h4>
+<div class="figure">
+<a class="shadow reference internal image-reference" href="_images/sujet.png"><img alt="_images/sujet.png" class="shadow" src="_images/sujet.png" style="width: 100%;" /></a>
+</div>
+
+<div class="slide-no">18</div>
+
+</article>
+<article class="slide level-4" id="titres-et-paragraphes-en-html">
+<span id="index-9"></span><h4>Titres et paragraphes en HTML<a class="headerlink" href="../html.html#titres-et-paragraphes-en-html" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Les paragraphes sont délimités par la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;p&gt;</span></span></tt></li>
+<li>Les titres sont délimités par les balises <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h1&gt;</span></span></tt>, <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h2&gt;</span></span></tt>..., <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h6&gt;</span></span></tt>&nbsp;;<ul>
+<li><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h1&gt;</span></span></tt> est le niveau le plus important,
+et <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h6&gt;</span></span></tt> le moins important.</li>
+</ul>
+</li>
+</ul>
+<p>Illustration&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Ceci est un titre<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>Ceci est un paragraphe.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Ceci est un deuxième paragraphe.<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">19</div>
+
+</article>
+<article class="slide level-5" id="illustration-plus-elaboree">
+<h5>Illustration plus élaborée<a class="headerlink" href="../html.html#illustration-plus-elaboree" title="View HTML">§</a></h5>
+<div class="big highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Thèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Paragraphe d&#39;introduction<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Argument 1<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Argument 2<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Antithèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Contre-argument 1<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Contre-argument 2<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Synthèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>Notez l'indentation pour faciliter la lecture.</p>
+
+<div class="slide-no">20</div>
+
+</article>
+<article class="slide level-4" id="coherence">
+<h4>Cohérence<a class="headerlink" href="../html.html#coherence" title="View HTML">§</a></h4>
+<p>⚠ L'enchaînement des niveaux de titre doit être cohérent&nbsp;:</p>
+<ul class="simple">
+<li>le premier titre devrait toujours être de niveau 1&nbsp;;</li>
+<li>un titre ne devrait pas monter de plus d'un niveau par rapport au précédent.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>«&nbsp;Mais si le <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h2&gt;</span></span></tt> ne se différencie pas assez du <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h1&gt;</span></span></tt>
+visuellement, j'ai le droit de mettre un <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h3&gt;</span></span></tt> à la place&nbsp;?&nbsp;»</p>
+<p class="last">→ non; HTML doit être cohérent avec la <em>structure</em> du document.
+Pour changer la typographie, on modifiera plutôt le <a class="reference internal" href="css.html"><em>CSS</em></a>.</p>
+</div>
+
+<div class="slide-no">21</div>
+
+</article>
+<article class="slide level-5" id="coherence-suite">
+<h5>Cohérence (suite)<a class="headerlink" href="../html.html#coherence-suite" title="View HTML">§</a></h5>
+<p>NB&nbsp;: ces règles de cohérence ne sont pas <em>normatives</em>,
+leur non-respect n'est <em>pas</em> signalé par le valideur,
+mais il est tout de même à proscrire.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">C'est donc à vous d'être attentifs à bien les respecter.</p>
+</div>
+
+<div class="slide-no">22</div>
+
+</article>
+<article class="slide level-5" id="exercice">
+<span id="exo-catane"></span><h5>Exercice<a class="headerlink" href="../html.html#exercice" title="View HTML">§</a></h5>
+<ol class="arabic">
+<li><p class="first">Téléchargez le <a class="reference external" href="_static/exo_structure/texte.txt">texte</a> correspondant à l'<a class="reference external" href="_static/exo_structure/sujet.png">exemple ci-avant</a>
+en utilisant les balises <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;p&gt;</span></span></tt> et <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;hN&gt;</span></span></tt>.</p>
+<p>NB&nbsp;: la mise en forme sera différente,
+mais chechez surtout a reproduire la structure <em>logique</em> du document.</p>
+</li>
+<li><p class="first">Téléchargez le <a class="reference external" href="_static/exo_structure/modele.html">modèle HTML</a> correspondant à l'exemple,
+et recopiez votre code à l'intérieur de la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;body&gt;</span></span></tt> .
+Ce modèle contient un lien vers la feuille de style appropriée.</p>
+</li>
+</ol>
+<p>Dans les deux cas, ne tenez pas compte pour l'instant
+des mots en gras, italique et souligné.</p>
+
+<div class="slide-no">23</div>
+
+</article>
+<article class="slide level-3" id="sections">
+<h3>Sections<a class="headerlink" href="../html.html#sections" title="View HTML">§</a></h3>
+<p>Les titres définissent en fait une structure de plus haut niveau&nbsp;:</p>
+<ul class="simple">
+<li>chaque titre indique le début d'une <em>section</em>,</li>
+<li>qui se termine au prochain titre de même niveau&nbsp;;</li>
+</ul>
+<p>Une section contient donc</p>
+<blockquote>
+<div><ul class="simple">
+<li>un titre,</li>
+<li>éventuellement des paragraphes,</li>
+<li>éventuellement une ou plusieurs section(s) de niveau suivant.</li>
+</ul>
+</div></blockquote>
+
+<div class="slide-no">24</div>
+
+</article>
+<article class="slide level-4" id="sections-en-html">
+<span id="index-10"></span><h4>Sections en HTML<a class="headerlink" href="../html.html#sections-en-html" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Jusqu'à HTML 4.01, la structuration en sections était laissée implicite.</li>
+<li>Depuis HTML5, on <span class="del">peut</span> est encouragé à utiliser
+la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;section&gt;</span></span></tt>,<ul>
+<li>d'autant que les anciens navigateurs l'ignoreront purement et simplement.</li>
+</ul>
+</li>
+</ul>
+
+<div class="slide-no">25</div>
+
+</article>
+<article class="slide level-5" id="arbre-avec-des-sections-implicites">
+<h5>Arbre avec des sections implicites<a class="headerlink" href="../html.html#arbre-avec-des-sections-implicites" title="View HTML">§</a></h5>
+<div class="big tree highlight-html"><div class="highlight"><pre>├ <span class="nt">&lt;h1&gt;</span> &quot;Thèse&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;h2&gt;</span> &quot;Argument 1&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;h2&gt;</span> &quot;Argument 1&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;h1&gt;</span> &quot;Anti-thèse&quot;
+├ <span class="nt">&lt;h2&gt;</span> &quot;Contre-argument 1&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;h2&gt;</span> &quot;Contre-argument 2&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;h1&gt;</span> &quot;Synthèse&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+├ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+└ <span class="nt">&lt;p&gt;</span>  &quot;...&quot;
+</pre></div>
+</div>
+
+<div class="slide-no">26</div>
+
+</article>
+<article class="slide level-5" id="illustration-avec-sections">
+<h5>Illustration avec sections<a class="headerlink" href="../html.html#illustration-avec-sections" title="View HTML">§</a></h5>
+<div class="big highlight-html"><div class="highlight"><pre><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Thèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Paragraphe d&#39;introduction<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Argument 1<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Argument 2<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Antithèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Contre-argument 1<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Contre-argument 2<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Synthèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">27</div>
+
+</article>
+<article class="slide level-5" id="arbre-avec-des-sections-explicites">
+<h5>Arbre avec des sections explicites<a class="headerlink" href="../html.html#arbre-avec-des-sections-explicites" title="View HTML">§</a></h5>
+<div class="big tree highlight-html"><div class="highlight"><pre>├ <span class="nt">&lt;section&gt;</span>
+│ ├ <span class="nt">&lt;h1&gt;</span> &quot;Thèse&quot;
+│ ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ ├ <span class="nt">&lt;section&gt;</span>
+│ │ ├ <span class="nt">&lt;h2&gt;</span> &quot;Argument 1&quot;
+│ │ ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ │ ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ │ └ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ └ <span class="nt">&lt;section&gt;</span>
+│   ├ <span class="nt">&lt;h2&gt;</span> &quot;Argument 2&quot;
+│   ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│   ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│   └ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+├ <span class="nt">&lt;section&gt;</span>
+│ ├ <span class="nt">&lt;h1&gt;</span> &quot;Antithèse&quot;
+│ ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ ├ <span class="nt">&lt;section&gt;</span>
+│ │ ├ <span class="nt">&lt;h2&gt;</span> &quot;Contre-argument 1&quot;
+│ │ ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ │ ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ │ └ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│ └ <span class="nt">&lt;section&gt;</span>
+│   ├ <span class="nt">&lt;h2&gt;</span> &quot;Contre-argument 2&quot;
+│   ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│   ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+│   └ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+└ <span class="nt">&lt;section&gt;</span>
+  ├ <span class="nt">&lt;h1&gt;</span> &quot;Synthèse&quot;
+  ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+  ├ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+  └ <span class="nt">&lt;p&gt;</span> &quot;...&quot;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>À ce stade, on pourrait arguer que l'ordinateur <em>peut</em> reconstruire
+la structure des sections à partir des niveaux de titre,
+et donc qu'il est superflu d'alourdir le code HTML
+avec cette information redondante.</p>
+<p class="last">Lorsqu'on étudiera <a class="reference internal" href="css.html"><em>CSS</em></a> et les <a class="reference internal" href="scripts.html"><em>Scripts</em></a>,
+on comprendra mieux l'intérêt de rendre cette structure explicite.</p>
+</div>
+
+<div class="slide-no">28</div>
+
+</article>
+<article class="slide level-5" id="exo-catane2">
+<span id="id6"></span><h5>Exercice<a class="headerlink" href="../html.html#exo-catane2" title="View HTML">§</a></h5>
+<p>Améliorez votre version de l'<a class="reference external" href="_static/exo_structure/sujet.png">exemple ci-avant</a>
+en ajoutant les balises <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;section&gt;</span></span></tt>.</p>
+
+<div class="slide-no">29</div>
+
+</article>
+<article class="slide level-4" id="redondance-et-compatibilite">
+<h4>Redondance et compatibilité<a class="headerlink" href="../html.html#redondance-et-compatibilite" title="View HTML">§</a></h4>
+<p>RMQ: l'emboîtement des sections suffit à déterminer leur niveau,
+donc l'information portée par le numéro de titre est <em>redondante</em>.</p>
+<p>→ en HTML5, on peut n'utiliser que <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;h1&gt;</span></span></tt> à tous les niveaux,</p>
+<blockquote>
+<div><ul class="simple">
+<li>les navigateurs compatibles adapteront la typographie
+en fonction de la «&nbsp;profondeur&nbsp;».</li>
+</ul>
+</div></blockquote>
+<p>⚠ cependant, ceci n'est pas compatible avec les anciens navigateurs,
+sauf à fournir une feuille de style précise.</p>
+
+<div class="slide-no">30</div>
+
+</article>
+<article class="slide level-5" id="illustration">
+<h5>Illustration<a class="headerlink" href="../html.html#illustration" title="View HTML">§</a></h5>
+<div class="big highlight-html"><div class="highlight"><pre><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Thèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Paragraphe d&#39;introduction<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Argument 1<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Argument 2<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Antithèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Contre-argument 1<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Contre-argument 2<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/section&gt;&lt;section&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Synthèse<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span> <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">31</div>
+
+</article>
+<article class="slide level-4" id="sections-specialisees">
+<span id="index-11"></span><h4>Sections spécialisées<a class="headerlink" href="../html.html#sections-specialisees" title="View HTML">§</a></h4>
+<p>Les balises suivantes représentent
+des sections avec une sémantique particulière.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;article&gt;</span></span></tt></td>
+<td>contenu auto-suffisant</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;aside&gt;</span></span></tt></td>
+<td>encart</td>
+</tr>
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;header&gt;</span></span></tt></td>
+<td>en-tête de la section parent (ou du doc)</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;footer&gt;</span></span></tt></td>
+<td>pied de la section parent (ou du doc)</td>
+</tr>
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;nav&gt;</span></span></tt></td>
+<td>section contenant des liens de navigation</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-no">32</div>
+
+</article>
+<article class="slide level-5" id="id8">
+<h5>Exemple<a class="headerlink" href="../html.html#id8" title="View HTML">§</a></h5>
+<div class="big highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- this examples comes from http://www.w3.org/TR/html5/ --&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+ <span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My wonderful blog<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>My tagline<span class="nt">&lt;/p&gt;</span>
+ <span class="nt">&lt;/header&gt;</span>
+ <span class="nt">&lt;aside&gt;</span>
+  <span class="c">&lt;!-- this aside contains two sections that are tangentially related</span>
+<span class="c">  to the page, namely, links to other blogs, and links to blog posts</span>
+<span class="c">  from this blog --&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+   <span class="nt">&lt;h1&gt;</span>My blogroll<span class="nt">&lt;/h1&gt;</span>
+   <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://blog.example.com/&quot;</span><span class="nt">&gt;</span>Example Blog<span class="nt">&lt;/a&gt;</span>
+   <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+   <span class="nt">&lt;h1&gt;</span>Archives<span class="nt">&lt;/h1&gt;</span>
+   <span class="nt">&lt;ol</span> <span class="na">reversed</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/last-post&quot;</span><span class="nt">&gt;</span>My last post<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/first-post&quot;</span><span class="nt">&gt;</span>My first post<span class="nt">&lt;/a&gt;</span>
+   <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+ <span class="nt">&lt;/aside&gt;</span>
+ <span class="nt">&lt;aside&gt;</span>
+  <span class="c">&lt;!-- this aside is tangentially related to the page also, it</span>
+<span class="c">  contains twitter messages from the blog author --&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Twitter Feed<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;blockquote</span> <span class="na">cite=</span><span class="s">&quot;http://twitter.example.net/t31351234&quot;</span><span class="nt">&gt;</span>
+   I&#39;m on vacation, writing my blog.
+  <span class="nt">&lt;/blockquote&gt;</span>
+  <span class="nt">&lt;blockquote</span> <span class="na">cite=</span><span class="s">&quot;http://twitter.example.net/t31219752&quot;</span><span class="nt">&gt;</span>
+   I&#39;m going to go on vacation soon.
+  <span class="nt">&lt;/blockquote&gt;</span>
+ <span class="nt">&lt;/aside&gt;</span>
+ <span class="nt">&lt;article&gt;</span>
+  <span class="c">&lt;!-- this is a blog post --&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My last post<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is my last post.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+   <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/last-post&quot;</span> <span class="na">rel=</span><span class="s">bookmark</span><span class="nt">&gt;</span>Permalink<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+ <span class="nt">&lt;/article&gt;</span>
+ <span class="nt">&lt;article&gt;</span>
+  <span class="c">&lt;!-- this is also a blog post --&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My first post<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is my first post.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;aside&gt;</span>
+   <span class="c">&lt;!-- this aside is about the blog post, since it&#39;s inside the</span>
+<span class="c">   &lt;article&gt; element; it would be wrong, for instance, to put the</span>
+<span class="c">   blogroll here, since the blogroll isn&#39;t really related to this post</span>
+<span class="c">   specifically, only to the page as a whole --&gt;</span>
+   <span class="nt">&lt;h1&gt;</span>Posting<span class="nt">&lt;/h1&gt;</span>
+   <span class="nt">&lt;p&gt;</span>While I&#39;m thinking about it, I wanted to say something about
+   posting. Posting is fun!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/aside&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+   <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/first-post&quot;</span> <span class="na">rel=</span><span class="s">bookmark</span><span class="nt">&gt;</span>Permalink<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+ <span class="nt">&lt;/article&gt;</span>
+ <span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/archives&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;</span> —
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/about&quot;</span><span class="nt">&gt;</span>About me<span class="nt">&lt;/a&gt;</span> —
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/copyright&quot;</span><span class="nt">&gt;</span>Copyright<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+ <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">33</div>
+
+</article>
+<article class="slide level-3" id="quelques-balises-utiles">
+<h3>Quelques balises utiles<a class="headerlink" href="../html.html#quelques-balises-utiles" title="View HTML">§</a></h3>
+<p>Nous allons maintenant présenter un certain nombre de balises
+qui peuvent être utilisées à l'intérieur des balises de paragraphe ou de titre.</p>
+
+<div class="slide-no">34</div>
+
+</article>
+<article class="slide level-4" id="balises-generiques">
+<span id="index-12"></span><h4>Balises génériques<a class="headerlink" href="../html.html#balises-generiques" title="View HTML">§</a></h4>
+<p>Voici quelques balises utiles, avec leur sémantique,
+et leur mise en forme <em>par défaut</em>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="42%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;em&gt;</span></span></tt></td>
+<td>emphase</td>
+<td>italique</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;strong&gt;</span></span></tt></td>
+<td>emphase forte</td>
+<td>gras</td>
+</tr>
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;dfn&gt;</span></span></tt></td>
+<td>définition</td>
+<td>aucun</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;cite&gt;</span></span></tt></td>
+<td>titre d'ouvrage</td>
+<td>italique</td>
+</tr>
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;q&gt;</span></span></tt></td>
+<td>citation</td>
+<td>guillemets</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-no">35</div>
+
+</article>
+<article class="slide level-5" id="id9">
+<h5>Exemple<a class="headerlink" href="../html.html#id9" title="View HTML">§</a></h5>
+<div class="highlight-html"><div class="highlight"><pre>Selon <span class="nt">&lt;cite&gt;</span>Wikipedia<span class="nt">&lt;/cite&gt;</span>, la <span class="nt">&lt;dfn&gt;</span>prose<span class="nt">&lt;/dfn&gt;</span> est :
+<span class="nt">&lt;q&gt;</span>la forme <span class="nt">&lt;em&gt;</span>ordinaire<span class="nt">&lt;/em&gt;</span> de l&#39;expression verbale.<span class="nt">&lt;/q&gt;</span>
+</pre></div>
+</div>
+<p class="rendered" lang="fr">
+ Selon <cite>Wikipedia</cite>, la <dfn>prose</dfn> est :
+ <q>la forme <em>ordinaire</em> de l'expression verbale.</q>
+</p><p class="rendered alt" lang="fr">
+ Selon <cite>Wikipedia</cite>, la <dfn>prose</dfn> est :
+ <q>la forme <em>ordinaire</em> de l'expression verbale.</q>
+</p>
+<div class="slide-no">36</div>
+
+</article>
+<article class="slide level-4" id="documentation-informatique">
+<span id="index-13"></span><h4>Documentation informatique<a class="headerlink" href="../html.html#documentation-informatique" title="View HTML">§</a></h4>
+<p>Les balises suivantes sont utiles pour écrire
+des documentations informatiques (ou scientifiques).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="42%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;code&gt;</span></span></tt></td>
+<td>code informatique</td>
+<td>non-prop</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;kbd&gt;</span></span></tt></td>
+<td>entrée clavier</td>
+<td>non-prop</td>
+</tr>
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;samp&gt;</span></span></tt></td>
+<td>sortie de programme</td>
+<td>non-prop</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;var&gt;</span></span></tt></td>
+<td>variable</td>
+<td>italique</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-no">37</div>
+
+</article>
+<article class="slide level-5" id="id10">
+<h5>Exemple<a class="headerlink" href="../html.html#id10" title="View HTML">§</a></h5>
+<div class="highlight-html"><div class="highlight"><pre>La boucle <span class="nt">&lt;code&gt;</span>while<span class="nt">&lt;/code&gt;</span> affiche <span class="nt">&lt;samp&gt;</span>1 2 3 4<span class="nt">&lt;/samp&gt;</span>,
+soient toutes les valeurs prises par <span class="nt">&lt;var&gt;</span>i<span class="nt">&lt;/var&gt;</span>.
+</pre></div>
+</div>
+<p class="rendered">
+ La boucle <code>while</code> affiche <samp>1 2 3 4</samp>,
+ soient toutes les valeurs prises par <var>i</var>.
+</p><p class="rendered alt">
+ La boucle <code>while</code> affiche <samp>1 2 3 4</samp>,
+ soient toutes les valeurs prises par <var>i</var>.
+</p>
+<div class="slide-no">38</div>
+
+</article>
+<article class="slide level-4" id="document-evolutif">
+<span id="index-14"></span><h4>Document évolutif<a class="headerlink" href="../html.html#document-evolutif" title="View HTML">§</a></h4>
+<p>Les balises suivantes sont utiles pour faire apparaître
+les évolutions d'un document.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="42%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;ins&gt;</span></span></tt></td>
+<td>texte inséré</td>
+<td>souligné</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;del&gt;</span></span></tt></td>
+<td>texte supprimé</td>
+<td>barré</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-no">39</div>
+
+</article>
+<article class="slide level-5" id="id11">
+<h5>Exemple<a class="headerlink" href="../html.html#id11" title="View HTML">§</a></h5>
+<div class="highlight-html"><div class="highlight"><pre>Je <span class="nt">&lt;del&gt;</span>ne<span class="nt">&lt;/del&gt;</span> connais
+<span class="nt">&lt;del&gt;</span>rien à<span class="nt">&lt;/del&gt;&lt;ins&gt;</span>bien<span class="nt">&lt;/ins&gt;</span> HTML.
+</pre></div>
+</div>
+<p class="rendered">
+ Je <del>ne</del> connais
+ <del>rien à</del><ins>bien</ins> HTML.
+</p><p class="rendered alt">
+ Je <del>ne</del> connais
+ <del>rien à</del><ins>bien</ins> HTML.
+</p>
+<div class="slide-no">40</div>
+
+</article>
+<article class="slide level-4" id="balises-historiques">
+<span id="index-15"></span><h4>Balises historiques<a class="headerlink" href="../html.html#balises-historiques" title="View HTML">§</a></h4>
+<p>Ces balises datent des premières versions de HTML,
+où la séparation fond&nbsp;/ forme n'était pas encore de rigueur.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;b&gt;</span></span></tt></td>
+<td>texte en gras</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;i&gt;</span></span></tt></td>
+<td>texte en italique</td>
+</tr>
+<tr class="row-odd"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;u&gt;</span></span></tt></td>
+<td>texte souligné</td>
+</tr>
+<tr class="row-even"><td><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;br&gt;</span></span></tt></td>
+<td>saut de ligne (sans contenu)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Elles sont encore valides en HTML5, (et donc acceptées par le valideur)
+mais la plupart du temps,
+il faut leur préférer une balise avec une sémantique plus précise.</p>
+</div>
+
+<div class="slide-no">41</div>
+
+</article>
+<article class="slide level-5" id="exo-catane3">
+<span id="id12"></span><h5>Exercice<a class="headerlink" href="../html.html#exo-catane3" title="View HTML">§</a></h5>
+<p>Reprenez votre code HTML reproduisant l'<a class="reference external" href="_static/exo_structure/sujet.png">exemple ci-avant</a>,
+et ajoutez les balises manquantes.</p>
+<p>Le rendu doit maintenant être très proche de celui de l'exemple.</p>
+
+<div class="slide-no">42</div>
+
+</article>
+<article class="slide level-2" id="listes">
+<h2>Listes<a class="headerlink" href="../html.html#listes" title="View HTML">§</a></h2>
+
+<div class="slide-no">43</div>
+
+</article>
+<article class="slide level-3" id="motivation">
+<h3>Motivation<a class="headerlink" href="../html.html#motivation" title="View HTML">§</a></h3>
+<p>Une liste est un paragraphe d'un type particulier,
+contenant une énumération d'éléments.</p>
+
+<div class="slide-no">44</div>
+
+</article>
+<article class="slide level-3" id="liste-non-ordonnee">
+<span id="index-16"></span><h3>Liste non ordonnée<a class="headerlink" href="../html.html#liste-non-ordonnee" title="View HTML">§</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>sucre<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>céréales<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>lait<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<section class="rendered">
+ <ul>
+   <li>sucre</li>
+   <li>céréales</li>
+   <li>lait</li>
+ </ul>
+</section>
+<div class="slide-no">45</div>
+
+</article>
+<article class="slide level-3" id="liste-ordonnee">
+<span id="index-17"></span><h3>Liste ordonnée<a class="headerlink" href="../html.html#liste-ordonnee" title="View HTML">§</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>sucre<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>céréales<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>lait<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div>
+</div>
+<section class="rendered">
+ <ol>
+   <li>sucre</li>
+   <li>céréales</li>
+   <li>lait</li>
+ </ol>
+</section>
+<div class="slide-no">46</div>
+
+</article>
+<article class="slide level-4" id="remarque">
+<h4>Remarque<a class="headerlink" href="../html.html#remarque" title="View HTML">§</a></h4>
+<p>On note que&nbsp;:</p>
+<ul class="simple">
+<li><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;ul&gt;</span></span></tt> signifie <span class="eng">unordered list</span></li>
+<li><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;ol&gt;</span></span></tt> signifie <span class="eng">ordered list</span></li>
+<li><tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;li&gt;</span></span></tt> signifie <span class="eng">list item</span></li>
+</ul>
+<p>Dans une liste ordonnée, les éléments sont <em>automatiquement</em> numérotés
+(mais cette numérotation peut être contrôlée avec une feuille de style).</p>
+
+<div class="slide-no">47</div>
+
+</article>
+<article class="slide level-4" id="styles-alternatifs-pour-les-listes">
+<h4>Styles alternatifs pour les listes<a class="headerlink" href="../html.html#styles-alternatifs-pour-les-listes" title="View HTML">§</a></h4>
+<section class="rendered alt">
+ <ul>
+   <li>sucre</li>
+   <li>céréales</li>
+   <li>lait</li>
+ </ul>
+</section><section class="rendered alt">
+ <ol>
+   <li>sucre</li>
+   <li>céréales</li>
+   <li>lait</li>
+ </ol>
+</section>
+<div class="slide-no">48</div>
+
+</article>
+<article class="slide level-5" id="id14">
+<h5>Exercice<a class="headerlink" href="../html.html#id14" title="View HTML">§</a></h5>
+<p>Dans l'<a class="reference external" href="_static/exo_structure/sujet.png">exemple ci-avant</a> pouvez-vous identifier une liste&nbsp;?
+Reprenez votre code HTML reproduisant cet exemple et
+modifiez-le en conséquence.</p>
+<p>Le rendu doit maintenant être identique à celui de l'exemple.</p>
+
+<div class="slide-no">49</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <a class="reference internal" href="seances.html#seance2"><em>Séance 2</em></a></h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance3"><em>Séance 3</em></a>.</p>
+
+<div class="slide-no">50</div>
+
+</article>
+<article class="slide level-2" id="liens-et-contenus-embarques">
+<span id="liens"></span><h2>Liens et contenus embarqués<a class="headerlink" href="../html.html#liens-et-contenus-embarques" title="View HTML">§</a></h2>
+
+<div class="slide-no">51</div>
+
+</article>
+<article class="slide level-3" id="urls">
+<span id="index-18"></span><h3>URLs<a class="headerlink" href="../html.html#urls" title="View HTML">§</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/url-structure.svg"><img src="_images/url-structure.svg" width="80%" /></a>
+</div>
+<ul class="simple">
+<li>Le nom local a une structure hiérarchique
+(similaire à la structure des fichiers).</li>
+<li>Comme pour les fichiers,
+on peut spécifier une URL <em>relativement</em> à une autre.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Malgré cette similitude,
+les ressources ne correspondent <em>pas toujours</em> à des fichiers.</p>
+</div>
+
+<div class="slide-no">52</div>
+
+</article>
+<article class="slide level-4" id="url-relative">
+<h4>URL relative<a class="headerlink" href="../html.html#url-relative" title="View HTML">§</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&quot;&quot;</td>
+<td>l'URL de base</td>
+</tr>
+<tr class="row-even"><td>&quot;toto&quot;</td>
+<td>la ressource <tt class="docutils literal"><span class="pre">toto</span></tt> dans le &quot;dossier&quot; courant</td>
+</tr>
+<tr class="row-odd"><td>&quot;.&quot;</td>
+<td>le &quot;dossier&quot; courant</td>
+</tr>
+<tr class="row-even"><td>&quot;..&quot;</td>
+<td>le &quot;dossier&quot; parent du &quot;dossier&quot; courant</td>
+</tr>
+<tr class="row-odd"><td>&quot;/&quot;</td>
+<td>le &quot;dossier&quot; racine du serveur</td>
+</tr>
+</tbody>
+</table>
+<p>On peut ensuite combiner ces éléments en les séparant par &quot;/&quot;.</p>
+<p>Étant données une URL de base et une URL relative,
+on peut calculer l'URL absolue correspondante
+simplement par un jeu d'écriture.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Plus précisément,
+c'est une manipulation purement <em>syntaxique</em>,
+qui est donc indépendante de
+la structure des éventuels fichiers sur le serveur.</p>
+<p>Il est même possible que l'URL relative et le nom de fichier relatif
+donnent des résultats différents, exemple&nbsp;:</p>
+<ul class="last simple">
+<li><tt class="docutils literal"><span class="pre">http://example.org/pchampin/</span></tt> correspond au répertoire
+<tt class="docutils literal"><span class="pre">/home/pchampin/public_html/</span></tt> sur le serveur&nbsp;;</li>
+<li>l'URL relative <tt class="docutils literal"><span class="pre">../jdoe/</span></tt> conduit à l'URL <tt class="docutils literal"><span class="pre">http://example.org/jdoe/</span></tt>,
+qui correspond au répertoire <tt class="docutils literal"><span class="pre">/home/jdoe/public_html/</span></tt>,</li>
+<li>alors que le nom de fichier relatif <tt class="docutils literal"><span class="pre">../jdoe/</span></tt> conduit au répertoire
+<tt class="docutils literal"><span class="pre">/home/pchampin/jdoe/</span></tt> qui n'a pas d'URL correspondante
+(et d'ailleurs n'existe probablement pas).</li>
+</ul>
+</div>
+
+<div class="slide-no">53</div>
+
+</article>
+<article class="slide level-4" id="exercices">
+<h4>Exercices<a class="headerlink" href="../html.html#exercices" title="View HTML">§</a></h4>
+<p>Combinez chacune des URLs de base de gauche
+avec chacune des URLs relatives de droite.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="65%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">URLs absolues</th>
+<th class="head">URLs relatives</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><ul class="first last simple">
+<li><a class="reference external" href="http://example.com/foo/bar/toto">http://example.com/foo/bar/toto</a></li>
+<li><a class="reference external" href="http://example.com/foo/bar/tata">http://example.com/foo/bar/tata</a></li>
+<li><a class="reference external" href="http://example.com/foo/bar/titi/">http://example.com/foo/bar/titi/</a></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li>.</li>
+<li>tata</li>
+<li>../tata</li>
+<li>baz/tutu</li>
+<li>../../there</li>
+<li>/somewhere/else</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-no">54</div>
+
+</article>
+<article class="slide level-5" id="exercices-suite">
+<h5>Exercices (suite)<a class="headerlink" href="../html.html#exercices-suite" title="View HTML">§</a></h5>
+<p>Considérant l'URL de base <a class="reference external" href="http://example.com/foo/bar/p1.html">http://example.com/foo/bar/p1.html</a> ,
+donnez une URL relative pour&nbsp;:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://example.com/foo/bar/p2.html">http://example.com/foo/bar/p2.html</a></li>
+<li><a class="reference external" href="http://example.com/foo/assets/style.css">http://example.com/foo/assets/style.css</a></li>
+<li><a class="reference external" href="http://example.com/foo/bar/img/photo.jpg">http://example.com/foo/bar/img/photo.jpg</a></li>
+<li><a class="reference external" href="http://example.com/global.css">http://example.com/global.css</a></li>
+</ul>
+
+<div class="slide-no">55</div>
+
+</article>
+<article class="slide level-3" id="image">
+<span id="index-19"></span><h3>Image<a class="headerlink" href="../html.html#image" title="View HTML">§</a></h3>
+<ul class="simple">
+<li>Une image peut être insérée avec la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;img&gt;</span></span></tt>.</li>
+<li>Cette balise est une <a class="reference internal" href="#balisevide"><em>balise vide</em></a></li>
+<li>Elle a deux attributs obligatoires&nbsp;:<ul>
+<li><tt class="code html docutils literal"><span class="pre">src</span></tt>&nbsp;: l'URL (absolue ou relative) de l'image,</li>
+<li><tt class="code html docutils literal"><span class="pre">alt</span></tt>&nbsp;: une description textuelle de l'image.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>La description textuelle est obligatoire pour les situations où l'image
+ne peut pas être affichée&nbsp;:</p>
+<ul class="last simple">
+<li>elle n'a pas pu être chargée,</li>
+<li>elle n'est pas reconnue par le navigateur,</li>
+<li>le navigateur ne peut pas afficher d'image (<em>e.g.</em> lecteur d'écran)...</li>
+</ul>
+</div>
+
+<div class="slide-no">56</div>
+
+</article>
+<article class="slide level-4" id="id16">
+<h4>Exemple<a class="headerlink" href="../html.html#id16" title="View HTML">§</a></h4>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;_static/monalisa-small.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Portrait de Mona Lisa&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p class="rendered">
+  <img src="_static/monalisa-small.jpg"  alt="Portrait de Mona Lisa" style="max-width: 100%; height: 10em">
+</p><p>Source image <a class="reference external" href="http://en.wikipedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg">Wikipedia</a></p>
+
+<div class="slide-no">57</div>
+
+</article>
+<article class="slide level-4" id="images-et-droit-d-auteur">
+<h4>Images et droit d'auteur<a class="headerlink" href="../html.html#images-et-droit-d-auteur" title="View HTML">§</a></h4>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Le fait qu'une image soit disponible sur le Web ne signifie pas
+que vous avez toute latitude pour la réutiliser sur votre propre site.</p>
+</div>
+<p>Ce qu'il faut faire&nbsp;:</p>
+<ul class="simple">
+<li>vérifier les droits associés<ul>
+<li>au besoin, en contactant le propriétaire,</li>
+</ul>
+</li>
+<li>citer les sources.</li>
+</ul>
+
+<div class="slide-no">58</div>
+
+</article>
+<article class="slide level-5" id="images-reutilisables">
+<h5>Images réutilisables<a class="headerlink" href="../html.html#images-reutilisables" title="View HTML">§</a></h5>
+<ul class="simple">
+<li>Domaine publique</li>
+<li><a class="reference external" href="http://creativecommons.org/">Creative Commons</a><ul>
+<li>réutilisables sous condition</li>
+<li><a class="reference external" href="http://www.flickr.com/search/advanced/?">la recherche avancée de flickr</a> permet de filtre les résultats
+par license (cc)</li>
+</ul>
+</li>
+<li>voyez aussi <a class="reference external" href="http://commons.wikimedia.org/">Wikimedia Commons</a></li>
+</ul>
+
+<div class="slide-no">59</div>
+
+</article>
+<article class="slide level-3" id="index-20">
+<span id="id21"></span><h3>Liens<a class="headerlink" href="../html.html#index-20" title="View HTML">§</a></h3>
+<ul class="simple">
+<li>La balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;a&gt;</span></span></tt> transforme son contenu en lien hypertexte.</li>
+<li>Elle doit contenir un attribut <tt class="code html docutils literal"><span class="pre">href</span></tt>,
+qui contient l'URL (absolue ou relative) vers lequel dirige ce lien.</li>
+</ul>
+<div class="highlight-html"><div class="highlight"><pre>Bienvenue à
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://iut.univ-lyon1.fr/&quot;</span><span class="nt">&gt;</span>l&#39;IUT de Lyon<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p class="rendered">
+  Bienvenue à
+  <a href="http://iut.univ-lyon1.fr/">
+  l'IUT de Lyon
+  </a>
+</p>
+<div class="slide-no">60</div>
+
+</article>
+<article class="slide level-4" id="contenu-de-la-balise-a">
+<h4>Contenu de la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;a&gt;</span></span></tt><a class="headerlink" href="../html.html#contenu-de-la-balise-a" title="View HTML">§</a></h4>
+<p>Rien n'empèche bien sûr la balise <tt class="code html docutils literal"><span class="name tag"><span class="pre">&lt;a&gt;</span></span></tt> de contenir d'autres balises.</p>
+<div class="highlight-html"><div class="highlight"><pre>Bienvenue à
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://iut.univ-lyon1.fr/&quot;</span><span class="nt">&gt;</span>
+  l&#39;<span class="nt">&lt;strong&gt;</span>IUT<span class="nt">&lt;/strong&gt;</span> de Lyon
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;_static/logo-lyon1.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Logo de Lyon1&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p class="rendered">
+  Bienvenue à
+  <a href="http://iut.univ-lyon1.fr/">l'<strong>IUT</strong> de Lyon
+  <img src="_static/logo-lyon1.jpg" alt="Logo de Lyon1"/></a>
+</p>
+<div class="slide-no">61</div>
+
+</article>
+<article class="slide level-4" id="lien-interne">
+<span id="index-21"></span><span id="id22"></span><h4>Lien interne<a class="headerlink" href="../html.html#lien-interne" title="View HTML">§</a></h4>
+<ul class="simple">
+<li>Il peut être utile de faire pointer un lien vers un <strong>fragment</strong> particulier
+d'un document plutôt que vers son intégralité.</li>
+<li>En HTML, toute balise délimite une partie du document.
+On peut donner un nom à ce fragment en ajoutant à la balise
+l'attribut <tt class="code html docutils literal"><span class="pre">id</span></tt>.</li>
+<li>L'URL du fragment est constituée en concaténant&nbsp;:<ul>
+<li>l'URL du document,</li>
+<li>le caractère «&nbsp;#&nbsp;», et</li>
+<li>l'identifiant du fragment.</li>
+</ul>
+</li>
+<li>NB&nbsp;: une URL relative commençant par «&nbsp;#&nbsp;» désigne donc un fragment
+du document courant.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Deux éléments du même document ne <em>peuvent pas</em> avoir
+la même valeur pour l'attribut <tt class="code html docutils literal"><span class="pre">id</span></tt>
+(ce qui serait contradictoire avec la notion d'identifiant).</p>
+<p>Dans les anciennes versions d'HTML,
+on utilisait une balise vide de la forme:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">&quot;identifier&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p class="last">mais cette syntaxe est obsolète.</p>
+</div>
+
+<div class="slide-no">62</div>
+
+</article>
+<article class="slide level-5" id="exemples">
+<h5>Exemples<a class="headerlink" href="../html.html#exemples" title="View HTML">§</a></h5>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#sec1&quot;</span><span class="nt">&gt;</span>
+  pointe vers le fragment #sec1 du document courant<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;other.html#sec2&quot;</span><span class="nt">&gt;</span>
+  pointe vers le fragment #sec2 d&#39;un autre document<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://en.wikipedia.org/wiki/Lyon#Details&quot;</span><span class="nt">&gt;</span>
+  pointe vers la section &quot;Détails&quot; d&#39;un article
+  Wikipedia<span class="nt">&lt;/a&gt;</span>
+
+<span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">&quot;sec1&quot;</span><span class="nt">&gt;</span>
+  La section vers laquelle pointe le 1er lien ci-dessus.
+  ...<span class="nt">&lt;/section&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">63</div>
+
+</article>
+<article class="slide level-4" id="organisation-des-fichiers">
+<h4>Organisation des fichiers<a class="headerlink" href="../html.html#organisation-des-fichiers" title="View HTML">§</a></h4>
+<p>Lorsque le nombre de fichiers constituant un site croît,
+il devient important de penser leur organisation. Quelques conseils&nbsp;:</p>
+<ul class="simple">
+<li>séparer les pages HTML des fichiers «&nbsp;utilitaires&nbsp;»
+(feuilles de styles, images) en plaçant ces derniers dans un sous-répertoire,</li>
+<li>calquer la hiérarchie des répertoires sur la structure logique du site,</li>
+<li>utiliser des fichiers <tt class="docutils literal"><span class="pre">index.html</span></tt> comme «&nbsp;point d'entrée&nbsp;» de chaque
+répertoire.</li>
+</ul>
+
+<div class="slide-no">64</div>
+
+</article>
+<article class="slide level-5" id="id23">
+<h5>Exemple<a class="headerlink" href="../html.html#id23" title="View HTML">§</a></h5>
+<div class="big tree highlight-text"><div class="highlight"><pre>├ assets/
+│ ├ style.css
+│ ├ img1.png
+│ └ ...
+├ index.html
+├ page1.html
+├ page2.html
+│
+├ sous-site1/
+│ ├ assets/
+│ │ └ ...
+│ ├ index.html
+│ └ page2.html
+└ sous-site2/
+  └ ...
+</pre></div>
+</div>
+
+<div class="slide-no">65</div>
+
+</article>
+<article class="slide level-4" id="exercice-livre-dont-vous-etes-le-heros">
+<span id="donjon"></span><h4>Exercice&nbsp;: livre dont vous êtes le héros<a class="headerlink" href="../html.html#exercice-livre-dont-vous-etes-le-heros" title="View HTML">§</a></h4>
+<p>Téléchargez <a class="reference external" href="_static/exo_liens/sujet.html">ce fichier html</a>. Il contient un livre dont vous êtes le héros minimaliste.</p>
+<ol class="arabic simple">
+<li>Faites en une version interactive avec des liens internes.</li>
+<li>Faites en une version interactive ou chaque entrée
+est une page HTML distincte.</li>
+</ol>
+
+<div class="slide-no">66</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Suite la <a class="reference internal" href="seances.html#seance4"><em>Séance 4</em></a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="css.html#position"><em>Positionnement en CSS</em></a></li>
+<li><a class="reference internal" href="css.html#boite"><em>Personnalisation des boîtes</em></a></li>
+</ul>
+
+<div class="slide-no">67</div>
+
+</article>
+<article class="slide level-3" id="video">
+<span id="id25"></span><h3>Vidéo<a class="headerlink" href="../html.html#video" title="View HTML">§</a></h3>
+<p>TODO</p>
+
+<div class="slide-no">68</div>
+
+</article>
+<article class="slide level-2" id="html-avance">
+<span id="id26"></span><h2>HTML avancé<a class="headerlink" href="../html.html#html-avance" title="View HTML">§</a></h2>
+
+<div class="slide-no">69</div>
+
+</article>
+<article class="slide level-3" id="entites">
+<h3>Entités<a class="headerlink" href="../html.html#entites" title="View HTML">§</a></h3>
+<p>TODO TRANSLATE &amp; ADAPT</p>
+<p>The following characters have special meaning in HTML, so a special code (<em>entity</em>) is needed to display them:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="41%" />
+<col width="41%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&lt;</td>
+<td><tt class="docutils literal"><span class="pre">&amp;lt;</span></tt></td>
+<td>lower than</td>
+</tr>
+<tr class="row-even"><td>&gt;</td>
+<td><tt class="docutils literal"><span class="pre">&amp;gt;</span></tt></td>
+<td>greater than</td>
+</tr>
+<tr class="row-odd"><td>&quot;</td>
+<td><tt class="docutils literal"><span class="pre">&amp;quote;</span></tt></td>
+<td>quote</td>
+</tr>
+<tr class="row-even"><td>'</td>
+<td><tt class="docutils literal"><span class="pre">&amp;apos;</span></tt></td>
+<td>apostrophe</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">&amp;</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">&amp;amp;</span></tt></td>
+<td>ampersand</td>
+</tr>
+</tbody>
+</table>
+<p>NB: other <em>entities</em> exist for many non-ASCII character, for example <tt class="docutils literal"><span class="pre">&amp;eacute;</span></tt> for é, <tt class="docutils literal"><span class="pre">&amp;Agrave;</span></tt> for À, <tt class="docutils literal"><span class="pre">&amp;ccedil;</span></tt> for ç...</p>
+<p>However, HTML now supports unicode, so they are not strictly necessary (and they hinder readbility).</p>
+
+<div class="slide-no">70</div>
+
+</article>
+<article class="slide level-3" id="commentaires">
+<h3>Commentaires<a class="headerlink" href="../html.html#commentaires" title="View HTML">§</a></h3>
+<p>En HTML, tout texte commençant par <tt class="code html docutils literal"><span class="comment"><span class="pre">&lt;!--</span></span></tt>
+et se terminant par <tt class="code html docutils literal"><span class="pre">--&gt;</span></tt>
+est considéré comme un commentaire.
+Tout ce qu'il contient (texte et balises) sera ignoré.</p>
+<div class="highlight-html"><div class="highlight"><pre>hello <span class="c">&lt;!--</span>
+<span class="c">  &lt;strong&gt;wonderful&lt;/strong&gt;</span>
+<span class="c">--&gt;</span> world
+</pre></div>
+</div>
+<p class="rendered">
+  hello <!--
+    <strong>wonderful</strong>
+  --> world
+</p>
+<div class="slide-no">71</div>
+
+</article>
+<article class="slide level-4" id="utilite">
+<h4>Utilité<a class="headerlink" href="../html.html#utilite" title="View HTML">§</a></h4>
+<p>Les commentaires servent à</p>
+<ul class="simple">
+<li>documenter la structure d'un document compliqué,</li>
+<li>cacher temporairement une partie d'un document
+(pour le debug, notamment).</li>
+</ul>
+<p>Notons que le commentaire ne concerne pas que l'affichage&nbsp;:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;style1.css&quot;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style2.css&quot;/&gt;</span>
+<span class="c">  inhibe temporairement la 2e feuille de style --&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">72</div>
+
+</article>
+<article class="slide level-3" id="meta-donnees">
+<h3>Méta-données<a class="headerlink" href="../html.html#meta-donnees" title="View HTML">§</a></h3>
+<p>TODO TRANSLATE &amp; ADAPT</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">&lt;meta&gt;</span></tt> tags are located in the <tt class="docutils literal"><span class="pre">&lt;head&gt;</span></tt> of the document.</li>
+<li>They contain <em>metadata</em>: data about the document itself (literally: “data about the data”), usable for example by search engines.</li>
+</ul>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span>
+      <span class="na">content=</span><span class="s">&quot;learn advanced tricks in HTML&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;author&quot;</span>
+      <span class="na">content=</span><span class="s">&quot;Pierre-Antoine Champin&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content=</span><span class="s">&quot;html web iut&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">73</div>
+
+</article>
+<article class="slide level-4" id="robot-meta-tag">
+<h4>Robot meta tag<a class="headerlink" href="../html.html#robot-meta-tag" title="View HTML">§</a></h4>
+<p>The <tt class="docutils literal"><span class="pre">robot</span></tt> meta tag can be used to provide instructions to search engines:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">index/noindex</span></tt>: whether they should index the page itself</li>
+<li><tt class="docutils literal"><span class="pre">follow/nofollow</span></tt>: whether they should follow the links in the page</li>
+</ul>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;robot&quot;</span> <span class="na">content=</span><span class="s">&quot;index,nofollow&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">74</div>
+
+</article>
+<article class="slide level-4" id="language-of-metadata">
+<h4>Language of metadata<a class="headerlink" href="../html.html#language-of-metadata" title="View HTML">§</a></h4>
+<p>Metadata can be provided in different languages, specified with the <tt class="docutils literal"><span class="pre">lang</span></tt> attribute, with a language code as specified by <a class="reference external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>.</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span>
+      <span class="na">content=</span><span class="s">&quot;learn advanced tricks in HTML&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">lang=</span><span class="s">&quot;fr&quot;</span>
+      <span class="na">content=</span><span class="s">&quot;apprenez plus de toursen HTML&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">lang</span></tt> attribute can be used on <em>any</em> HTML tag, including inside the body.</p>
+</div>
+
+<div class="slide-no">75</div>
+
+</article>
+<article class="slide level-3" id="span-et-div">
+<h3>Span et div<a class="headerlink" href="../html.html#span-et-div" title="View HTML">§</a></h3>
+<p>TODO</p>
+
+<div class="slide-no">76</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <a class="reference internal" href="seances.html#seance5"><em>Séance 5</em></a></h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance6"><em>Séance 6</em></a>.</p>
+
+<div class="slide-no">77</div>
+
+</article>
+<article class="slide level-2" id="tableaux">
+<span id="table"></span><h2>Tableaux<a class="headerlink" href="../html.html#tableaux" title="View HTML">§</a></h2>
+<p>TODO TRANSLATE &amp; ADAPT</p>
+<p>A table is composed of rows, which are in turn composed of cells.</p>
+<table class="example">
+  <tr>
+    <td colspan="3" class="no-border"> the table </td>
+  </tr>
+  <tr>
+    <td colspan="3"> a row </td>
+  </tr>
+  <tr>
+    <th> a header cell </th>
+    <td> a data cell </td>
+    <td> another data cell </td>
+  </tr>
+</table><p>This is described with the following tags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>table</td>
+<td><tt class="docutils literal"><span class="pre">&lt;table&gt;</span></tt></td>
+</tr>
+<tr class="row-even"><td>row</td>
+<td><tt class="docutils literal"><span class="pre">&lt;tr&gt;</span></tt></td>
+</tr>
+<tr class="row-odd"><td>header cell</td>
+<td><tt class="docutils literal"><span class="pre">&lt;th&gt;</span></tt></td>
+</tr>
+<tr class="row-even"><td>data cell</td>
+<td><tt class="docutils literal"><span class="pre">&lt;td&gt;</span></tt></td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-no">78</div>
+
+</article>
+<article class="slide level-3" id="example-code">
+<h3>Example (code)<a class="headerlink" href="../html.html#example-code" title="View HTML">§</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Product<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;th&gt;</span>Price<span class="nt">&lt;/th&gt;</span> <span class="nt">&lt;th&gt;</span>Available<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Beer<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>3€<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>no<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Wine<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>5€<span class="nt">&lt;/td&gt;</span> <span class="nt">&lt;td&gt;</span>yes<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+</div>
+
+<div class="slide-no">79</div>
+
+</article>
+<article class="slide level-3" id="example-rendered">
+<h3>Example (rendered)<a class="headerlink" href="../html.html#example-rendered" title="View HTML">§</a></h3>
+<table class="rendered example">
+  <tr>
+    <th>Product</th> <th>Price</th> <th>Available</th>
+  </tr>
+  <tr>
+    <td>Beer</td> <td>3€</td> <td>no</td>
+  </tr>
+  <tr>
+    <td>Wine</td> <td>5€</td> <td>yes</td>
+  </tr>
+</table>
+<div class="slide-no">80</div>
+
+</article>
+<article class="slide level-3" id="exo-calculette1">
+<span id="id27"></span><h3>Exercice<a class="headerlink" href="../html.html#exo-calculette1" title="View HTML">§</a></h3>
+<p>Reproduisez <a class="reference external" href="_static/exo_calculette/sujet_table.png">ce modèle</a> représentant une calculatrice.</p>
+
+<div class="slide-no">81</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <a class="reference internal" href="seances.html#seance6"><em>Séance 6</em></a></h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance7"><em>Séance 7</em></a>.</p>
+
+<div class="slide-no">82</div>
+
+</article>
+<article class="slide level-2" id="formulaires-et-interactivite">
+<span id="form"></span><h2>Formulaires et interactivité<a class="headerlink" href="../html.html#formulaires-et-interactivite" title="View HTML">§</a></h2>
+<p>TODO</p>
+
+<div class="slide-no">83</div>
+
+</article>
+<article class="slide level-3" id="exo-calculette2">
+<span id="id29"></span><h3>Exercice<a class="headerlink" href="../html.html#exo-calculette2" title="View HTML">§</a></h3>
+<p>Reprenez <a class="reference internal" href="#exo-calculette1"><em>votre code représentant une calculatrice</em></a>
+et améliorez le pour qu'il soit conforme à <a class="reference external" href="_static/exo_calculette/sujet_form.png">ce modèle</a>.</p>
+
+<div class="slide-no">84</div>
+
+</article>
+<article class="nav-seance slide level-2">
+<h2>Fin de la <cite>seance8</cite>:ref</h2>
+<p>Vers la <a class="reference internal" href="seances.html#seance9"><em>Séances 9</em></a>.</p>
+
+<div class="slide-no">85</div>
+
+</article>
+
+
+</section>
+
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2013-10-10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+  </body>
+</html>

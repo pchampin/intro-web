@@ -127,7 +127,7 @@ Structure en arbre
 ------------------
 
 De la règle d'emboîtement,
-il découle que les balise confèrent une structure d'**arbre** au document :
+il découle que les balises confèrent une structure d'**arbre** au document :
 
 .. rst-class:: big
 .. code-block:: html
@@ -174,8 +174,8 @@ n'affichera que le texte « P-A. Champin ».
 
 .. _balisevide:
 
-Balises vide
-------------
+Balises vides
+-------------
 
 Certaines balises particulières n'attendent pas de contenu textuel.
 Ces balises **vides** n'ont donc pas de balise fermante correspondante ::
@@ -317,7 +317,7 @@ repérables à leur typographie (et parfois à leur numérotation).
 
   .. admonition:: Question
 
-     Identifiez vous les différents niveaux de titre dans l'exemple suivant ?
+     Identifiez-vous les différents niveaux de titre dans l'exemple suivant ?
 
 
 
@@ -781,7 +781,7 @@ Balises historiques
 -------------------
 
 Ces balises datent des premières versions de HTML,
-ou la séparation fond / forme n'était pas encore de rigueur.
+où la séparation fond / forme n'était pas encore de rigueur.
 
 ============== ===============================
  :html:`<b>`    texte en gras
@@ -1057,12 +1057,12 @@ Exemple
 
 .. code-block:: html
 
-   <img src="_static/monalisa-small.jpg">
+   <img src="_static/monalisa-small.jpg" alt="Portrait de Mona Lisa">
 
 .. raw:: html
 
  <p class="rendered">
-   <img src="_static/monalisa-small.jpg" style="max-width: 100%; height: 10em">
+   <img src="_static/monalisa-small.jpg"  alt="Portrait de Mona Lisa" style="max-width: 100%; height: 10em">
  </p>
 
 Source image Wikipedia__
@@ -1087,8 +1087,8 @@ Ce qu'il faut faire :
 
 * citer les sources.
 
-Image réutilisables
-```````````````````
+Images réutilisables
+````````````````````
 
 * Domaine publique
 
@@ -1134,14 +1134,14 @@ Liens
 Contenu de la balise `<a>`:html:
 --------------------------------
 
-Rien n'empèche bien sûr la balise `<a>`:html: à contenir d'autres balises.
+Rien n'empèche bien sûr la balise `<a>`:html: de contenir d'autres balises.
 
 .. code-block:: html
 
    Bienvenue à
    <a href="http://iut.univ-lyon1.fr/">
      l'<strong>IUT</strong> de Lyon
-     <img src="_static/logo-lyon1.jpg"/>
+     <img src="_static/logo-lyon1.jpg" alt="Logo de Lyon1" />
    </a>
 
 .. raw:: html
@@ -1149,7 +1149,7 @@ Rien n'empèche bien sûr la balise `<a>`:html: à contenir d'autres balises.
  <p class="rendered">
    Bienvenue à
    <a href="http://iut.univ-lyon1.fr/">l'<strong>IUT</strong> de Lyon
-   <img src="_static/logo-lyon1.jpg"/></a>
+   <img src="_static/logo-lyon1.jpg" alt="Logo de Lyon1"/></a>
  </p>
 
 

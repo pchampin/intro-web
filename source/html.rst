@@ -1045,7 +1045,7 @@ Image
 
 .. note::
 
-   La description textuelle est obligatoire pour les situations ou l'image
+   La description textuelle est obligatoire pour les situations où l'image
    ne peut pas être affichée :
 
    * elle n'a pas pu être chargée,

@@ -1062,7 +1062,8 @@ Exemple
 .. raw:: html
 
  <p class="rendered">
-   <img src="_static/monalisa-small.jpg"  alt="Portrait de Mona Lisa" style="max-width: 100%; height: 10em">
+   <img src="_static/monalisa-small.jpg" alt="Portrait de Mona Lisa"
+        style="max-width: 100%; height: 10em">
  </p>
 
 Source image Wikipedia__

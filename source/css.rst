@@ -37,7 +37,7 @@ Avantages
   - mutualisation de la feuille de style
 
 * séparation des tâches (développeur web / graphiste)
-  
+
 
 
 .. index:: link; rel=stylesheet
@@ -113,7 +113,7 @@ Dans le menu contextuel (clic droit) sur n'importe quel élément,
 
 * de naviguer dans l'arbre HTML,
 * de voir les règles qui s'appliquent à chaque élément,
-* de modifier dynamiquement le code HTML et la feuille de style. 
+* de modifier dynamiquement le code HTML et la feuille de style.
 
 
 
@@ -319,7 +319,7 @@ pas *trop différent* des intentions de l'auteur.
 Bonne pratique
 --------------
 
-* Spécifier une *liste* de polices, 
+* Spécifier une *liste* de polices,
 
 * par ordre croissant de probabilité qu'elle soit disponible,
 
@@ -470,7 +470,7 @@ Exemples
 --------
 
 .. code-block:: css
-   
+
    q        { font-style: italic; }
    q em     { font-weight: bold; }
    q strong { text-decoration: underline; }
@@ -499,7 +499,7 @@ __ _static/exo_css_text/sujet.png
 
 
 .. index:: @class, @id
- 
+
 Classes et identifiant
 ++++++++++++++++++++++
 
@@ -620,7 +620,7 @@ Exercice
 
 
 
-.. _position: 
+.. _position:
 
 Position et espacement
 ======================
@@ -704,7 +704,7 @@ Ces propriétés acceptent des longueurs
 .. raw:: html
 
    <p style="width: 50%">Par exemple, ce paragraphe a la propriété
-     <span class="code css">width: 50%</span>,
+     <span class="literal code css">width: 50%</span>,
      il occupe donc la moitié de la largeur de la page.
 
 .. note:: Certains éléments ignorent
@@ -739,16 +739,18 @@ Positionnement flottant
 
 Par défaut, les images appartiennent au flux de texte. Ainsi ::
 
-  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
-  probablement le tableau le plus connu au monde.
+  La Joconde <img src="_static/monalisa.jpg"
+                  alt="Portrait de Mona Lisa">
+  est probablement le tableau le plus connu au monde.
 
 sera affiché comme suit :
 
 .. raw:: html
 
  <p class="rendered" style="font-size: 100% ! important">
-  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
-  probablement le tableau le plus connu au monde.
+  La Joconde <img src="_static/monalisa.jpg"
+                  alt="Portrait de Mona Lisa">
+  est probablement le tableau le plus connu au monde.
  </p>
 
 
@@ -836,7 +838,7 @@ Propriétés ``border``
   ou *style* peut être :
 
   .. raw:: html
-     
+
        <table class="css-values">
        <tr>
        <td><span style="border: 1px none blue">none</span></td>

@@ -952,6 +952,30 @@ par exemple :
 * `border-top-style`:css: (style)
 * `border-top-color`:css: (couleur)
 
+Propriétés ``border`` (exemples)
+````````````````````````````````
+
+.. raw:: html
+
+   <div class="rendered">
+     <p style="border: 1px none black; border-style: solid none">
+     Bord en haut et en bas.
+     </p>
+     <p style="border: 1px none black; border-style: none solid">
+     Bord à gauche et à droite.
+     </p>
+     <p style="border: 1px none black; border-right-style: solid">
+     Bord uniquement à droite.
+     </p>
+     <p style="border-top: 1px solid black;
+               border-right: 2px dashed red;
+               border-bottom: 3px dotted green;
+               border-left: 4px double blue">
+     Quatre bords différents
+     </p>
+   </div>
+
+
 
 
 `Padding`:eng:
@@ -983,6 +1007,32 @@ ou par une propriété synthétique acceptant 1 à 4 valeurs :
 
 .. index:: .border-radius, .border-*-radius
 
+Propriétés ``padding`` (exemples)
+`````````````````````````````````
+
+.. raw:: html
+
+   <div class="rendered">
+     <p style="border: 1px solid black">
+     Padding nul.
+     </p>
+     <p style="border: 1px solid black; padding: .5em">
+     Padding de 0.5em.
+     </p>
+     <p style="border: 1px solid black; padding: .5em 1em">
+     Padding de 0.5em vertical et 1em horizontal.
+     </p>
+     <p style="border: 1px solid black; 
+               text-align: justify;
+               padding-top: .5em;
+               padding-right: 1em;
+               padding-bottom: 1.5em;
+               padding-left: 2em">
+     Padding de 0.5 em en haut, 1em à droite, 1.5em en bas et 2em à gauche.
+     </p>
+   </div>
+
+
 Coins arrondis
 ++++++++++++++
 
@@ -997,6 +1047,27 @@ ou par une propriété synthétique acceptant 1 à 4 valeurs :
 
 * `border-radius`:css: (tl) (tr) (br) (bl)
 
+Coins arrondis (exemples)
+-------------------------
+
+.. raw:: html
+
+   <div class="rendered">
+     <p style="border: 1px solid black; padding: .5em">
+     Pas d'arrondi (avec un padding de 0.5em).
+     </p>
+     <p style="border: 1px solid black; padding: .5em; border-radius: .5em">
+     Arrondi de 0.5em.
+     </p>
+     <p style="border: 1px solid black; padding: .5em; border-radius: 1em">
+     Arrondi de 1em.
+     </p>
+     <p style="border: 1px solid black;
+               padding: .5em;
+               border-radius: 0 .5em 1em 1.5em">
+     Arrondis différents
+     </p>
+   </div>
 
 
 Remarques

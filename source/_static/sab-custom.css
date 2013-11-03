@@ -86,6 +86,10 @@ section.rendered {
     margin-bottom: 1em;
 }
 
+.rendered video {
+    width: 7em;
+}
+
 /* ensures that box-drawing character connect with each other */
 .big.tree pre {
     line-height: 1.1em;

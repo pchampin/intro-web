@@ -1281,12 +1281,137 @@ __ _static/exo_liens/sujet.html
 
 
 
+.. index:: <video>
+
 .. _video:
 
 Vidéo
 +++++
 
-TODO
+En plus des images, HTML5 permet d'inclure des vidéos,
+grâce à la balise `<video>`:html:.
+
+.. code-block:: html
+
+   <video src="_static/Chrome_ImF.webm">
+     Ici, une vidéo représentant...
+   </video>
+
+.. raw:: html
+
+  <div class="rendered">
+   <video src="_static/Chrome_ImF.webm">
+     Ici, une vidéo représentant...
+   </video>
+  </div>
+
+Source vidéo : Google_.
+
+.. _Google: http://google.com/
+
+.. note::
+
+   Le contenu textuel de la balise `<video>`:html:,
+   affiché uniquement si le navigateur ne supporte pas cette balise,
+   joue le rôle de l'attribut `alt`:html: des images.
+
+.. index:: @autoplay, @controls, @loop, @muted, @poster
+
+Attributs de la balise video
+----------------------------
+
+La balise video supporte les attributs suivants :
+
+* `autoplay`:html:\ : lance la lecture automatiquement
+* `controls`:html:\ : affiche l'interface de lecture
+* `loop`:html:\ : reprend automatiquement la lecture à la fin de la vidéo
+* `muted`:html:\ : fixe le volume sonore à 0
+* `poster`:html:\ : URL d'une image à afficher avant la lecture
+
+NB : à part `poster`:html:, ces attributs n'ont pas besoin de valeur ;
+la simple *présence* de l'attribut active son effet.
+Il n'est donc même pas indispensable de leur donner une valeur ;
+au lieu de `autoplay=""`:html:, on peut écrire simplement `autoplay`.
+
+Attributs de la balise video (exemple)
+``````````````````````````````````````
+
+.. code-block:: html
+
+   <video src="_static/Chrome_ImF.webm"
+          autoplay loop muted>
+     Ici, une vidéo représentant...
+   </video>
+   <video src="_static/Chrome_ImF.webm"
+          controls poster="_static/sun.png">
+     Ici, une vidéo représentant...
+   </video>
+
+.. raw:: html
+
+  <div class="rendered">
+   <video src="_static/Chrome_ImF.webm"
+          autoplay loop muted>
+     Ici, une vidéo représentant...
+   </video>
+   <video src="_static/Chrome_ImF.webm"
+          controls poster="_static/sun.png">
+     Ici, une vidéo représentant...
+   </video>
+  </div>
+
+Source vidéo : Google_, image: johnny_automatic_.
+
+.. _johnny_automatic: http://openclipart.org/user-detail/johnny_automatic
+
+
+.. index:: <source>
+
+Problème de compatibilité
+-------------------------
+
+Les navigateurs ne supportent pas tous les même formats vidéo.
+Il peut donc être nécessaire de fournir plusieurs sources alternatives
+pour la même vidéo.
+
+La balise vidéo peut donc, à la place de l'attribut `src`:html:,
+contenir plusieurs balises `<source>`:html: ayant chacune :
+
+  * un attribut `src`:html: avec l'URL d'une version de la vidéo,
+  * éventuellement un attribut `type`:html: décrivant son format.
+
+Avec les formats WebM_ et MP4_ (H264+AAC),
+on couvre la grande majorité des navigateurs.
+
+.. _WebM: http://fr.wikipedia.org/wiki/WebM
+.. _MP4: http://fr.wikipedia.org/wiki/MPEG-4_Part_14
+
+Problème de compatibilité (exemple)
+```````````````````````````````````
+
+.. code-block:: html
+
+   <video autoplay loop muted>
+     <source src="_static/Chrome_ImF.webm"
+             type='video/webm; codecs="vp8, vorbis"'>
+     <source src="_static/Chrome_ImF.mp4"
+             type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+     Ici, une vidéo représentant...
+   </video>
+
+.. raw:: html
+
+  <div class="rendered">
+   <video autoplay loop muted>
+     <source src="_static/Chrome_ImF.webm"
+             type='video/webm; codecs="vp8, vorbis"'>
+     <source src="_static/Chrome_ImF.mp4"
+             type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+     Ici, une vidéo représentant...
+   </video>
+  </div>
+
+Source vidéo : Google_.
 
 
 

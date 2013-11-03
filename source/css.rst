@@ -866,10 +866,6 @@ Positionnement `fixed`:css:
      Votre navigateur ne supporte pas les i-frames.
      </iframe>
    </div>
-.. TODO
-   * expliquer les types de positionnement et leur utilité
-   * montrer des exemples
-   * noter que top et bottom sont redondants, comme left et right
 
 
 .. _boite:
@@ -1022,7 +1018,7 @@ Propriétés ``padding`` (exemples)
      <p style="border: 1px solid black; padding: .5em 1em">
      Padding de 0.5em vertical et 1em horizontal.
      </p>
-     <p style="border: 1px solid black; 
+     <p style="border: 1px solid black;
                text-align: justify;
                padding-top: .5em;
                padding-right: 1em;
@@ -1092,10 +1088,104 @@ Remarques
 Images de fond
 ++++++++++++++
 
-.. TODO
+Plutôt qu'une couleur de fond (`background-color`:css:),
+on peut spécifier une *image* de fond pour certains éléments.
 
-   * syntaxe en CSS
-   * choix entre <img> et background-img
+* `background-image`:css:\ : (url)
+
+Par exemple :
+
+.. code-block:: css
+
+   background-image: url("_static/trefle.png")
+
+.. raw:: html
+
+   <p class="rendered" style='background-image: url("_static/trefle.png")'>
+     Élément avec une image de fond.
+   </p>
+
+Paramétrage de l'image de fond
+------------------------------
+
+* `background-position`:css:\ : (position gauche) (position haut)
+
+  + positions en pixel
+  + positions en anglais (`left`:css:, `right`:css:, `center`:css:,
+    `top`:css:, `bottom`:css:)
+
+* `background-attachment`:css:\ :
+
+  + `scroll`:css:\ : l'image défile ave la page (par défaut)
+  + `fixed`:css:\ : l'image reste fixe quand la page défile
+
+* `background-repeat`:css:\ :
+
+  + `repeat`:css:\ : l'image se répère en mosaïque
+    (par défaut)
+  + `repeat-x`:css:\ : l'image se répère horizontallement
+  + `repeat-y`:css:\ : l'image se répère verticalement
+  + `no-repeat`:css:\ : l'image ne se répète pas
+
+Propriété synthétique `background`:css:
+---------------------------------------
+
+* On peut compiner dans une seule propriété tous les aspects du fond :
+
+  `background`:css:\ : (valeur1) (valeur2) (valeur3) ...
+
+  où les valeurs correspondent à :
+
+  + `background-color`:css:
+  + `background-image`:css:
+  + `background-repeat`:css:
+  + `background-attachment`:css:
+  + `background-position`:css:
+
+  Certaines valeurs peuvent être omises, mais l'ordre doit être respecté.
+
+* On peut également combiner plusieurs images de fond
+  en séparant les listes de valeurs par des virgules.
+
+Exemple
+-------
+
+.. code-block:: css
+
+   body {
+      background :
+        url("sun.png") no-repeat fixed top right,
+        url("moon.png") repeat-y top left ;
+      background-color : blue ;
+   }
+   h1 {
+      text-align : center ;
+   }
+
+.. raw:: html
+
+   <div>
+     <iframe src="_static/background.html" style="width: 80%; height: 4em">
+     Votre navigateur ne supporte pas les i-frames.
+     </iframe>
+   </div>
+
+Source images: johnny_automatic_
+
+.. _johnny_automatic: http://openclipart.org/user-detail/johnny_automatic
+
+Discussion
+----------
+
+Il convient de distinguer
+
+* les images faisant partie intégrante du document (comme les figures)
+  et qui doivent figurer dans une balise `<img>`:html:,
+
+* des images liées à la présentation,
+  qui doivent être incluses dans la feuille de style *via* `background`:css:.
+
+.. TODO rajouter les entrées d'index sur border et sur background
 
 
 Display

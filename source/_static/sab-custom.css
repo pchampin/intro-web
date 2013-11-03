@@ -222,3 +222,15 @@ div.warning {
     background-color: lightBlue;
 }
 
+/**** Table.example ****/
+
+table.example,
+table.example td,
+table.example th {
+    border-collapse: separate;
+    border: 1px solid black;
+}
+
+table.example td.no-border {
+    border: none;
+}

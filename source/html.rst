@@ -1582,14 +1582,24 @@ notamment en portant des `classes <class>`:ref: personnalisées.
 
 
 
+.. index:: <table>, <tr>, <td>, <th>
+
 .. _table:
 
 Tableaux
 ========
 
-TODO TRANSLATE & ADAPT
+Structure d'un tableau
+++++++++++++++++++++++
 
-A table is composed of rows, which are in turn composed of cells.
+Un tableau (ou une table) permet d'organiser des information sur deux dimensions.
+
+Une table (`table`:eng:) est composée de lignes (`rows`:eng:),
+elles-mêmes composées de cellules (`cells`:eng:).
+
+On considère deux sortes de cellules :
+les cellules d'en-tête (`header cells`:eng:) et
+les cellules de données (`data cells`:eng:).
 
 .. raw:: html
 
@@ -1607,19 +1617,22 @@ A table is composed of rows, which are in turn composed of cells.
     </tr>
   </table>
 
-This is described with the following tags:
+Tableau en HTML
+---------------
 
-=========== ===========
-table       ``<table>``
-row         ``<tr>``
-header cell ``<th>``
-data cell   ``<td>``
-=========== ===========
+Les différents éléments d'un tableau sont représentés par 
+
+=========== ================
+table       `<table>`:html:
+row         `<tr>`:html:
+header cell `<th>`:html:
+data cell   `<td>`:html:
+=========== ================
 
 
 
-Example (code)
-++++++++++++++
+Example
++++++++
 
 .. code-block:: html
 
@@ -1637,8 +1650,8 @@ Example (code)
 
 
 
-Example (rendered)
-++++++++++++++++++
+Example (résultat)
+------------------
 
 .. raw:: html
 
@@ -1665,6 +1678,16 @@ Reproduisez `ce modèle`__ représentant une calculatrice.
 
 __ _static/exo_calculette/sujet_table.png
 
+
+.. index:: <caption>, <thead>, <tbody>, <tfoot>
+
+Pour aller plus loin
+++++++++++++++++++++
+
+* `<caption>`:html:\ : légende du tableau (premier fils de `<table>`:html:)
+* `<thead>`:html:\ : ensemble de lignes (`<row>`:html:) constituant l'en-tête (par ex. intitulés de colonnes)
+* `<tbody>`:html:\ : ensemble de lignes (`<row>`:html:) constituant le corps (données à proprement parler)
+* `<tfoot>`:html:\ : ensemble de lignes (`<row>`:html:) constituant le pied (par ex. rappel des intitulés de colonnes, ou somme des valeurs par colonne)
 
 
 .. slide:: Fin de la `seance6`:ref:

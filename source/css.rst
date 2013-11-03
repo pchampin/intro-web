@@ -680,6 +680,8 @@ CSS reconnait les unités de longueur suivantes :
  em   taille de la police courante
  ex   hauteur du caractère *x* dans la police courante
  px   « pixel CSS » (varie avec le niveau de zoom)
+ vw   1% de la largeur de la fenêtre
+ vh   1% de la hauteur de la fenêtre
 ==== ==================================================
 
 Pour en savoir plus, voir ici__.

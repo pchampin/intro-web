@@ -500,6 +500,8 @@ __ _static/exo_css_text/sujet.png
 
 .. index:: @class, @id
 
+.. _class:
+
 Classes et identifiant
 ++++++++++++++++++++++
 
@@ -1201,6 +1203,9 @@ Il convient de distinguer
 .. index::
    double: affichage; inline
    double: affichage; block
+
+.. _block:
+.. _inline:
 
 Mode d'affichage
 ++++++++++++++++

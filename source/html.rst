@@ -248,6 +248,7 @@ Structure d'un document
 =======================
 
 
+.. _structure_globale:
 
 Structure globale
 +++++++++++++++++
@@ -1265,11 +1266,6 @@ Téléchargez `ce fichier html`__. Il contient un livre dont vous êtes le héro
 
 __ _static/exo_liens/sujet.html
 
-.. TODO
-
-   Il faudrait ajouter quelques images au document source pour donner
-   matière à les placer avec CSS ensuite.
-
 
 
 .. slide:: Suite la `seance4`:ref:
@@ -1420,14 +1416,13 @@ Source vidéo : Google_.
 HTML avancé
 ===========
 
-
+.. index:: entité
 
 Entités
 +++++++
 
-TODO TRANSLATE & ADAPT
-
-The following characters have special meaning in HTML, so a special code (*entity*) is needed to display them:
+Les caractères suivants ont une signification spéciale en HTML,
+donc il faut utiliser un code spécial (*entité*) pour les afficher :
 
 ===== ============ ============
   <   ``&lt;``     lower than
@@ -1437,11 +1432,16 @@ The following characters have special meaning in HTML, so a special code (*entit
 ``&`` ``&amp;``    ampersand
 ===== ============ ============
 
-NB: other *entities* exist for many non-ASCII character, for example ``&eacute;`` for é, ``&Agrave;`` for À, ``&ccedil;`` for ç...
+Autres entités
+--------------
 
-However, HTML now supports unicode, so they are not strictly necessary (and they hinder readbility).
+Il existe d'autres entités pour de nombreux caractères non-SCII,
+par exemple ``&eacute;`` pour é, ``&Agrave;`` pour À, ``&ccedil;`` pour ç...
 
-
+Cependant, HTML supporte désormais unicode,
+donc ces entités ne sont plus nécessaires.
+En revanchent elles nuisent à la lisibilité du code HTML.
+Leur utilisation est donc déconseillée.
 
 Commentaires
 ++++++++++++
@@ -1484,30 +1484,42 @@ Notons que le commentaire ne concerne pas que l'affichage ::
 
 
 
+.. index:: <meta>
 
 Méta-données
 ++++++++++++
 
-TODO TRANSLATE & ADAPT
-
-* ``<meta>`` tags are located in the ``<head>`` of the document.
-* They contain *metadata*: data about the document itself (literally: “data about the data”), usable for example by search engines.
+* Les balises `<meta>`:html: sont situées dans l'élément `<head>`:html:
+  du document.
+* Elles contiennent des *méta-données* : des données sur le document lui-même
+  (litéralement, des « données à propos des données »).
 
 .. code-block:: html
 
+  <meta charset="utf-8">
   <meta name="description"
-        content="learn advanced tricks in HTML">
+        content="apprenez plus de tours en HTML">
   <meta name="author"
         content="Pierre-Antoine Champin">
   <meta name="keywords" content="html web iut">
 
-Robot meta tag
---------------
+.. note::
 
-The ``robot`` meta tag can be used to provide instructions to search engines:
+   On a `déjà <structure_globale>`:ref: rencontré la balise `<meta>`:html:
+   pour spécifier l'encodage du document.
 
-* ``index/noindex``: whether they should index the page itself
-* ``follow/nofollow``: whether they should follow the links in the page
+
+
+
+Méta-données pour les robots
+----------------------------
+
+Avec le nom ``robot``,
+la balise `<meta>`:html: peut être utilisée
+pour fournir des instrucrions aux moteurs de recherche :
+
+* ``index/noindex``: doivent-ils indexer cette page ou non ?
+* ``follow/nofollow``: doivent-ils suivre les liens ou non ?
 
 .. code-block:: html
 
@@ -1515,10 +1527,14 @@ The ``robot`` meta tag can be used to provide instructions to search engines:
 
 
 
-Language of metadata
---------------------
+.. index:: @lang
 
-Metadata can be provided in different languages, specified with the ``lang`` attribute, with a language code as specified by `BCP47`_.
+Langue des méta-données
+-----------------------
+
+Les méta-données peuvent être fournies dans différentes langues,
+spécifiées dans l'attribut `lang`:html:
+à l'aide d'un code spécifié par `BCP47`_.
 
 .. _BCP47: http://www.ietf.org/rfc/bcp/bcp47.txt
 
@@ -1527,18 +1543,34 @@ Metadata can be provided in different languages, specified with the ``lang`` att
   <meta name="description" lang="en"
         content="learn advanced tricks in HTML">
   <meta name="description" lang="fr"
-        content="apprenez plus de toursen HTML">
+        content="apprenez plus de tours en HTML">
 
-.. note::
+NB : l'attribut `lang`:html: peut en fait être utilisé
+sur *n'importe quelle* balise,
+y compris dans le corps (`<body>`:html:) du document.
 
-  The ``lang`` attribute can be used on *any* HTML tag, including inside the body.
 
 
+
+.. index:: <div>, <span>
 
 Span et div
 +++++++++++
 
-TODO
+HTML fournit deux balises *neutres* (c.à.d. sans sémantique particulière) :
+
+* `<span>`:html: qui s'affiche en mode `inline <inline>`:ref:, et
+* `<div>`:html: qui d'affiche en mode `block <block>`:ref:.
+
+Ces éléments sont utiles pour rajouter de la structuration au document,
+notamment en portant des `classes <class>`:ref: personnalisées.
+
+.. warning::
+
+   Même lorsqu'on utilise des classes personnalisées,
+   il est préférable de les associer, autant que,
+   à une balise dont la sémantique est proche,
+   plutôt qu'à une balise neutre.
 
 
 

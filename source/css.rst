@@ -1188,17 +1188,79 @@ Il convient de distinguer
 .. TODO rajouter les entrées d'index sur border et sur background
 
 
-Display
-+++++++
+Mode d'affichage
+++++++++++++++++
 
-.. TODO (incluant none)
+Il existe deux grands types d'éléments :
 
+* Les éléments de type `inline`:css:,
+* Les éléments de type `block`:css:.
+
+
+Les éléments `inline`:css:
+--------------------------
+
+* Ils s'inscrivent dans le flux du texte.
+
+* Leur taille est déterminée par leur contenu.
+
+  + Les propriétés `width`:css: et `height`:css: sont sans effet sur eux.
+
+* Exemples : `<a>`:html:, `<em>`:html:...
+
+
+Les éléments `block`:css:
+-------------------------
+
+* Ils sont précédés et suivis d'un retour à la ligne.
+
+* Ils prennent toute la largeur disponible,
+  et uniquement la hauteur nécessaire.
+
+  + Mais on peut changer leur taille
+    avec les propriétés `width`:css: et `height`:css:.
+
+* Exemples :  `<p>`:html:, `<section>`:html:, `<h1>`:html:, ...
+
+
+Changer le mode d'affichage
+---------------------------
+
+* `display`:css:\ : inline, block, inline-block, none
+
+  + Un élément avec `display:inline-block`:css: se comporte
+    comme un élément `inline` avec ses voisins (pas de retour à la ligne),
+    mais comme un élément `block` pour son contenu (taille ajustable).
+
+  + Un élément avec `display:none`:css: ne sera pas affiché.
+    Ce mode est utile en conjonction avec la directive `@media <media>`:ref:.
+
+* `vertical-align`:css:\ :
+
+  + Cette propriété permet de spécifier
+    comment des éléments inline ou inline-block s'alignent verticalement
+    par rapport au flux du texte.
+
+  + Pour plus de détails, voir
+    http://www.w3.org/wiki/CSS/Properties/vertical-align .
 
 
 Exercice
 ++++++++
 
-.. TODO exercice de synthèse pour la séance 4
+Reproduisez la page HTML ci-dessous (cliquez sur l'image pour agrandir).
+Vous trouverez dans `cette archive`__ le source HTML
+et toutes les images nécessaires.
+
+__ _static/exo_css_boxes/sujet.zip
+
+.. figure:: _static/exo_css_boxes/sujet.png
+   :width: 50%
+   :target: _static/exo_css_boxes/sujet.png
+
+   Exercice conçu par Isabelle Gonçalves, et inspiré du `Site du Zéro`_.
+
+.. _Site du Zéro: http://fr.openclassrooms.com/
 
 
 

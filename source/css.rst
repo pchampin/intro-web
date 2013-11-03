@@ -787,6 +787,8 @@ le HTML précédent s'affichera ainsi :
    ou certains contenus textuels (`<aside>`:html:).
 
 
+.. index:: .position, .top, .right, .bottom, .left
+
 Positionnement fin
 ++++++++++++++++++
 
@@ -806,6 +808,7 @@ Positionnement fin
 
    Les propriétés `top`:css: et `bottom`:css: sont redondantes,
    de même que `left`:css: et `right`:css:.
+
 
 Positionnement `static`:css:
 ----------------------------
@@ -1085,6 +1088,8 @@ Remarques
 
 
 
+.. index:: .background-image
+
 Images de fond
 ++++++++++++++
 
@@ -1104,6 +1109,9 @@ Par exemple :
    <p class="rendered" style='background-image: url("_static/trefle.png")'>
      Élément avec une image de fond.
    </p>
+
+
+.. index:: .background-*, .background
 
 Paramétrage de l'image de fond
 ------------------------------
@@ -1188,6 +1196,10 @@ Il convient de distinguer
 .. TODO rajouter les entrées d'index sur border et sur background
 
 
+.. index::
+   double: affichage; inline
+   double: affichage; block
+
 Mode d'affichage
 ++++++++++++++++
 
@@ -1222,6 +1234,8 @@ Les éléments `block`:css:
 
 * Exemples :  `<p>`:html:, `<section>`:html:, `<h1>`:html:, ...
 
+
+.. index:: .display, .vertical-align
 
 Changer le mode d'affichage
 ---------------------------

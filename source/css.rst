@@ -790,12 +790,82 @@ le HTML précédent s'affichera ainsi :
 Positionnement fin
 ++++++++++++++++++
 
-* `position`:css: : `relative`:css:, `absolute`:css:, `static`:css:
+* `position`:css: : `static`:css:, `relative`:css:, `absolute`:css:,
+  `fixed`:css:
+
+.. figure:: _static/position.*
+   :class: float-right
+   :width: 50%
+
 * `top`:css: : (longueur)
 * `right`:css: : (longueur)
 * `bottom`:css: : (longueur)
 * `left`:css: : (longueur)
 
+.. note::
+
+   Les propriétés `top`:css: et `bottom`:css: sont redondantes,
+   de même que `left`:css: et `right`:css:.
+
+Positionnement `static`:css:
+----------------------------
+
+* positionnement par défaut
+
+  + pas besoin de le spécifier, sauf pour surcharger une autre règle
+
+* `top`:css:, `bottom`:css:, `left`:css: and `right`:css: ne sont pas utilisés
+
+Positionnement `relative`:css:
+------------------------------
+
+* positionnement par rapport à la position par défaut
+
+.. raw:: html
+
+   <p class="rendered">
+   Positionnement <span style="border: 1px solid red"
+   ><span style="position: relative; bottom: .7ex; right: .7ex">relatif</span
+   ></span> d'un texte.
+   </p>
+
+
+Positionnement `absolute`:css:
+------------------------------
+
+* positionnement par rapport à la page
+
+  **ou** au plus proche parent ayant un positionnement relatif ou absolu.
+
+  + top : écart entre le bord haut et le haut du référentiel
+  + bottom : écart entre le bord bas et le bas du référentiel
+  + left : écart entre le bord gauche et la gauche du référentiel
+  + right : écart entre le bord droit et la droite du référentiel
+
+
+.. raw:: html
+
+   <p class="rendered" style="position: relative">
+   Positionnement <span style="border: 1px solid red"
+   ><span style="position: absolute; bottom: .7ex; right: .7ex">absolu</span
+   ></span> d'un texte.
+   </p>
+
+Positionnement `fixed`:css:
+---------------------------
+
+* positionnement par rapport à la *fenêtre*
+
+  + insensible au défilement
+
+
+.. raw:: html
+
+   <div>
+     <iframe src="_static/position_fixed.html" style="width: 80%; height: 5em">
+     Votre navigateur ne supporte pas les i-frames.
+     </iframe>
+   </div>
 .. TODO
    * expliquer les types de positionnement et leur utilité
    * montrer des exemples

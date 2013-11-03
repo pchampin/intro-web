@@ -12,14 +12,6 @@ Version: |version|
 
 .. include:: credits.rst.inc
 
-.. COMMENTED OUT FOR THE MOMENT only:: html
-
-   .. ifnotslides::
-
-      Une version PDF__ est disponible.
-
-   __ index.pdf
-
 .. toctree::
    :maxdepth: 1
 
@@ -30,4 +22,8 @@ Version: |version|
    seances
 
 * :ref:`genindex`
+
+.. rubric:: Remerciements
+
+Merci à Isabelle Gonçalves pour ses nombreuses remarques et contributions.
 

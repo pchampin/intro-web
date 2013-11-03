@@ -162,6 +162,6 @@ slides:
 	@echo "Build finished. The HTML slides are in $(BUILDDIR)/html/slides."
 
 view: slides
-	sensible-browser $(BUILDDIR)/slides/index.html
+	sensible-browser file:$(BUILDDIR)/slides/index.html
 
 publishable: slides html singlehtml

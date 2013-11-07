@@ -1668,6 +1668,29 @@ Example (résultat)
   </table>
 
 
+.. index:: @colspan, @rowspan
+
+Cellules étendues
++++++++++++++++++
+
+Une cellule peut s'étendre
+sur plusieurs lignes (vers le bas) et/ou colonnes (vers la droite)
+à l'aide des attributs `rowspan`:html: et `colspan`:html:.
+
+.. hint::
+
+   Dans ce cas, le nombre de `<td>`:html: ou `<th>`:html:
+   pourra varier d'une `<tr>`:html: à l'autre...
+
+.. raw:: html
+
+  <table class="rendered example" >
+    <caption>Exemple</caption>
+    <colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%">
+    <tr><td rowspan=2>rowspan=2<td colspan=2>colspan=2<td>.
+    <tr><td>.<td colspan=2 rowspan=2>colspan=2 rowspan=2
+    <tr><td>.<td>.
+  </table>
 
 .. _exo_calculette1:
 
@@ -1688,6 +1711,22 @@ Pour aller plus loin
 * `<thead>`:html:\ : ensemble de lignes (`<row>`:html:) constituant l'en-tête (par ex. intitulés de colonnes)
 * `<tbody>`:html:\ : ensemble de lignes (`<row>`:html:) constituant le corps (données à proprement parler)
 * `<tfoot>`:html:\ : ensemble de lignes (`<row>`:html:) constituant le pied (par ex. rappel des intitulés de colonnes, ou somme des valeurs par colonne)
+* `<colgroup>`:html: et `<col>`:html: permettent d'identifier les colonnes (par exemple pour les besoins du CSS)
+
+Pour plus de détails, voir http://www.w3.org/TR/html5/tabular-data.html#table-model .
+
+
+Tableaux et mise en pages
+-------------------------
+
+Avant que CSS ne s'impose, les tableaux ont souvent été utilisés
+pour faciliter la mise en page des sites
+(en tête et pied de page, menu latéral, présentation sur plusieurs colonnes).
+
+Aujourd'hui, cette pratique est fortement déconseillée,
+car elle est beaucoup moins flexible
+que l'utilisation de CSS pour le `positionnement <position>`:ref:.
+
 
 
 .. slide:: Fin de la `seance6`:ref:

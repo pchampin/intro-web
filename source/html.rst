@@ -685,14 +685,14 @@ Exemple
 
 .. raw:: html
 
-  <p class="rendered" lang="fr">
+  <p class="rendered">
    Selon <cite>Wikipedia</cite>, la <dfn>prose</dfn> est :
    <q>la forme <em>ordinaire</em> de l'expression verbale.</q>
   </p>
 
 .. raw:: html
 
-  <p class="rendered alt" lang="fr">
+  <p class="rendered alt">
    Selon <cite>Wikipedia</cite>, la <dfn>prose</dfn> est :
    <q>la forme <em>ordinaire</em> de l'expression verbale.</q>
   </p>
@@ -1568,7 +1568,7 @@ notamment en portant des `classes <class>`:ref: personnalisées.
 .. warning::
 
    Même lorsqu'on utilise des classes personnalisées,
-   il est préférable de les associer, autant que,
+   il est préférable de les associer, autant que possible,
    à une balise dont la sémantique est proche,
    plutôt qu'à une balise neutre.
 

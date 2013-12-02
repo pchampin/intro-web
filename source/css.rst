@@ -1332,14 +1332,35 @@ qui correspondent à leur définition.
       a:active { color: yellow } /* even if :visited, :focus or :hover */
 
 
+.. index:: :first-child, :last-child, :nth-child
+
 Ordre des éléments
 ------------------
 
-TODO firs-child and co.
+* `:first-child`:css: :  élément qui est le premier enfant de son parent
+* `:last-child`:css: :  élément qui est le dernier enfant de son parent
+* `:nth-child(i)`:css: :  élément qui est le i-ème enfant de son parent
+
+L'argument de `:nth-child(i)`:css: accepte comme argument le rang de l'élément concerné
+(en commençant à 1), mais peut être une expression simple utilisant la variable `n`, par exemple :
+
+* `:nth-child(3)`:css: :  3ème enfant
+* `:nth-child(2n)`:css: :  enfants de rang pair (le 2ème, le 4ème, etc.)
+* `:nth-child(2n+1)`:css: :  enfants de rang impair (le 1er, le 3ème, etc.)
 
 
 
-.. index:: pseudo-élément
+
+.. index:: pseudo-élément, ::first-letter, ::first-line, ::before, ::after
+
+Exercice
+--------
+
+Reprenez l'exercice du `livre dont vous êtes le héros <donjon>`:ref:,
+dans sa version en un seul fichier (avec des liens internes),
+mais faîtes en sorte qu'à tout moment, seul l'article en cours de lecture s'affiche.
+
+
 
 Pseudo-éléments
 +++++++++++++++
@@ -1369,26 +1390,19 @@ Ces valeurs peuvent notamment être de la forme :
 * `"texte"`:css: : affichera le texte tel quel
 * `url("url-image")`:css: : affichera l'image dont l'URL est passée en paramètres
 
-Compteurs
-+++++++++
+.. TODO 
 
-TODO
+   Compteurs
+   +++++++++
 
+   TODO
 
+   .. _transition:
 
-Exercice
-++++++++
+   Transitions
+   ===========
 
-.. TODO donjon : liens locaux mais en n'affichant que l'article en cours
-
-
-
-.. _transition:
-
-Transitions
-===========
-
-TODO
+   TODO
 
 
 

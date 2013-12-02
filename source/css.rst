@@ -1411,10 +1411,7 @@ Ces valeurs peuvent notamment être de la forme :
 Adaptation au média
 ===================
 
-TODO TRANSLATE & ADAPT
-
-Different stylesheet can be specified for different media types:
-
+Des feuilles de style différentes peuvent être appliquées selon le *média* :
 .. code-block:: html
 
    <link rel="stylesheet" type="text/css"
@@ -1422,7 +1419,7 @@ Different stylesheet can be specified for different media types:
    <link rel="stylesheet" type="text/css"
          media="print" href="serif.css">
 
-NB: this can be specified directly in the CSS as well:
+NB : ceci peut également être spécifié dans un unique fichier CSS :
 
 .. code-block:: css
 
@@ -1431,8 +1428,8 @@ NB: this can be specified directly in the CSS as well:
    }
 
 
-Media types for stylesheets
-+++++++++++++++++++++++++++
+Types de média
+++++++++++++++
 
 +-----------+
 | aural     |
@@ -1452,30 +1449,31 @@ Media types for stylesheets
 | tv        |
 +-----------+
 
-For more details, see `CSS3 Media Queries`_
-
-.. _CSS3 Media Queries: http://dev.w3.org/csswg/css3-mediaqueries/
 
 
+Adaptation à la taille du média
++++++++++++++++++++++++++++++++
 
-Hiding elements in some stylesheets
------------------------------------
-
-CSS allows to completely remove some elements. This can be used in media-specific stylesheets (for example, hiding a site menu in the ``print`` media):
+La directive `@media`:css: permet également de n'appliquer des règles CSS
+que lorsque les dimensions de l'affichage respectent certaines conditions,
+par exemple :
 
 .. code-block:: css
 
-  @media print {
-    ul.menu {
-      display: none;
-    }
-  }
+   @media (max-width:320px) { ... }
+   @media (min-width:321px) and (max-width:640px) { ... }
+   @media (min-width:641px) { ... }
 
+.. note::
 
+   On peut bien sûr garder avoir des règles *hors* de toute section `@media`:css:,
+   qui s'appliquent à *toutes* les situations.
+   Les sections `@media`:css: ne sont là que pour *ajuster* la présentation générale
+   à un contexte particulier.
 
-.. slide:: Fin de la `seance7`:ref:
-   :level: 2
-   :class: nav-seance
+Pour en savoir plus...
+++++++++++++++++++++++
 
-   Vers la `seance8`:ref:.
+... consulter `CSS3 Media Queries`_
 
+.. _CSS3 Media Queries: http://dev.w3.org/csswg/css3-mediaqueries/

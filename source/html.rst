@@ -1697,9 +1697,12 @@ sur plusieurs lignes (vers le bas) et/ou colonnes (vers la droite)
 Exercice
 ++++++++
 
-Reproduisez `ce modèle`__ représentant une calculatrice.
+Reproduisez le modèle ci-dessous représentant une calculatrice.
 
-__ _static/exo_calculette/sujet_table.png
+.. figure:: _static/exo_calculette/sujet_table.png
+   :target: _static/exo_calculette/sujet_table.png
+   :alt: calculette
+   :width: 50%
 
 
 .. index:: <caption>, <thead>, <tbody>, <tfoot>

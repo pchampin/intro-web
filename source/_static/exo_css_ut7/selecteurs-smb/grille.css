@@ -1,0 +1,74 @@
+/*
+ * /ut7 - 2012
+ *
+ * Cet exercice a été amoureusement concocté par les forces vives
+ * de /ut7 (http://ut7.fr), et plus particulièrement par Jonathan
+ * Perret (jonathan@ut7.fr).
+ *
+ * /ut7 et tous ses salariés sont extatiques à l'idée que vous
+ * utilisiez cet exercice pour embellir votre quotidien et celui
+ * des autres. Si vous souhaitez le diffuser, /ut7 et tous ses
+ * salariés comptent sur vous pour mentionner les auteurs et leur
+ * adresse électronique.
+ *
+ * Contact : training@ut7.fr
+ *
+ */
+
+
+/* Les éléments <b>  */
+b { background: rgb(0,241,253); }
+
+/* L'élément ayant pour 'id' "c6"  */
+TODO { background: rgb(232,185,116); }
+
+/* Les élements dont l'attribut 'title' est égal à "test"  */
+TODO { background: rgb(152,228,220); }
+
+/* Les élements dont l'attribut 'title' contient les mots "test" et "petit"  */
+TODO { background: rgb(252,233,207); }
+
+/* Les éléments dont l'attribut 'class' contient le mot "pim", "pam" ou "poum"  */
+TODO { background: rgb(252,225,165); }
+
+/* Les éléments <u> contenus dans un élément <strong>  */ 
+TODO { background: rgb(255,151,145); }
+
+/* Les éléments <u> précédés par un élément ayant "plouf" comme "class"  */
+TODO { background: rgb(255,110,147); }
+
+/* Les éléments <u> immédiatement enfants d'un élément <em>  */
+TODO { background: rgb(0,151,63); }
+
+/* Les éléments <i> suivant immédiatement un élément ayant "A" comme 'accesskey'  */
+TODO { background: rgb(60,92,161); }
+
+/* Les éléments dont l'attribut 'class' contient les mots "plif" et "plaf"  */
+TODO { background: rgb(255,166,79); }
+
+/* Les élements dont l'attribut 'title' commence par "Il était une fois"  */
+TODO { background: rgb(253,224,215); }
+
+/* Les éléments dont l'attribut 'title' se termine par "c'est fini."  */
+TODO { background: rgb(174,124,67); }
+
+/* Les élements <q> qui sont premier ou deuxième enfant d'un élement <mark>  */
+TODO { background: rgb(210,81,130); }
+
+/* Les éléments dont l'attribut 'title' contient la chaîne 'James "007" Bond'  */
+TODO { background: rgb(90,164,180); }
+
+/* Les éléments <label> qui suivent immédiatement une case à cocher cochée  */
+TODO { background: rgb(0,199,89); }
+
+/* Les éléments <q> ayant un attribut 'title' mais pas la classe 'oups'  */
+TODO { background: rgb(123,4,4); }
+
+/* Les éléments <q> qui ont la classe "dernier" et sont le dernier enfant de leur parent  */
+TODO { background: rgb(215,71,34) !important; }
+
+/* Les éléments petits-fils d'un élément <span>  */
+TODO { background: rgb(0,242,112); }
+
+/* Les éléments suivant un <button> à l'état désactivé  */
+TODO { background: rgb(0,0,0); }

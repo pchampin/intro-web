@@ -1,0 +1,42 @@
+/*
+ * /ut7 - 2012
+ *
+ * Cet exercice a été amoureusement concocté par les forces vives
+ * de /ut7 (http://ut7.fr), et plus particulièrement par Jonathan
+ * Perret (jonathan@ut7.fr).
+ *
+ * /ut7 et tous ses salariés sont extatiques à l'idée que vous
+ * utilisiez cet exercice pour embellir votre quotidien et celui
+ * des autres. Si vous souhaitez le diffuser, /ut7 et tous ses
+ * salariés comptent sur vous pour mentionner les auteurs et leur
+ * adresse électronique.
+ *
+ * Contact : training@ut7.fr
+ *
+ */
+
+
+/* Les éléments <b> */
+/* TODO */ { background: rgb(85,250,83); }
+
+/* Les élements dont l'attribut 'title' est égal à "test" */
+/* TODO */ { background: rgb(252,83,247); }
+
+/* Les éléments dont l'attribut 'class' contient le mot "pim", "pam" ou "poum" */
+/* TODO */ { background: rgb(0,168,168); }
+
+/* Les éléments <u> qui suivent (pas forcément immédiatement) un élément ayant "plouf" comme "class" */
+/* TODO */ { background: rgb(17,36,169); }
+
+/* Les éléments <label> associés (attribut 'for') à un élément dont l'id commence par 'check-' */
+/* TODO */ { background: rgb(84,84,84); }
+
+/* Les éléments <q> qui suivent immédiatement une case à cocher cochée n'ayant pas la classe 'oups' */
+/* TODO */ { background: rgb(168,84,23); }
+
+/* Les éléments petits-fils d'un élément <span> */
+/* TODO */ { background: rgb(0,168,48); }
+
+/* Les élements <q> qui sont premier ou deuxième enfant d'un élement <mark> */
+/* TODO */ { background: rgb(252,252,252); }
+

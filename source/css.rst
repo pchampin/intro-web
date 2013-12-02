@@ -1298,9 +1298,6 @@ __ _static/exo_css_boxes/sujet.zip
 Pseudo-classes et pseudo-éléments
 =================================
 
-TODO
-
-
 
 .. index:: pseudo-classe, :link, :visited, :active, :focus, :hover, :target
 
@@ -1404,6 +1401,27 @@ Ces valeurs peuvent notamment être de la forme :
 
    TODO
 
+
+Exercices
++++++++++
+
+Voici deux exercices pour réviser les sélecteurs CSS.
+
+.. warning:: Ces exercices utilisent des sélecteurs non vus en cours.
+
+   Pour une liste exhaustive, consultez http://www.w3.org/TR/css3-selectors/ .
+
+Dans les deux exercice,
+vous devez compléter ``grille.css`` conformément aux directives données en commentaire,
+pour voir apparaître une image dans ``grille.html``.
+
+* `exercice 1`__
+* `exercice 2`__
+
+__ _static/exo_css_ut7/selecteurs-civ/
+__ _static/exo_css_ut7/selecteurs-smb/
+
+Merci à `UT7 <http://ut7.fr/>`_ pour ces exercices !
 
 
 .. _media:

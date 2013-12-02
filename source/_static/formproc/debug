@@ -1,0 +1,75 @@
+# -*- coding=utf-8 -*-
+from cgi import FieldStorage
+
+HTML_HEAD = u"""<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Débogueur de formulaire</title>
+    <style type="text/css">
+        table { width: 100%; }
+        table tr > * { border: 1px solid black; }
+    </style>
+  </head>
+  <body>
+    <h1>Débogueur de formulaire</h1>
+"""
+
+HTML_FOOT = u"""
+  </body>
+</html>
+"""
+
+EXAMPLE_FORM = u"""
+    <h2>Exemple de formulaire</h2>
+    <form action="" method="GET">
+      <div><label>Nom: <input name="fname"></label></div>
+      <div><label>Prénom: <input name="gname"></label></div>
+      <div><button>Envoyer</button></div>
+    </form>
+"""
+
+def application(environ, start_response):
+    form = FieldStorage(fp=environ['wsgi.input'], environ=environ)
+    RESULT = u"\n    <h2>Données reçues</h2>\n"
+    if form:
+        RESULT += u"    <table>\n"
+        for key in form.keys():
+            val = form.getvalue(key)
+            val = repr(val).replace("<", "&lt;")
+            RESULT += u"      <tr><th>%s</th><td>%s</td></tr>\n" % (key, val)
+        RESULT += u"    </table>\n"
+    else:
+        RESULT += u"    <p>Aucune donnée reçue...</p>\n"
+            
+    status = '200 OK'
+    response_headers = [('Content-type','text/html')]
+    # include CORS headers to allow other servers in invoke this form
+    origin = environ.get("HTTP_ORIGIN")
+    if origin:
+        response_headers.append(("access-control-allow-origin",
+                                 origin))
+        response_headers.append(("access-control-allow-methods",
+                                    "GET, HEAD, PUT, POST, DELETE"))
+        acrh = environ.get("HTTP_ACCESS_CONTROL_REQUEST_HEADERS")
+        if acrh:
+            response_headers.append(("access-control-allow-headers",
+                                    acrh))
+
+    start_response(status, response_headers)
+
+
+    return ( i.encode("utf-8") for i in [
+        HTML_HEAD,
+        RESULT,
+        EXAMPLE_FORM,
+        HTML_FOOT] )
+
+if __name__ == "__main__":
+   from wsgiref.simple_server import make_server
+
+   httpd = make_server('', 1234, application)
+   print "Serving HTTP on port 1234..."
+
+   # Respond to requests until process is killed
+   httpd.serve_forever()

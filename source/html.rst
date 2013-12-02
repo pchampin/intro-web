@@ -1745,24 +1745,394 @@ que l'utilisation de CSS pour le `positionnement <position>`:ref:.
 Formulaires et interactivité
 ============================
 
-TODO
+.. index:: <input>
+
+Champs de saisie
+++++++++++++++++
+
+Certaines pages HTML comportent des **champs**
+permettant à l'utilisateur de saisir de l'information.
+La balise offrant cette possibilité est la balise `<input>`:html:.
+
+.. code-block:: html
+
+   <input>
+
+.. raw:: html
+
+  <p class="rendered">
+   <input>
+  </p>
+
+
+.. index:: @type
+
+Types de champs
+---------------
+
+HTML offre un certain nombre de types de champs,
+les plus utilisés étant
+
+.. list-table::
+  :widths: 70 30
+
+  * - ``<input type="text">``
+    - .. raw:: html
+
+         <input type="text">
+
+  * - ``<input type="password">``
+    - .. raw:: html
+
+         <input type="password">
+
+  * - ``<input type="checkbox">``
+    - .. raw:: html
+
+         <input type="checkbox">
+
+  * - ``<input type="radio">``
+    - .. raw:: html
+
+         <input type="radio">
+
+  * - ``<input type="file">``
+    - .. raw:: html
+
+         <input type="file">
+
+NB : HTML5 définit beaucoup d'autres `types de champs`__ (par exemple ``date`` ou ``color``),
+mais ils ne sont pas encore largement implémentés.
+
+__ http://www.w3.org/TR/html5/forms.html#states-of-the-type-attribute
+
+
+.. index:: <label>
+
+Libellé
+-------
+
+Les champs de saisie sont le plus souvent associés à un libellé.
+
+Ceci est représenté en encapsulant
+le libellé (n'importe quel code HTML) *et* la balise `<input>`:html:
+dans une balise `<label>`:html:.
+
+.. code-block:: html
+
+   <div><label>Nom : <input></label></div>
+   <div><label><input type=checkbox> tarif réduit</div>
+
+.. raw:: html
+
+  <div class="rendered">
+   <div><label>Nom : <input></label></div>
+   <div><label><input type=checkbox> tarif réduit</div>
+  </div>
+
+.. note::
+
+   Une autre méthode consiste à
+
+   * nommer le `<input>`:html: avec l'attribut `@id`:html:, et
+   * lui lier le `<input>`:html: avec l'attribut `@for`:html:.
+
+   Par exemple :
+
+   .. code-block:: html
+
+      <table>
+        <tr><td><label for="name">Nom :</td>
+            <td><input id="name"></td></tr>
+        <tr><td><label for="gname">Prénom :</td>
+            <td><input id="gname"></td></tr>
+      </table>
+
+   .. raw:: html
+
+     <div class="rendered">
+      <table>
+        <tr><td><label for="name">Nom :</td>
+            <td><input id="name"></td></tr>
+        <tr><td><label for="gname">Prénom :</td>
+            <td><input id="gname"></td></tr>
+      </table>
+     </div>
+
+
+.. index:: @placeholder
+
+Alternative au libellé
+``````````````````````
+
+Pour les champs de type ``text`` ou ``password``,
+une alternative au libellé consiste à utiliser l'attribut `@placeholder`:html:\ :
+
+.. code-block:: html
+
+   <input placeholder="identifiant">
+   <input type="password" placeholder="mot de passe">
+
+.. raw:: html
+
+  <div class="rendered">
+   <input placeholder="identifiant">
+   <input type="password" placeholder="mot de passe">
+  </div>
+
+
+
+.. index:: <select>, <option>, @multiple
+
+Liste
+-----
+
+Un autre type de champs permet de sélectionner (ou ou plusieurs) éléments dans une liste.
+
+.. code-block:: html
+
+   <select>
+     <option>Georges</option>
+     <option>John</option>
+     <option>Paul</option>
+     <option>Ringo</option>
+   </select>
+
+.. raw:: html
+
+  <div class="rendered">
+   <select>
+     <option>Georges</option>
+     <option>John</option>
+     <option>Paul</option>
+     <option>Ringo</option>
+   </select>
+  </div>
+
+L'attribut `@multiple`:html: autorise la sélection de plusieurs éléments.
+
+
+.. index:: <textarea>
+
+Zone de texte
+-------------
+
+Les champs `<input>`:html: ne permette pas la saisie de texte sur plusieurs lignes.
+Pour cela, on utilise le champs `<textarea>`:html:.
+
+.. code-block:: html
+
+  <textarea placeholder="type your message">Hello
+  world</textarea>
+
+.. raw:: html
+
+  <div class="rendered">
+  <textarea placeholder="type your message">Hello
+  world</textarea>
+  </div>
+
+NB: contrairement à `<input>`:html:,
+`<textarea>`:html: attend une balise fermante
+(car le texte contenu dans le champs est le contenu de la balise).
+
+.. index:: button
+
+Bouttons
+--------
+
+La balise `<button>`:html: permet de créer des boutons.
+
+.. code-block:: html
+
+   <button>Ok</button> <button><em>Annuler</em></button>
+
+.. raw:: html
+
+  <div class="rendered">
+   <button>Ok</button> <button><em>Annuler</em></button>
+  </div>
+
+
+.. note::
+
+   Historiquement, les boutons étaient générés par la balise `<input>`:html:
+   avec des types spécifiques (``button`` et ``submit`` notamment).
+
+
+.. index:: <form>, @action
+
+Formulaire
+++++++++++
+
+Les champs sont généralement regroupés dans une balise `<form>`:html:,
+qu'on appelle un **formulaire**.
+
+Cette balise requiert l'attribut `@action`:html:, qui contient
+l'URL de la ressource qui traitera les données du formulaire.
+
+
+.. index:: @name
+
+Champs d'un formulaire
+----------------------
+
+Pour pouvoir être traités,
+les champs d'un formulaire doivent tous être identifiés par un nom,
+porté par l'attribut `@name`:html:\ :
+
+.. code-block:: html
+
+   <form action="_static/formproc/debug">
+     <input name="name" placeholder="identifiant">
+     <input name="tel"  placeholder="n° de tel">
+     <button>Je m'inscrit</button>
+   </form>
+
+.. raw:: html
+
+  <div class="rendered">
+   <form action="_static/formproc/debug">
+     <input name="name" placeholder="identifiant">
+     <input name="tel"  placeholder="n° de tel">
+     <button>Je m'inscrit</button>
+   </form>
+  </div>
+
+
+.. index:: @value
+
+Cases à cocher et boutons radio
+-------------------------------
+
+Les champs ayant le type ``checkbox`` ou ``radio`` vont souvent par groupe.
+Tous les membres d'un groupe ont le même nom,
+et se différencient par une **valeur** portée par un attribut `@value`:html:.
+
+Pour les cases à cocher, le nom se voir affecter l'ensemble des valeurs sélectionnée.
+
+Pour les boutons radio, une seule valeur peut-être affectée
+(l'activation d'un bouton du groupe désactive automatiquement les autres).
+
+Exemple (source)
+````````````````
+
+.. code-block:: html
+
+   <form action="_static/formproc/debug">
+     <p>Taille :
+       <label><input name="size" type="radio" value="s"> Petite</label>
+       <label><input name="size" type="radio" value="m"> Moyenne</label>
+       <label><input name="size" type="radio" value="l"> Grande</label>
+     </p>
+     <p>Garniture :
+       <label><input name="topping" type="checkbox" value="ch"> Fromage</label>
+       <label><input name="topping" type="checkbox" value="ol"> Olives</label>
+       <label><input name="topping" type="checkbox" value="mu"> Champignons</label>
+     </p>
+     <button>Commander</button>
+   </form>
+
+Exemple (rendu)
+```````````````
+
+.. raw:: html
+
+  <div class="rendered">
+   <form action="_static/formproc/debug">
+     <p>Taille :
+       <label><input name="size" type="radio" value="s"> Petite</label>
+       <label><input name="size" type="radio" value="m"> Moyenne</label>
+       <label><input name="size" type="radio" value="l"> Grande</label>
+     </p>
+     <p>Garniture :
+       <label><input name="topping" type="checkbox" value="ch"> Fromage</label>
+       <label><input name="topping" type="checkbox" value="ol"> Olives</label>
+       <label><input name="topping" type="checkbox" value="mu"> Champignons</label>
+     </p>
+     <button>Commander</button>
+   </form>
+  </div>
+
+Boutons et formulaires
+----------------------
+
+Les boutons ont trois fonctionalités possibles, portées par l'attribut `@type`:html:\ :
+
+* ``submit``\ : envoie les données du formulaire (défaut)
+* ``reset``\ : remet tous les champs du formulaire à leur valeur initiale
+* ``button``\ : aucun comportement par défaut
+
+Les boutons du dernier type sont utiles en conjonction avec des `scripts`:doc:.
+
+
+.. index:: @method
+
+Méthode
+-------
+
+La balise `<form>`:html: accepte un atttribut `@method`:html:, qui peut prendre deux valeurs :
+
+* ``get``\ : les données sont passée *via* l'URL (défaut)
+* ``post``\ : les données sont passées dans la requête HTTM
+
+La méthode ``get`` doit être employée
+
+* lorsque les données ne sont pas trop volumineuses, et surtout
+* lorsque le traitement des données n'a **pas d'effet de bord**.
+
+Dans tous les autres cas, la méthode ``post`` doit être utilisée.
+
+.. note::
+
+  Bien que les données du formulaire n'apparaissent pas directement avec la méthode ``post``,
+  celle-ci n'est pas plus sécurisée que la méthode ``get``\ :
+  les données circulent en clair sur le réseau.
+
+  La bonne manière de faire transiter des données de manière sûre sur le Web
+  consiste à utiliser le protocole HTTPS au lieu de HTTP.
+
+
+Envoi de fichier
+----------------
+
+L'emploi de `<input type="file">`:html: pour envoyer le contenu d'un fichier
+nécessite deux précaution au niveau du `<form>`:html: englobant :
+
+* `method="post"`:html:
+* `enctype="multipart/form-data"`:html:
+
+sans quoi c'est le *nom* du fichier, et non son contenu, qui sera envoyé au serveur.
 
 
 
 .. _exo_calculette2:
 
-Exercice
-++++++++
+Exercices
++++++++++
 
 Reprenez `votre code représentant une calculatrice <exo_calculette1>`:ref:
-et améliorez le pour qu'il soit conforme à `ce modèle`__.
+et améliorez le pour qu'il soit conforme au modèle ci-dessous.
 
-__ _static/exo_calculette/sujet_form.png
+.. figure:: _static/exo_calculette/sujet_form.png
+   :target: _static/exo_calculette/sujet_form.png
+   :alt: calculette
+   :width: 45%
 
 
+Exercice
+--------
 
-.. slide:: Fin de la `seance8`:ref
+Expérimentez les différents types de champs
+avec le processeur fourni à l'adresse suivante  :
+
+  http://champin.net/enseignement/intro-web/_static/formproc/debug
+
+.. slide:: Fin de la `seance8`:ref:
    :level: 2
    :class: nav-seance
 
    Vers la `seance9`:ref:.
+
+.. _exo_form_debug:
+

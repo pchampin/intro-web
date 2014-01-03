@@ -1638,13 +1638,16 @@ Example
 
   <table>
     <tr>
-      <th>Product</th> <th>Price</th> <th>Available</th>
+      <td></td> <th>Medium</th> <th>Large</th>
     </tr>
     <tr>
-      <td>Beer</td> <td>3€</td> <td>no</td>
+      <th>Americano</th> <td>1.50€</td> <td>1.90€</td>
     </tr>
     <tr>
-      <td>Wine</td> <td>5€</td> <td>yes</td>
+      <th>Latte</th> <td>1.90€</td> <td>2.10€</td>
+    </tr>
+    <tr>
+      <th>Cappucino</th> <td>1.90€</td> <td>2.10€</td>
     </tr>
   </table>
 
@@ -1657,13 +1660,16 @@ Example (résultat)
 
   <table class="rendered example">
     <tr>
-      <th>Product</th> <th>Price</th> <th>Available</th>
+      <td></td> <th>Medium</th> <th>Large</th>
     </tr>
     <tr>
-      <td>Beer</td> <td>3€</td> <td>no</td>
+      <th>Americano</th> <td>1.50€</td> <td>1.90€</td>
     </tr>
     <tr>
-      <td>Wine</td> <td>5€</td> <td>yes</td>
+      <th>Latte</th> <td>1.90€</td> <td>2.10€</td>
+    </tr>
+    <tr>
+      <th>Cappucino</th> <td>1.90€</td> <td>2.10€</td>
     </tr>
   </table>
 

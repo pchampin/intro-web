@@ -20,6 +20,7 @@ Version: |version|
    css
    scripts
    seances
+   projet
 
 * :ref:`genindex`
 

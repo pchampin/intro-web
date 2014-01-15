@@ -1492,6 +1492,8 @@ par exemple :
 Pour en savoir plus...
 ++++++++++++++++++++++
 
-... consulter `CSS3 Media Queries`_
+* consulter `CSS3 Media Queries`_
+* `testez votre configuration`_
 
 .. _CSS3 Media Queries: http://dev.w3.org/csswg/css3-mediaqueries/
+.. _testez votre configuration: _static/test-media.html

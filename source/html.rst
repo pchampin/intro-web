@@ -1841,7 +1841,7 @@ dans une balise `<label>`:html:.
    Une autre méthode consiste à
 
    * nommer le `<input>`:html: avec l'attribut `@id`:html:, et
-   * lui lier le `<input>`:html: avec l'attribut `@for`:html:.
+   * lui lier le `<label>`:html: avec l'attribut `@for`:html:.
 
    Par exemple :
 

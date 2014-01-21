@@ -90,12 +90,6 @@ section.rendered {
     width: 7em;
 }
 
-/* ensures that box-drawing character connect with each other */
-.big.tree pre {
-    line-height: 1.1em;
-}
-
-
 
 /**** custom classes ****/
 
@@ -233,4 +227,22 @@ table.example th {
 
 table.example td.no-border {
     border: none;
+}
+
+/**** better graphviz rendering ****/
+
+p.graphviz {
+    text-align: center;
+}
+
+
+/**** big elements handling ****/
+
+p.big.graphviz {
+    max-width: none;
+    overflow: auto;
+}
+
+.big.graphviz img {
+    max-width: none;
 }

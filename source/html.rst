@@ -123,6 +123,8 @@ Exemples :
 
 .. index:: arbre
 
+.. _structure_en_arbre:
+
 Structure en arbre
 ------------------
 
@@ -134,18 +136,29 @@ il découle que les balises confèrent une structure d'**arbre** au document :
 
   <X><Y>Lorem <Z>ipsum</Z></Y> dolor <X>sit.</X></X>
 
-.. rst-class:: big tree
-.. code-block:: html
+.. graphviz::
 
-   <X>
-   ├ <Y>
-   │ ├ "Lorem "
-   │ └ <Z>
-   │   └ "ipsum"
-   ├ " dolor "
-   └ <X>
-     └ "sit."
+   graph  {
 
+     X -- Y
+      Y -- Lorem
+      Y -- Z
+       Z -- ipsum
+     X -- dolor
+     X -- X2
+       X2 -- "sit."
+
+     X  [ label="<X>", shape=box, style=rounded ]
+     Y  [ label="<Y>", shape=box, style=rounded ]
+     Z  [ label="<Z>", shape=box, style=rounded ]
+     X2 [ label="<X>", shape=box, style=rounded ]
+
+     Lorem  [ shape=elipse, style=filled ]
+     ipsum  [ shape=elipse, style=filled ]
+     dolor  [ shape=elipse, style=filled ]
+     "sit." [ shape=elipse, style=filled ]
+
+   }
 
 
 .. index:: attribut
@@ -458,33 +471,62 @@ Sections en HTML
 
 Arbre avec des sections implicites
 ``````````````````````````````````
-.. rst-class:: big tree
-.. code-block:: html
 
-   ├ <h1> "Thèse"
-   ├ <p>  "..."
-   ├ <h2> "Argument 1"
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <h2> "Argument 1"
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <h1> "Anti-thèse"
-   ├ <h2> "Contre-argument 1"
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <h2> "Contre-argument 2"
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <p>  "..."
-   ├ <h1> "Synthèse"
-   ├ <p>  "..."
-   ├ <p>  "..."
-   └ <p>  "..."
+.. rst-class:: big
+.. graphviz::
 
+   graph {
+     node  [ shape=elipse, style=filled ]
+
+     body -- h1_1 -- "Thèse"
+     body -- p_1 -- "...1"
+     body -- h2_1 -- "Argument 1"
+     body -- p_2 -- "...2"
+     body -- p_3 -- "...3"
+     body -- h2_2 -- "Argument 2"
+     body -- p_4 -- "...4"
+     body -- p_5 -- "...5"
+     body -- h1_2 -- "Anti-thèse"
+     body -- h2_3 -- "Contre-argument 1"
+     body -- p_6 -- "...6"
+     body -- p_7 -- "...7"
+     body -- h2_4 -- "Contre-argument 2"
+     body -- p_8 -- "...8"
+     body -- p_9 -- "...9"
+     body -- h1_3 -- "Synthèse"
+     body -- p_10 -- "...10"
+
+     body [ label="<body>", shape=box, style=rounded ]
+     h1_1 [ label="<h1>", shape=box, style=rounded ]
+     h1_2 [ label="<h1>", shape=box, style=rounded ]
+     h1_3 [ label="<h1>", shape=box, style=rounded ]
+     h2_1 [ label="<h2>", shape=box, style=rounded ]
+     h2_2 [ label="<h2>", shape=box, style=rounded ]
+     h2_3 [ label="<h2>", shape=box, style=rounded ]
+     h2_4 [ label="<h2>", shape=box, style=rounded ]
+     p_1 [ label="<p>", shape=box, style=rounded ]
+     p_2 [ label="<p>", shape=box, style=rounded ]
+     p_3 [ label="<p>", shape=box, style=rounded ]
+     p_4 [ label="<p>", shape=box, style=rounded ]
+     p_5 [ label="<p>", shape=box, style=rounded ]
+     p_6 [ label="<p>", shape=box, style=rounded ]
+     p_7 [ label="<p>", shape=box, style=rounded ]
+     p_8 [ label="<p>", shape=box, style=rounded ]
+     p_9 [ label="<p>", shape=box, style=rounded ]
+     p_10 [ label="<p>", shape=box, style=rounded ]
+
+     "...1" [ label="..." ]
+     "...2" [ label="..." ]
+     "...3" [ label="..." ]
+     "...4" [ label="..." ]
+     "...5" [ label="..." ]
+     "...6" [ label="..." ]
+     "...7" [ label="..." ]
+     "...8" [ label="..." ]
+     "...9" [ label="..." ]
+     "...10" [ label="..." ]
+
+   }
 
 
 Illustration avec sections
@@ -520,40 +562,75 @@ Illustration avec sections
 
 Arbre avec des sections explicites
 ``````````````````````````````````
-.. rst-class:: big tree
-.. code-block:: html
+.. rst-class:: big
+.. graphviz::
 
-   ├ <section>
-   │ ├ <h1> "Thèse"
-   │ ├ <p> "..."
-   │ ├ <section>
-   │ │ ├ <h2> "Argument 1"
-   │ │ ├ <p> "..."
-   │ │ ├ <p> "..."
-   │ │ └ <p> "..."
-   │ └ <section>
-   │   ├ <h2> "Argument 2"
-   │   ├ <p> "..."
-   │   ├ <p> "..."
-   │   └ <p> "..."
-   ├ <section>
-   │ ├ <h1> "Antithèse"
-   │ ├ <p> "..."
-   │ ├ <section>
-   │ │ ├ <h2> "Contre-argument 1"
-   │ │ ├ <p> "..."
-   │ │ ├ <p> "..."
-   │ │ └ <p> "..."
-   │ └ <section>
-   │   ├ <h2> "Contre-argument 2"
-   │   ├ <p> "..."
-   │   ├ <p> "..."
-   │   └ <p> "..."
-   └ <section>
-     ├ <h1> "Synthèse"
-     ├ <p> "..."
-     ├ <p> "..."
-     └ <p> "..."
+   graph {
+     node  [ shape=elipse, style=filled ]
+
+     body -- sec1
+     sec1 -- h1_1 -- "Thèse"
+     sec1 -- p_1 -- "...1"
+     sec1 -- sec2
+     sec2 -- h2_1 -- "Argument 1"
+     sec2 -- p_2 -- "...2"
+     sec2 -- p_3 -- "...3"
+     sec1 -- sec3
+     sec3 -- h2_2 -- "Argument 2"
+     sec3 -- p_4 -- "...4"
+     sec3 -- p_5 -- "...5"
+     body -- sec4
+     sec4 -- h1_2 -- "Anti-thèse"
+     sec4 -- sec5
+     sec5 -- h2_3 -- "Contre-argument 1"
+     sec5 -- p_6 -- "...6"
+     sec5 -- p_7 -- "...7"
+     sec4 -- sec6
+     sec6 -- h2_4 -- "Contre-argument 2"
+     sec6 -- p_8 -- "...8"
+     sec6 -- p_9 -- "...9"
+     body -- sec7
+     sec7 -- h1_3 -- "Synthèse"
+     sec7 -- p_10 -- "...10"
+
+     body [ label="<body>", shape=box, style=rounded ]
+     sec1 [ label="<section>", shape=box, style=rounded ]
+     sec2 [ label="<section>", shape=box, style=rounded ]
+     sec3 [ label="<section>", shape=box, style=rounded ]
+     sec4 [ label="<section>", shape=box, style=rounded ]
+     sec5 [ label="<section>", shape=box, style=rounded ]
+     sec6 [ label="<section>", shape=box, style=rounded ]
+     sec7 [ label="<section>", shape=box, style=rounded ]
+     h1_1 [ label="<h1>", shape=box, style=rounded ]
+     h1_2 [ label="<h1>", shape=box, style=rounded ]
+     h1_3 [ label="<h1>", shape=box, style=rounded ]
+     h2_1 [ label="<h2>", shape=box, style=rounded ]
+     h2_2 [ label="<h2>", shape=box, style=rounded ]
+     h2_3 [ label="<h2>", shape=box, style=rounded ]
+     h2_4 [ label="<h2>", shape=box, style=rounded ]
+     p_1 [ label="<p>", shape=box, style=rounded ]
+     p_2 [ label="<p>", shape=box, style=rounded ]
+     p_3 [ label="<p>", shape=box, style=rounded ]
+     p_4 [ label="<p>", shape=box, style=rounded ]
+     p_5 [ label="<p>", shape=box, style=rounded ]
+     p_6 [ label="<p>", shape=box, style=rounded ]
+     p_7 [ label="<p>", shape=box, style=rounded ]
+     p_8 [ label="<p>", shape=box, style=rounded ]
+     p_9 [ label="<p>", shape=box, style=rounded ]
+     p_10 [ label="<p>", shape=box, style=rounded ]
+
+     "...1" [ label="..." ]
+     "...2" [ label="..." ]
+     "...3" [ label="..." ]
+     "...4" [ label="..." ]
+     "...5" [ label="..." ]
+     "...6" [ label="..." ]
+     "...7" [ label="..." ]
+     "...8" [ label="..." ]
+     "...9" [ label="..." ]
+     "...10" [ label="..." ]
+
+   }
 
 .. note::
 

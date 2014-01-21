@@ -452,11 +452,26 @@ Ceci peut s'exprimer en combinant plusieurs sélecteurs :
    X Y { /* s'applique à tout élément Y situé
             à l'intérieur d'un X — même indirectement */ }
 
-   X>Y { /* s'applique à tout élément Y situé
-            directement à l'intérieur d'un X */ }
+   X > Y { /* s'applique à tout élément Y situé
+              directement à l'intérieur d'un X */ }
 
-   X+Y { /* s'applique à tout élément Y situé
-            immédiatement après un X */ }
+   X + Y { /* s'applique à tout élément Y situé
+              immédiatement après un X */ }
+
+.. TODO illustrer sur un arbre graphviz?
+.. note::
+
+   En considérant la `structure_en_arbre`:ref: vue dans la section sur HTML,
+   on peut reformuler les connecteurs ainsi :
+
+   - X Y : déplacement quelconque vers le bas
+   - X > Y : déplacement d'un cran vers le bas
+   - X + Y : déplacement d'un cran vers la droite (sous le même parent)
+
+   Notons qu'il existe un quatrième connecteur :
+
+   - X ~ Y : déplacement vers la droite (sous le même parent)
+
 
 Principe (suite)
 ----------------

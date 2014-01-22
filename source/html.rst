@@ -1809,9 +1809,24 @@ Avant que CSS ne s'impose, les tableaux ont souvent été utilisés
 pour faciliter la mise en page des sites
 (en tête et pied de page, menu latéral, présentation sur plusieurs colonnes).
 
-Aujourd'hui, cette pratique est fortement déconseillée,
+Aujourd'hui, cette pratique est *fortement déconseillée*,
 car elle est beaucoup moins flexible
 que l'utilisation de CSS pour le `positionnement <position>`:ref:.
+
+C'est aussi une violation de la séparation entre fond et forme :
+l'utilisation de :html:`<table>` se justifie lorsque les éléments situés sur la même ligne
+(resp. la même colonne) ont quelque-chose qui les relie.
+
+Contre-exemple
+``````````````
+
+L'utilisation d'un tableau pour afficher une gallerie d'image sur deux colonnes est une
+mauvaise solution.
+
+Il est plus judicieux d'utiliser CSS pour obtenir le même résultat,
+d'autant que ce résultat pourra adapter le nombre de colonnes
+(éventuellement pour le réduire à 1)
+en fonction du type d'affichage.
 
 
 

@@ -44,7 +44,7 @@ basé sur la navigation par hypertexte_.
 
 .. note::
 
-   Beaucoup d'application d'Internet utilisent aujourd'hui le Web
+   Beaucoup d'applications d'Internet utilisent aujourd'hui le Web
    comme interface utilisateur,
    ce qui rend plus floue la différence entre le Web et Internet.
 
@@ -186,7 +186,7 @@ Composants du Web
 HTTP
 ----
 
-* HyperText Transfer Protocol (`RFC 2616`_)
+* HyperText Transfer Protocol (`RFC 2616`_).
 
 * Décrit comment les données du Web sont échangées entre machines.
 
@@ -202,13 +202,13 @@ HTTP (terminologie)
 
 .. rst-class:: small
 
-* **Ressource**:
-  toute unité d'information (document, image, vidéo...) accessible sur le Web
+* **Ressource** :
+  toute unité d'information (document, image, vidéo...) accessible sur le Web.
 
-* **Serveur**:
+* **Serveur** :
   un ordinateur « contenant » des ressources, toujours connecté à Internet.
 
-* **Client**:
+* **Client** :
   un ordinateur/smartphone/tablette... utilisé pour afficher des ressources.
 
 .. figure:: _static/client-server.png
@@ -224,7 +224,7 @@ URLs
 ----
 
 * Uniform Resource Locator (`STD 66`_)
-* Structure:
+* Structure :
 
 .. figure:: _static/url-structure.*
    :width: 80%
@@ -237,7 +237,7 @@ URLs
 
 .. rst-class:: small
 
-  NB: les URLs sont parfois appelés URIs ou IRIs → même chose
+  NB : les URLs sont parfois appelés URIs ou IRIs → même chose
 
 
 HTML
@@ -302,7 +302,7 @@ Parce que...
 Et que...
 ---------
 
-Le WYSIWYG n'est pas idéal pour HTML:
+Le WYSIWYG n'est pas idéal pour HTML :
 
 * HTML n'est pas (plus) un langage de présentation :
 

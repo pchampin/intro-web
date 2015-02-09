@@ -1,13 +1,13 @@
 ================
-Projet 2013-2014
+Projet 2014-2015
 ================
 
 L'objectif de votre projet est de produire, en binôme,
 une maquette de site marchand.
-Ce sera une *maquette* dans le sens ou les fonctionnalités coté serveur
+Ce sera une *maquette* dans le sens où les fonctionnalités coté serveur
 (recherche, passage de commande) seront simulées.
 
-Voici la liste des pages que votre site devra, au minimum, comporter :
+Voici la liste des pages que votre maquette devra, au minimum, comporter :
 
 * une page de garde, affichant un message de bienvenue et les promotions en cours,
   et offrant une fonction de recherche ;
@@ -29,12 +29,23 @@ __ http://validator.w3.org/
 __ http://jigsaw.w3.org/css-validator/
 
 
-Chaque binôme m'enverra par mail l'URL à laquelle son projet est accessible,
-avant le **mardi 21 janvier 2014 à 23:59**\ ;
+Chaque binôme m'enverra par mail
+
+* l'URL à laquelle son projet est accessible, et
+* l'URL d'un dépôt GIT (par exemple sur github_ ou bitbucket_)
+  contenant les fichiers du projet (et démontrant un minimum d'utilisation),
+
+avant le **mardi 20 janvier 2015 à 23:59**\ ;
 tout retard entraînera un malus sur la note.
+
+.. _github: https://github.com
+.. _bitbucket: https://bitbucket.org
         
 Quelques indications
 ++++++++++++++++++++
+
+* Votre maquette utilisera exclusivement du HTML et du CSS
+  (pas de Javascript ou de PHP).
 
 * Comme tout site marchand, votre projet devra avoir un aspect uniforme d'une
   page à l'autre.
@@ -46,7 +57,7 @@ Quelques indications
   pointer vers l'unique page détaillée d'article que l'on vous demande
   d'écrire.
 
-* Pour simuler une fonction de recherche, il suffit d'utiliser l'adresse de la
-  page HTML "résultats de recherche" comme attribut ``action`` du formulaire.
+* Pour simuler un formulaire, il suffit d'utiliser l'adresse de la
+  page résultat comme attribut ``action`` de la balise ``<form>``.
   
 

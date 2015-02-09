@@ -14,78 +14,94 @@ Séance 1
 ========
 
 * `intro`:doc:
-* Prendre de l'avance sur la séance suivante
 
 .. _seance2:
 
 Séance 2
 ========
 
-* `Bases de HTML <html>`:doc: (jusqu'aux listes, incluses)
+* `Bases de HTML <html>`:doc:
+  (jusqu'à `l'exemple «Règle du jeu» <exemple_regle_du_jeu>`:ref:)
 
 .. _seance3:
 
 Séance 3
 ========
 
-* `Bases de CSS <css>`:doc: (jusqu'aux classes/id, inclus)
+* `Balises HTML <balises_html>`:ref: (jusqu'aux listes, incluses)
 
 .. _seance4:
 
 Séance 4
 ========
 
-* `Liens et images en HTML <liens>`:ref:
-* `Positionnement en CSS <position>`:ref:
-* `Personnalisation des boîtes <boite>`:ref:
+* `Bases de CSS <css>`:doc: (jusqu'aux sélecteurs complexes, inclus)
 
 .. _seance5:
 
 Séance 5
 ========
 
-* `Vidéo en HTML <video>`:ref:
-* `HTML avancé <html_avance>`:ref:
+* `Classes et identifiants <class>`:ref:
+* `Liens et images en HTML <liens>`:ref:
 
 .. _seance6:
 
 Séance 6
 ========
 
-* `Tableaux <table>`:ref:
+* `Livre dont vous êtes le héros <donjon>`:ref:
+* `Organisation des fichiers <orga_fichiers>`:ref:
+* `Marge et positionnement <position>`:ref:
 
 .. _seance7:
 
 Séance 7
 ========
 
-* `Pseudo-classes et pseudo-éléments <pseudos>`:ref:
-* `Transitions CSS <transition>`:ref:
-* `Adaptation au media <media>`:ref:
+* `Personnalisation des boîtes <boite>`:ref:
+* `Images de fond <background>`:ref:
+* `Modes d'affichage <block>`:ref:
+* `Vidéo en HTML <video>`:ref:
 
 .. _seance8:
 
 Séance 8
 ========
 
-* `Formulaires et interactivités <form>`:ref:
+* `HTML avancé <html_avance>`:ref:
+* `Tableaux <table>`:ref:
 
 .. _seance9:
 
 Séances 9
 =========
 
-* `Introduction aux scripts <scripts>`:doc:
+* `Pseudo-classes et pseudo-éléments <pseudos>`:ref:
 
 .. _seance10:
+.. _seance11:
 
-Séance 10
+Séances 10 et 11
+================
+
+* `Formulaires et interactivités <form>`:ref:
+
+.. _seance12:
+
+Séance 12
 =========
 
-* `Scripts et application client <appclient>`:ref:
+* `Adaptation au media <media>`:ref:
 
 
-.. TODO
+Projet
+======
+
+* Deux séances seront consacrées au travail sur le `projet <projet>`:doc:.
+
+
+.. pour mémoire, le plan que j'avais initialement prévu
 
     Il y a 14 séances de 2h (+2h sur la typographie).
 

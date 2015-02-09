@@ -18,7 +18,6 @@ Version: |version|
    intro
    html
    css
-   scripts
    seances
    projet
 

@@ -325,7 +325,9 @@ Un document typique est une séquence de
 * paragraphes.
 
 Les titres ont différents niveaux d'importance,
-repérables à leur typographie (et parfois à leur numérotation).
+repérables à leur typographie (et parfois à leur numérotation),
+et donnent une structure *hiérarchique* au document
+(en parties, sous-parties, *etc*.).
 
 .. container:: build
 
@@ -333,7 +335,7 @@ repérables à leur typographie (et parfois à leur numérotation).
 
      Identifiez-vous les différents niveaux de titre dans l'exemple suivant ?
 
-
+.. _exemple_regle_du_jeu:
 
 Exemple
 -------
@@ -343,6 +345,8 @@ Exemple
    :class: shadow
 
 
+
+.. _balises_html:
 
 .. index:: <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
 
@@ -639,8 +643,10 @@ Arbre avec des sections explicites
    et donc qu'il est superflu d'alourdir le code HTML
    avec cette information redondante.
 
-   Lorsqu'on étudiera `css`:doc: et les `scripts`:doc:,
+   Lorsqu'on étudiera `css`:doc: et les scripts (`l'an prochain`__),
    on comprendra mieux l'intérêt de rendre cette structure explicite.
+
+__ http://champin.net/enseignement/intro-js
 
 
 
@@ -1002,14 +1008,11 @@ Le rendu doit maintenant être identique à celui de l'exemple.
 
 
 
-
-
-
-.. slide:: Fin de la `seance2`:ref:
+.. slide:: Fin de la `seance3`:ref:
    :level: 2
    :class: nav-seance
 
-   Vers la `seance3`:ref:.
+   Vers la `seance4`:ref:.
 
 
 
@@ -1290,6 +1293,22 @@ Exemples
     ...</section>
 
 
+.. _donjon:
+
+Exercice : livre dont vous êtes le héros
+----------------------------------------
+
+Téléchargez `ce fichier html`__. Il contient un livre dont vous êtes le héros minimaliste.
+
+#. Faites en une version interactive avec des liens internes.
+#. Faites en une version interactive ou chaque entrée
+   est une page HTML distincte.
+
+__ _static/exo_liens/sujet.html
+
+
+
+.. _orga_fichiers:
 
 Organisation des fichiers
 -------------------------
@@ -1329,29 +1348,11 @@ Exemple
      └ ...
 
 
-
-.. _donjon:
-
-Exercice : livre dont vous êtes le héros
-----------------------------------------
-
-Téléchargez `ce fichier html`__. Il contient un livre dont vous êtes le héros minimaliste.
-
-#. Faites en une version interactive avec des liens internes.
-#. Faites en une version interactive ou chaque entrée
-   est une page HTML distincte.
-
-__ _static/exo_liens/sujet.html
-
-
-
-.. slide:: Suite la `seance4`:ref:
+.. slide:: Suite la `seance6`:ref:
    :level: 2
    :class: nav-seance
 
-   * `Positionnement en CSS <position>`:ref:
-   * `Personnalisation des boîtes <boite>`:ref:
-
+   * `Marge et positionnement <position>`:ref:
 
 
 .. index:: <video>
@@ -1830,11 +1831,11 @@ en fonction du type d'affichage.
 
 
 
-.. slide:: Fin de la `seance6`:ref:
+.. slide:: Fin de la `seance8`:ref:
    :level: 2
    :class: nav-seance
 
-   Vers la `seance7`:ref:.
+   Vers la `seance9`:ref:.
 
 
 
@@ -1928,34 +1929,36 @@ dans une balise `<label>`:html:.
    <div><label><input type=checkbox> tarif réduit</div>
   </div>
 
-.. note::
+.. nextslide::
 
-   Une autre méthode consiste à
+Une autre méthode consiste à
 
-   * nommer le `<input>`:html: avec l'attribut `@id`:html:, et
-   * lui lier le `<label>`:html: avec l'attribut `@for`:html:.
+* nommer le `<input>`:html: avec l'attribut `@id`:html:, et
+* lui lier le `<label>`:html: avec l'attribut `@for`:html:.
 
-   Par exemple :
+.. nextslide::
 
-   .. code-block:: html
+Par exemple :
 
-      <table>
-        <tr><td><label for="name">Nom :</td>
-            <td><input id="name"></td></tr>
-        <tr><td><label for="gname">Prénom :</td>
-            <td><input id="gname"></td></tr>
-      </table>
+.. code-block:: html
 
-   .. raw:: html
+   <table>
+     <tr><td><label for="name">Nom :</td>
+         <td><input id="name"></td></tr>
+     <tr><td><label for="gname">Prénom :</td>
+         <td><input id="gname"></td></tr>
+   </table>
 
-     <div class="rendered">
-      <table>
-        <tr><td><label for="name">Nom :</td>
-            <td><input id="name"></td></tr>
-        <tr><td><label for="gname">Prénom :</td>
-            <td><input id="gname"></td></tr>
-      </table>
-     </div>
+.. raw:: html
+
+  <div class="rendered">
+   <table>
+     <tr><td><label for="name">Nom :</td>
+         <td><input id="name"></td></tr>
+     <tr><td><label for="gname">Prénom :</td>
+         <td><input id="gname"></td></tr>
+   </table>
+  </div>
 
 
 .. index:: @placeholder
@@ -2161,7 +2164,8 @@ Les boutons ont trois fonctionalités possibles, portées par l'attribut `@type`
 * ``reset``\ : remet tous les champs du formulaire à leur valeur initiale
 * ``button``\ : aucun comportement par défaut
 
-Les boutons du dernier type sont utiles en conjonction avec des `scripts`:doc:.
+Les boutons du dernier type sont utiles en conjonction avec des scripts
+(hors-programme pour cette année).
 
 
 .. index:: @method
@@ -2217,20 +2221,29 @@ et améliorez le pour qu'il soit conforme au modèle ci-dessous.
    :alt: calculette
    :width: 45%
 
+.. nextslide::
 
-Exercice
---------
+Ajoutez ensuite la ligne suivante dans le ``<head>`` de votre document::
 
-Expérimentez les différents types de champs
+  <script type="text/javascript" src="http://champin.net/enseignement/intro-web/_static/exo_calculette/calculette.js"></script>
+
+et essayez votre calculette...
+
+
+.. nextslide::
+
+Dans un nouveau document, créer un formulaire
+(par exemple, pour commander des pizzas),
+en expérimentant les différents types de champs
 avec le processeur fourni à l'adresse suivante  :
 
   http://champin.net/enseignement/intro-web/_static/formproc/debug
 
-.. slide:: Fin de la `seance8`:ref:
+.. slide:: Fin des `seance10`:ref:
    :level: 2
    :class: nav-seance
 
-   Vers la `seance9`:ref:.
+   Vers la `seance12`:ref:.
 
 .. _exo_form_debug:
 

@@ -629,11 +629,11 @@ Exercice
 
 
 
-.. slide:: Fin de la `seance3`:ref:
+.. slide:: Suite la `seance5`:ref:
    :level: 2
    :class: nav-seance
 
-   Vers la `seance4`:ref:.
+   * `Liens et images en HTML <liens>`:ref:
 
 
 
@@ -1107,6 +1107,8 @@ Remarques
 
 
 
+.. _background:
+
 .. index:: .background-image
 
 Images de fond
@@ -1281,6 +1283,7 @@ Changer le mode d'affichage
     http://www.w3.org/wiki/CSS/Properties/vertical-align .
 
 
+
 Exercice
 ++++++++
 
@@ -1300,12 +1303,11 @@ __ _static/exo_css_boxes/sujet.zip
 
 
 
-.. slide:: Fin de la `seance4`:ref:
+.. slide:: Suite la `seance7`:ref:
    :level: 2
    :class: nav-seance
 
-   Vers la `seance5`:ref:.
-
+   * `Vidéo en HTML <video>`:ref:
 
 
 .. _pseudos:
@@ -1439,12 +1441,24 @@ __ _static/exo_css_ut7/selecteurs-smb/
 Merci à `UT7 <http://ut7.fr/>`_ pour ces exercices !
 
 
+.. slide:: Fin de la `seance9`:ref:
+   :level: 2
+   :class: nav-seance
+
+   Vers la `seance10`:ref:.
+
+
+
 .. _media:
 
 Adaptation au média
 ===================
 
+Adaptation au média
++++++++++++++++++++
+
 Des feuilles de style différentes peuvent être appliquées selon le *média* :
+
 .. code-block:: html
 
    <link rel="stylesheet" type="text/css"

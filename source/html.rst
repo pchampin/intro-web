@@ -1302,9 +1302,10 @@ Téléchargez `ce fichier html`__. Il contient un livre dont vous êtes le héro
 
 #. Faites en une version interactive avec des liens internes.
 #. Faites en une version interactive ou chaque entrée
-   est une page HTML distincte.
+   est une page HTML distincte (en utilisant `ces fichiers HTML`__).
 
 __ _static/exo_liens/sujet.html
+__ _static/exo_liens/chapitres.tar.gz
 
 
 

@@ -13,21 +13,12 @@ NEWLINE = regex("\n *")
 
 class MyParser(HTMLParser):
 
-    nb = 0
+    nb = 1
     current = None
     data = ""
 
-    def dump_json(self):
-        if self.current:
-            filename = "chapitre{}.json".format(self.nb);
-            print(filename)
-            with open(filename, "w") as f:
-                dump(self.current, f, indent="    ")
-        self.nb += 1
-
     def handle_starttag(self, tag, _):
         if tag == "section":
-            self.dump_json()
             self.current = { "txt": "", "links": [] }
         self.data = ""
 
@@ -43,6 +34,13 @@ class MyParser(HTMLParser):
                 "txt": self.data,
                 "link": "#{}".format(linkno),
             })
+        elif tag == "section":
+            filename = "chapitre{}.json".format(self.nb);
+            print(filename)
+            with open(filename, "w") as f:
+                dump(self.current, f, indent="    ")
+            self.nb += 1
+            
             
 
 if __name__ == "__main__":

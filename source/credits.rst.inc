@@ -19,7 +19,7 @@
         Creative Commons Attribution-ShareAlike 3.0 France</a>.</p>
 
 
-.. only:: not(html)
+.. only:: not(html) and not(slides)
 
    .. fallback for non HTML content
 

@@ -9,9 +9,6 @@ from html.parser import HTMLParser
 from json import dump
 from re import compile as regex
 
-def makelink(n):
-    return "chapitre{}.json".format(n)
-
 NEWLINE = regex("\n *")
 
 class MyParser(HTMLParser):
@@ -22,7 +19,7 @@ class MyParser(HTMLParser):
 
     def dump_json(self):
         if self.current:
-            filename = makelink(self.nb)
+            filename = "chapitre{}.json".format(self.nb);
             print(filename)
             with open(filename, "w") as f:
                 dump(self.current, f, indent="    ")
@@ -44,7 +41,7 @@ class MyParser(HTMLParser):
             linkno = self.data.rsplit(" ", 1)[-1]
             self.current["links"].append({
                 "txt": self.data,
-                "link": makelink(linkno),
+                "link": "#{}".format(linkno),
             })
             
 

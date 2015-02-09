@@ -16,6 +16,11 @@
 }
 
 
+/**** level-2 slide ****/
+
+.slide.level-2 h2 {
+    margin-top: 350px;
+}
 
 /**** source and rendered HTML ****/
 

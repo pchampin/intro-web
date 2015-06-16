@@ -255,6 +255,27 @@ c'est à dire le **fond** et non la **forme**.
 La mise en forme (qu'on appelle parfois *structure physique*) est gérée par
 une **feuille de style** qui sera décrite en `css`:doc:.
 
+Cette séparation est indispensable pour assurer l'**adaptabilité** du contenu,
+et cette adaptabilité est incontournable dans un environnement ouvert comme le Web:
+
+  * `responsive design`__
+  * `accessibilité`__
+
+__ http://en.wikipedia.org/wiki/Responsive_design
+__ http://www.w3.org/standards/webdesign/accessibility
+
+.. note::
+
+   Considérez que votre page web peut être visualisée sur
+   
+   * un ordinateur fixe (grand écran, clavier, souris)
+   * un ordinateur portable (écran moyen, clavier, touchpad)
+   * une tablette (écran moyen à petit, écran tactile, clavier éventuellement)
+   * un smartphone (petit écran tactile, accéléromètre?, voix?)
+   * un téléviseur (très grand écran, télécommande)
+   * un terminal pour non-voyant (lecteur d'écran, afficheur braille)
+   
+
 
 
 Structure d'un document

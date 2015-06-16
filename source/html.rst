@@ -1985,6 +1985,60 @@ Par exemple :
 
 .. index:: @placeholder
 
+Importance de lier le libellé au champs
+```````````````````````````````````````
+
+L'association du libellé au champs explicite la sémantique du document,
+ce qui permet notamment d'améliorer :
+
+* l'ergonomie :
+
+  lorsqu'on clique sur un libellé, c'est le champs qui prend le focus ;
+
+* l'accessibilité :
+
+  l'adaptation du formulaire (par exemple pour un lecteur d'écran)
+  peut se faire de manière plus pertinente.
+
+.. note::
+
+   Considérez par exemple le formulaire suivant,
+   et sa lecture par un lecteur d'écran :
+
+   .. raw:: html
+            
+     <table>
+     <tr>
+       <td><label for="name2">Nom :</td>
+       <td><label for="gname2">Prénom :</td>
+     </tr>
+     <tr>
+       <td><input id="name2"></td>
+       <td><input id="gname2"></td>
+     </tr>
+     <tr>
+       <td colspan="2">Adresse (<label for="addr_street">rue</label>,
+                              <label for="addr_city">ville</label>,
+                              <label for="addr_country">pays</label>) :</td>
+     </tr>
+     <tr>
+       <td colspan="2"><input id="addr_street" style="width:100%"></td>
+     </tr>
+     <tr>
+       <td colspan="2"><input id="addr_city" style="width:100%"></td>
+     </tr>
+     <tr>
+       <td colspan="2"><input id="addr_country" style="width:100%"></td>
+     </tr>
+     <tr>
+       <td><label for="phone">Télépone :</td>
+       <td><input id="phone"></td>
+     </tr>
+     </table>
+   
+
+  
+
 Alternative au libellé
 ``````````````````````
 

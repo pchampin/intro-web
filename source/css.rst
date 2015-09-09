@@ -129,12 +129,11 @@ Référence et apprentissage :
 Démonstrations :
 
 * http://www.csszengarden.com/
-* http://css1k.com/
 
 .. note::
 
-   Les deux sites de démonstration ci-dessus
-   sont construits sur le même principe :
+   Le site de démonstration ci-dessus
+   est construit sur le principe suivant :
    la page HTML est toujours la même, seule la feuille de style change.
 
 
@@ -1422,23 +1421,28 @@ Ces valeurs peuvent notamment être de la forme :
 Exercices
 +++++++++
 
-Voici deux exercices pour réviser les sélecteurs CSS.
+Voici quelques exercices pour réviser les sélecteurs CSS.
 
-.. warning:: Ces exercices utilisent des sélecteurs non vus en cours.
+* `CSS Diner`__
 
-   Pour une liste exhaustive, consultez http://www.w3.org/TR/css3-selectors/ .
+__ http://flukeout.github.io/
 
-Dans les deux exercice,
+Dans les deux exercices suivants,
 vous devez compléter ``grille.css`` conformément aux directives données en commentaire,
 pour voir apparaître une image dans ``grille.html``.
 
-* `exercice 1`__
-* `exercice 2`__
+* `Coloriage magique 1`__
+* `Coloriage magique 2`__
 
 __ _static/exo_css_ut7/selecteurs-civ/
 __ _static/exo_css_ut7/selecteurs-smb/
 
-Merci à `UT7 <http://ut7.fr/>`_ pour ces exercices !
+Merci à `UT7 <http://ut7.fr/>`_ pour les deux derniers exercices !
+
+.. warning:: Les coloriages magiques utilisent des sélecteurs non vus en cours.
+
+   Pour une liste exhaustive, consultez http://www.w3.org/TR/css3-selectors/ .
+
 
 
 .. slide:: Fin de la `seance9`:ref:

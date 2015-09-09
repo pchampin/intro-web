@@ -23,7 +23,9 @@ Version: |version|
 
 * :ref:`genindex`
 
-.. rubric:: Remerciements
+.. rubric:: Crédits
 
-Merci à Isabelle Gonçalves pour ses nombreuses remarques et contributions.
+Ce support de cours a été initié par `Pierre-Antoine Champin <http://champin.net/>`_.
+
+Merci à Amélie Cordier et Isabelle Gonçalves pour leurs nombreuses remarques et contributions.
 

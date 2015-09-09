@@ -41,7 +41,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Introduction au Web'
-copyright = u'2013, Pierre-Antoine Champin <http://champin.net/>'
+copyright = u'2013-{}, Département Informatique (IUT Lyon1)'.format(
+    datetime.datetime.now().year)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -197,7 +198,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'intro-web.tex', u'Introduction au Web',
-   u'Pierre-Antoine Champin <http://champin.net/>', 'manual'),
+   u'Département Informatique (IUT Lyon 1)', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -241,7 +242,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'intro-web', u'Introduction au Web',
-   u'Pierre-Antoine Champin', 'intro-web', 'One line description of project.',
+   u'Département Informatique (IUT Lyon1)', 'intro-web', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -259,9 +260,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'Introduction au Web'
-epub_author = u'Pierre-Antoine Champin <http://champin.net/>'
-epub_publisher = u'Pierre-Antoine Champin <http://champin.net/>'
-epub_copyright = u'2013, Pierre-Antoine Champin <http://champin.net/>'
+epub_author = u'Département Informatique (IUT Lyon1)'
+epub_publisher = u'Département Informatique (IUT Lyon1)'
+epub_copyright = copyright
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

@@ -751,6 +751,62 @@ le contenu des éléments concernés :
 .. TODO ce serait bien d'avoir un voire plusieurs exemples ici
 
 
+.. index:: .overflow
+
+Débordement
+-----------
+
+Lorsqu'on contraint la taille d'un élément
+(par exemple un paragraphe),
+il est possible que cette taille ne suffise plus pour afficher le *contenu* de cet élément.
+
+La propriété :css:`overflow` permet de paramétrer le comportement de l'élément dans cette circonstance.
+Elle peut prendre les valeurs suivantes.
+
+* `visible`:css: (valeur par défaut) : le contenu s'affichera entièrement,
+  quitte à dépasser des limites de l'éléments
+  (et donc à empiéter éventuellement sur d'autres éléments).
+
+* `hidden`:css: : le contenu ne s'affiche qu'à l'intérieur de l'élément,
+  quitte à être tronqué.
+
+* `scroll`:css: : le contenu ne s'affiche qu'à l'intérieur de l'élément,
+  mais des ascenseurs sont affichés pour le faire défiler.
+
+* `auto`:css: : le navigateur choisit la solution qui lui semble la plus appropriée.
+  En général, il n'affiche que les ascenseurs qui sont nécessaires.
+
+Exemples d'utilisation de :css:`overflow`
+`````````````````````````````````````````
+.. raw:: html
+
+ <table class="rendered" style="width: 100%">
+   <tr>
+     <td style="border: 1px solid black">
+       <div style="height: 3em; overflow: visible">
+         visible<br>visible<br>visible<br>visible
+       </div>
+     </td>
+     <td style="border: 1px solid black">
+       <div style="height: 3em; overflow: hidden">
+         hidden<br>hidden<br>hidden<br>hidden
+       </div>
+     </td>
+     <td style="border: 1px solid black">
+       <div style="height: 3em; overflow: scroll">
+         scroll<br>scroll<br>scroll<br>scroll
+       </div>
+     </td>
+     <td style="border: 1px solid black">
+       <div style="height: 3em; overflow: auto">
+         auto<br>auto<br>auto<br>auto
+       </div>
+     </td>
+   </tr>
+ </table>
+
+
+
 
 Positionnement flottant
 +++++++++++++++++++++++

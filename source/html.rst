@@ -1942,21 +1942,21 @@ dans une balise `<label>`:html:.
 .. code-block:: html
 
    <div><label>Nom : <input></label></div>
-   <div><label><input type=checkbox> tarif réduit</div>
+   <div><label><input type=checkbox> tarif réduit</label></div>
 
 .. raw:: html
 
   <div class="rendered">
    <div><label>Nom : <input></label></div>
-   <div><label><input type=checkbox> tarif réduit</div>
+   <div><label><input type=checkbox> tarif réduit</label></div>
   </div>
 
 .. nextslide::
 
 Une autre méthode consiste à
 
-* nommer le `<input>`:html: avec l'attribut `@id`:html:, et
-* lui lier le `<label>`:html: avec l'attribut `@for`:html:.
+* nommer le `<input>`:html: avec l'attribut `id`:html:, et
+* lui lier le `<label>`:html: avec l'attribut `for`:html:.
 
 .. nextslide::
 
@@ -2031,7 +2031,7 @@ ce qui permet notamment d'améliorer :
        <td colspan="2"><input id="addr_country" style="width:100%"></td>
      </tr>
      <tr>
-       <td><label for="phone">Télépone :</td>
+       <td><label for="phone">Téléphone :</td>
        <td><input id="phone"></td>
      </tr>
      </table>
@@ -2043,7 +2043,7 @@ Alternative au libellé
 ``````````````````````
 
 Pour les champs de type ``text`` ou ``password``,
-une alternative au libellé consiste à utiliser l'attribut `@placeholder`:html:\ :
+une alternative au libellé consiste à utiliser l'attribut `placeholder`:html:\ :
 
 .. code-block:: html
 
@@ -2086,7 +2086,7 @@ Un autre type de champ permet de sélectionner (ou ou plusieurs) éléments dans
    </select>
   </div>
 
-L'attribut `@multiple`:html: autorise la sélection de plusieurs éléments.
+L'attribut `multiple`:html: autorise la sélection de plusieurs éléments.
 
 
 .. index:: <textarea>
@@ -2145,7 +2145,7 @@ Formulaire
 Les champs sont généralement regroupés dans une balise `<form>`:html:,
 qu'on appelle un **formulaire**.
 
-Cette balise requiert l'attribut `@action`:html:, qui contient
+Cette balise requiert l'attribut `action`:html:, qui contient
 l'URL de la ressource qui traitera les données du formulaire.
 
 
@@ -2156,14 +2156,14 @@ Champs d'un formulaire
 
 Pour pouvoir être traités,
 les champs d'un formulaire doivent tous être identifiés par un nom,
-porté par l'attribut `@name`:html:\ :
+porté par l'attribut `name`:html:\ :
 
 .. code-block:: html
 
    <form action="_static/formproc/debug">
      <input name="name" placeholder="identifiant">
      <input name="tel"  placeholder="n° de tel">
-     <button>Je m'inscrit</button>
+     <button>Je m'inscris</button>
    </form>
 
 .. raw:: html
@@ -2184,9 +2184,9 @@ Cases à cocher et boutons radio
 
 Les champs ayant le type ``checkbox`` ou ``radio`` vont souvent par groupe.
 Tous les membres d'un groupe ont le même nom,
-et se différencient par une **valeur** portée par un attribut `@value`:html:.
+et se différencient par une **valeur** portée par un attribut `value`:html:.
 
-Pour les cases à cocher, le nom se voir affecter l'ensemble des valeurs sélectionnée.
+Pour les cases à cocher, le nom se voit affecter l'ensemble des valeurs sélectionnées.
 
 Pour les boutons radio, une seule valeur peut-être affectée
 (l'activation d'un bouton du groupe désactive automatiquement les autres).
@@ -2234,7 +2234,7 @@ Exemple (rendu)
 Boutons et formulaires
 ----------------------
 
-Les boutons ont trois fonctionalités possibles, portées par l'attribut `@type`:html:\ :
+Les boutons ont trois fonctionnalités possibles, portées par l'attribut `type`:html:\ :
 
 * ``submit``\ : envoie les données du formulaire (défaut)
 * ``reset``\ : remet tous les champs du formulaire à leur valeur initiale
@@ -2249,7 +2249,7 @@ Les boutons du dernier type sont utiles en conjonction avec des scripts
 Méthode
 -------
 
-La balise `<form>`:html: accepte un atttribut `@method`:html:, qui peut prendre deux valeurs :
+La balise `<form>`:html: accepte un atttribut `method`:html:, qui peut prendre deux valeurs :
 
 * ``get``\ : les données sont passée *via* l'URL (défaut)
 * ``post``\ : les données sont passées dans la requête HTTP
@@ -2275,7 +2275,7 @@ Envoi de fichier
 ----------------
 
 L'emploi de `<input type="file">`:html: pour envoyer le contenu d'un fichier
-nécessite deux précaution au niveau du `<form>`:html: englobant :
+nécessite deux précautions au niveau du `<form>`:html: englobant :
 
 * `method="post"`:html:
 * `enctype="multipart/form-data"`:html:

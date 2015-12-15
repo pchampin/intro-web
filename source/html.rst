@@ -2064,7 +2064,7 @@ une alternative au libellé consiste à utiliser l'attribut `@placeholder`:html:
 Liste
 -----
 
-Un autre type de champs permet de sélectionner (ou ou plusieurs) éléments dans une liste.
+Un autre type de champ permet de sélectionner (ou ou plusieurs) éléments dans une liste.
 
 .. code-block:: html
 
@@ -2094,8 +2094,8 @@ L'attribut `@multiple`:html: autorise la sélection de plusieurs éléments.
 Zone de texte
 -------------
 
-Les champs `<input>`:html: ne permette pas la saisie de texte sur plusieurs lignes.
-Pour cela, on utilise le champs `<textarea>`:html:.
+Le champ `<input>`:html: ne permet pas la saisie de texte sur plusieurs lignes.
+Pour cela, on utilise le champ `<textarea>`:html:.
 
 .. code-block:: html
 
@@ -2109,9 +2109,9 @@ Pour cela, on utilise le champs `<textarea>`:html:.
   world</textarea>
   </div>
 
-NB: contrairement à `<input>`:html:,
+NB : contrairement à `<input>`:html:,
 `<textarea>`:html: attend une balise fermante
-(car le texte contenu dans le champs est le contenu de la balise).
+(car le texte contenu dans le champ est le contenu de la balise).
 
 .. index:: button
 
@@ -2252,11 +2252,11 @@ Méthode
 La balise `<form>`:html: accepte un atttribut `@method`:html:, qui peut prendre deux valeurs :
 
 * ``get``\ : les données sont passée *via* l'URL (défaut)
-* ``post``\ : les données sont passées dans la requête HTTM
+* ``post``\ : les données sont passées dans la requête HTTP
 
-La méthode ``get`` doit être employée
+La méthode ``get`` doit être employée :
 
-* lorsque les données ne sont pas trop volumineuses, et surtout
+* lorsque les données ne sont pas trop volumineuses, et surtout;
 * lorsque le traitement des données n'a **pas d'effet de bord**.
 
 Dans tous les autres cas, la méthode ``post`` doit être utilisée.

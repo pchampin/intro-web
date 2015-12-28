@@ -243,7 +243,7 @@ On va voir dans la suite comment faire afficher des retours à la ligne.
 
 
 
-.. index:: structure logique, structure phyisique, fond / forme,
+.. index:: structure logique, structure physique, fond / forme,
            feuille de style
 
 Séparation fond / forme
@@ -451,7 +451,7 @@ Exercice
    __ _static/exo_structure/sujet.png
 
    NB : la mise en forme sera différente,
-   mais chechez surtout a reproduire la structure *logique* du document.
+   mais cherchez surtout à reproduire la structure *logique* du document.
 
 #. Téléchargez le `modèle HTML`__ correspondant à l'exemple,
    et recopiez votre code à l'intérieur de la balise `<body>`:html: .
@@ -1237,7 +1237,7 @@ Liens
 Contenu de la balise `<a>`:html:
 --------------------------------
 
-Rien n'empèche bien sûr la balise `<a>`:html: de contenir d'autres balises.
+Rien n'empêche bien sûr la balise `<a>`:html: de contenir d'autres balises.
 
 .. code-block:: html
 
@@ -1592,7 +1592,7 @@ Méta-données
 * Les balises `<meta>`:html: sont situées dans l'élément `<head>`:html:
   du document.
 * Elles contiennent des *méta-données* : des données sur le document lui-même
-  (litéralement, des « données à propos des données »).
+  (littéralement, des « données à propos des données »).
 
 .. code-block:: html
 
@@ -1616,7 +1616,7 @@ Méta-données pour les robots
 
 Avec le nom ``robot``,
 la balise `<meta>`:html: peut être utilisée
-pour fournir des instrucrions aux moteurs de recherche :
+pour fournir des instructions aux moteurs de recherche :
 
 * ``index/noindex``: doivent-ils indexer cette page ou non ?
 * ``follow/nofollow``: doivent-ils suivre les liens ou non ?
@@ -1843,7 +1843,7 @@ l'utilisation de :html:`<table>` se justifie lorsque les éléments situés sur 
 Contre-exemple
 ``````````````
 
-L'utilisation d'un tableau pour afficher une gallerie d'image sur deux colonnes est une
+L'utilisation d'un tableau pour afficher une galerie d'image sur deux colonnes est une
 mauvaise solution.
 
 Il est plus judicieux d'utiliser CSS pour obtenir le même résultat,
@@ -2115,7 +2115,7 @@ NB : contrairement à `<input>`:html:,
 
 .. index:: button
 
-Bouttons
+Boutons
 --------
 
 La balise `<button>`:html: permet de créer des boutons.
@@ -2172,7 +2172,7 @@ porté par l'attribut `name`:html:\ :
    <form action="_static/formproc/debug">
      <input name="name" placeholder="identifiant">
      <input name="tel"  placeholder="n° de tel">
-     <button>Je m'inscrit</button>
+     <button>Je m'inscris</button>
    </form>
   </div>
 
@@ -2249,7 +2249,7 @@ Les boutons du dernier type sont utiles en conjonction avec des scripts
 Méthode
 -------
 
-La balise `<form>`:html: accepte un atttribut `method`:html:, qui peut prendre deux valeurs :
+La balise `<form>`:html: accepte un attribut `method`:html:, qui peut prendre deux valeurs :
 
 * ``get``\ : les données sont passée *via* l'URL (défaut)
 * ``post``\ : les données sont passées dans la requête HTTP

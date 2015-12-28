@@ -333,7 +333,7 @@ Bonne pratique
 Taille du texte avec ``font-size``
 ++++++++++++++++++++++++++++++++++
 
-La taille de police est générallement exprimée en points pica :
+La taille de police est généralement exprimée en points pica :
 
 .. code-block:: css
 
@@ -354,7 +354,7 @@ sont en théorie utilisables.
 .. index:: .test-decoration, .text-transform, .text-align, .color,
            .background-color
 
-Autres proriétés
+Autres propriétés
 ++++++++++++++++
 
 .. raw:: html
@@ -421,7 +421,7 @@ Couleurs en CSS : RGB
 Couleurs en CSS : autres moyens
 -------------------------------
 
-* couleurs pré-définies:
+* couleurs prédéfinies:
   `black`:css:, `white`:css:, `red`:css:, `green`:css:, `blue`:css:,
   `yellow`:css:...
 
@@ -463,13 +463,13 @@ Ceci peut s'exprimer en combinant plusieurs sélecteurs :
    En considérant la `structure_en_arbre`:ref: vue dans la section sur HTML,
    on peut reformuler les connecteurs ainsi :
 
-   - X Y : déplacement quelconque vers le bas
-   - X > Y : déplacement d'un cran vers le bas
-   - X + Y : déplacement d'un cran vers la droite (sous le même parent)
+   - X Y : déplacement quelconque vers le bas
+   - X > Y : déplacement d'un cran vers le bas
+   - X + Y : déplacement d'un cran vers la droite (sous le même parent)
 
    Notons qu'il existe un quatrième connecteur :
 
-   - X ~ Y : déplacement vers la droite (sous le même parent)
+   - X ~ Y : déplacement vers la droite (sous le même parent)
 
 
 Principe (suite)
@@ -545,7 +545,7 @@ en spécifiant ou non le type de la balise.
 
   article.post { /* tout <article> de la classe 'post' */ }
 
-  .funny       { /* tout élement de la classe 'funny' */ }
+  .funny       { /* tout élément de la classe 'funny' */ }
 
   ol#contents  { /* toute <ol> avec l'id 'contents' */ }
 
@@ -686,7 +686,7 @@ On peut aussi utiliser la version synthétique, qui accepte 1 à 4 valeurs :
 
 Longueurs en CSS
 ----------------
-CSS reconnait les unités de longueur suivantes :
+CSS reconnaît les unités de longueur suivantes :
 
 ==== ==================================================
  cm   centimètre
@@ -760,11 +760,11 @@ Lorsqu'on contraint la taille d'un élément
 (par exemple un paragraphe),
 il est possible que cette taille ne suffise plus pour afficher le *contenu* de cet élément.
 
-La propriété :css:`overflow` permet de paramétrer le comportement de l'élément dans cette circonstance.
+La propriété :css:`overflow` permet de paramétrer le comportement de l'élément dans cette circonstance.
 Elle peut prendre les valeurs suivantes.
 
 * `visible`:css: (valeur par défaut) : le contenu s'affichera entièrement,
-  quitte à dépasser des limites de l'éléments
+  quitte à dépasser des limites de l'élément
   (et donc à empiéter éventuellement sur d'autres éléments).
 
 * `hidden`:css: : le contenu ne s'affiche qu'à l'intérieur de l'élément,
@@ -776,7 +776,7 @@ Elle peut prendre les valeurs suivantes.
 * `auto`:css: : le navigateur choisit la solution qui lui semble la plus appropriée.
   En général, il n'affiche que les ascenseurs qui sont nécessaires.
 
-Exemples d'utilisation de :css:`overflow`
+Exemples d'utilisation de :css:`overflow`
 `````````````````````````````````````````
 .. raw:: html
 
@@ -1109,7 +1109,7 @@ Propriétés ``padding`` (exemples)
 Coins arrondis
 ++++++++++++++
 
-Il est possible d'arrondir les coins du bord grace aux propriétés suivante :
+Il est possible d'arrondir les coins du bord grâce aux propriétés suivante :
 
 * `border-top-left-radius`:css: (rayon)
 * `border-top-right-radius`:css: (rayon)
@@ -1153,7 +1153,7 @@ Remarques
 
 * On peut également exprimer le rayon en pourcentage de la taille de l'élément ;
 
-  * avec un rayon de 50%, on a une éllipse.
+  * avec un rayon de 50%, on a une ellipse.
 
 * On peut utiliser ces propriétés *même sans cadre*,
   pour rogner le contenu le contenu ce certains éléments,
@@ -1200,21 +1200,21 @@ Paramétrage de l'image de fond
 
 * `background-attachment`:css:\ :
 
-  + `scroll`:css:\ : l'image défile ave la page (par défaut)
+  + `scroll`:css:\ : l'image défile avec la page (par défaut)
   + `fixed`:css:\ : l'image reste fixe quand la page défile
 
 * `background-repeat`:css:\ :
 
-  + `repeat`:css:\ : l'image se répère en mosaïque
+  + `repeat`:css:\ : l'image se répète en mosaïque
     (par défaut)
-  + `repeat-x`:css:\ : l'image se répère horizontallement
-  + `repeat-y`:css:\ : l'image se répère verticalement
+  + `repeat-x`:css:\ : l'image se répète horizontalement
+  + `repeat-y`:css:\ : l'image se répète verticalement
   + `no-repeat`:css:\ : l'image ne se répète pas
 
 Propriété synthétique `background`:css:
 ---------------------------------------
 
-* On peut compiner dans une seule propriété tous les aspects du fond :
+* On peut combiner dans une seule propriété tous les aspects du fond :
 
   `background`:css:\ : (valeur1) (valeur2) (valeur3) ...
 
@@ -1478,6 +1478,10 @@ Exercices
 +++++++++
 
 Voici quelques exercices pour réviser les sélecteurs CSS.
+
+* `Pour travailler les flexboxes`__
+
+__ http://flexboxfroggy.com/
 
 * `CSS Diner`__
 

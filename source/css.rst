@@ -355,7 +355,7 @@ sont en théorie utilisables.
            .background-color
 
 Autres propriétés
-++++++++++++++++
++++++++++++++++++
 
 .. raw:: html
 

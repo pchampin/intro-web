@@ -1,4 +1,4 @@
-.. raw:: html
+ .. raw:: html
 
    <!-- NB: using raw:: directive in order to accurately tag metadata -->
 

@@ -760,7 +760,7 @@ Lorsqu'on contraint la taille d'un élément
 (par exemple un paragraphe),
 il est possible que cette taille ne suffise plus pour afficher le *contenu* de cet élément.
 
-La propriété :css:`overflow` permet de paramétrer le comportement de l'élément dans cette circonstance.
+La propriété :css:`overflow` permet de paramétrer le comportement de l'élément dans cette circonstance.
 Elle peut prendre les valeurs suivantes.
 
 * `visible`:css: (valeur par défaut) : le contenu s'affichera entièrement,
@@ -776,7 +776,7 @@ Elle peut prendre les valeurs suivantes.
 * `auto`:css: : le navigateur choisit la solution qui lui semble la plus appropriée.
   En général, il n'affiche que les ascenseurs qui sont nécessaires.
 
-Exemples d'utilisation de :css:`overflow`
+Exemples d'utilisation de :css:`overflow`
 `````````````````````````````````````````
 .. raw:: html
 

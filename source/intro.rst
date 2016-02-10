@@ -186,15 +186,13 @@ Composants du Web
 HTTP
 ----
 
-* HyperText Transfer Protocol (`RFC 2616`_).
+* HyperText Transfer Protocol (:rfc:`7230`\ –\ :rfc:`7235`).
 
 * Décrit comment les données du Web sont échangées entre machines.
 
 * Vous l'étudierez plus en détail l'an prochain...
 
   * ... mais il faut en savoir un minimum.
-
-.. _RFC 2616: http://datatracker.ietf.org/doc/rfc2616/
 
 
 HTTP (terminologie)
@@ -223,7 +221,7 @@ HTTP (terminologie)
 URLs
 ----
 
-* Uniform Resource Locator (`STD 66`_)
+* Uniform Resource Locator (:rfc:`3986`)
 * Structure :
 
 .. figure:: _static/url-structure.*
@@ -233,11 +231,10 @@ URLs
 
 * N'importe qui peut lier à n'importe quoi
 
-.. _STD 66: http://datatracker.ietf.org/doc/rfc3986/
-
 .. rst-class:: small
 
-  NB : les URLs sont parfois appelés URIs ou IRIs → même chose
+  NB : bien que, dans les standards, le sigle URL ait été remplacé par URI
+  (*uniform resource identifier*), la plupart des gens parlent encore d'URL.
 
 
 HTML

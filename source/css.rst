@@ -1422,15 +1422,6 @@ L'argument de `:nth-child(i)`:css: accepte comme argument le rang de l'élément
 
 .. index:: pseudo-élément, ::first-letter, ::first-line, ::before, ::after
 
-Exercice
---------
-
-Reprenez l'exercice du `livre dont vous êtes le héros <donjon>`:ref:,
-dans sa version en un seul fichier (avec des liens internes),
-mais faîtes en sorte qu'à tout moment, seul l'article en cours de lecture s'affiche.
-
-
-
 Pseudo-éléments
 +++++++++++++++
 
@@ -1477,6 +1468,20 @@ Ces valeurs peuvent notamment être de la forme :
 Exercices
 +++++++++
 
+Reprenez l'exercice du `livre dont vous êtes le héros <donjon>`:ref:,
+dans sa version en un seul fichier (avec des liens internes),
+mais faîtes en sorte que
+
+* à tout moment, seul l'article en cours de lecture s'affiche ;
+* les liens déjà visités aient la même couleur que les autres ;
+* les liens aient des couleurs de fond alternées ;
+* les liens soient suivis d'une flèche.
+
+
+
+Perfectionnement CSS
+--------------------
+
 Voici quelques exercices pour réviser les sélecteurs CSS.
 
 * `Pour travailler les flexboxes`__
@@ -1490,6 +1495,9 @@ __ http://flukeout.github.io/
 Dans les deux exercices suivants,
 vous devez compléter ``grille.css`` conformément aux directives données en commentaire,
 pour voir apparaître une image dans ``grille.html``.
+
+Casse-tête CSS
+--------------
 
 * `Coloriage magique 1`__
 * `Coloriage magique 2`__

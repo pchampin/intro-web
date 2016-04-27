@@ -1352,7 +1352,7 @@ Exemple
 .. rst-class:: big tree
 .. code-block:: text
 
-   
+
    ├ assets/
    │ ├ style.css
    │ ├ img1.png
@@ -2006,7 +2006,7 @@ ce qui permet notamment d'améliorer :
    et sa lecture par un lecteur d'écran :
 
    .. raw:: html
-            
+
      <table>
      <tr>
        <td><label for="name2">Nom :</td>
@@ -2035,9 +2035,9 @@ ce qui permet notamment d'améliorer :
        <td><input id="phone"></td>
      </tr>
      </table>
-   
 
-  
+
+
 
 Alternative au libellé
 ``````````````````````

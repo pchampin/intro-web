@@ -1,8 +1,8 @@
 :orphan:
 
-================
-Projet 2014-2015
-================
+===========
+Projet 2016
+===========
 
 L'objectif de votre projet est de produire, en binôme,
 une maquette de site marchand.
@@ -31,16 +31,19 @@ __ http://validator.w3.org/
 __ http://jigsaw.w3.org/css-validator/
 
 
-Chaque binôme m'enverra par mail
+Chaque binôme renseignera sur Tomuss__
 
 * l'URL à laquelle son projet est accessible, et
-* l'URL d'un dépôt GIT (par exemple sur github_ ou bitbucket_)
+* l'URL d'un dépôt GIT (par exemple sur github_, gitlab_ ou bitbucket_)
   contenant les fichiers du projet (et démontrant un minimum d'utilisation),
 
-avant le **mardi 20 janvier 2015 à 23:59**\ ;
+avant le **lundi 13 juin 2016 à 23:59**\ ;
 tout retard entraînera un malus sur la note.
 
+__ https://tomuss.univ-lyon1.fr//2016/Printemps/info_6s1-2
+
 .. _github: https://github.com
+.. _gitlab: https://gitlab.com/
 .. _bitbucket: https://bitbucket.org
         
 Quelques indications

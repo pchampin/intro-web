@@ -731,7 +731,7 @@ Illustration
 
 
 
-.. index:: <article>, <aside>, <header>, <footer>, <nav>
+.. index:: <main>, <article>, <aside>, <header>, <footer>, <nav>
 
 Sections spécialisées
 ---------------------
@@ -740,6 +740,7 @@ Les balises suivantes représentent
 des sections avec une sémantique particulière.
 
 ================== ===========================================
+:html:`<main>`      contenu principal de la page
 :html:`<article>`   contenu auto-suffisant
 :html:`<aside>`     encart
 :html:`<header>`    en-tête de la section parent (ou du doc)

@@ -1923,7 +1923,17 @@ les plus utilisés étant
 
          <input type="file">
 
-NB : HTML5 définit beaucoup d'autres `types de champs`__ (par exemple ``date`` ou ``color``),
+  * - ``<input type="number">``
+    - .. raw:: html
+
+         <input type="number">
+
+  * - ``<input type="range">``
+    - .. raw:: html
+
+         <input type="range">
+
+NB : HTML5 définit d'autres `types de champs`__ (par exemple ``date`` ou ``color``),
 mais ils ne sont pas encore largement implémentés.
 
 __ http://www.w3.org/TR/html5/forms.html#states-of-the-type-attribute

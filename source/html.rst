@@ -393,18 +393,19 @@ Illustration plus élaborée
 .. rst-class:: big
 .. code-block:: html
 
-   <h1>Thèse</h1>
+   <h1>Ma dissertation</h1>
+   <h2>Thèse</h2>
      <p>Paragraphe d'introduction</p>
-     <h2>Argument 1</h2>
+     <h3>Argument 1</h3>
        <p>...</p> <p>...</p> <p>...</p>
-     <h2>Argument 2</h2>
+     <h3>Argument 2</h3>
        <p>...</p> <p>...</p> <p>...</p>
-   <h1>Antithèse</h1>
-     <h2>Contre-argument 1</h2>
+   <h2>Antithèse</h2>
+     <h3>Contre-argument 1</h3>
        <p>...</p> <p>...</p> <p>...</p>
-     <h2>Contre-argument 2</h2>
+     <h3>Contre-argument 2</h3>
        <p>...</p> <p>...</p> <p>...</p>
-   <h1>Synthèse</h1>
+   <h2>Synthèse</h2>
      <p>...</p> <p>...</p> <p>...</p>
 
 Notez l'indentation pour faciliter la lecture.
@@ -503,32 +504,34 @@ Arbre avec des sections implicites
    graph {
      node  [ shape=elipse, style=filled ]
 
-     body -- h1_1 -- "Thèse"
+     body -- h1 -- "Ma dissertation"
+     body -- h2_1 -- "Thèse"
      body -- p_1 -- "...1"
-     body -- h2_1 -- "Argument 1"
+     body -- h3_1 -- "Argument 1"
      body -- p_2 -- "...2"
      body -- p_3 -- "...3"
-     body -- h2_2 -- "Argument 2"
+     body -- h3_2 -- "Argument 2"
      body -- p_4 -- "...4"
      body -- p_5 -- "...5"
-     body -- h1_2 -- "Anti-thèse"
-     body -- h2_3 -- "Contre-argument 1"
+     body -- h2_2 -- "Anti-thèse"
+     body -- h3_3 -- "Contre-argument 1"
      body -- p_6 -- "...6"
      body -- p_7 -- "...7"
-     body -- h2_4 -- "Contre-argument 2"
+     body -- h3_4 -- "Contre-argument 2"
      body -- p_8 -- "...8"
      body -- p_9 -- "...9"
-     body -- h1_3 -- "Synthèse"
+     body -- h2_3 -- "Synthèse"
      body -- p_10 -- "...10"
 
      body [ label="<body>", shape=box, style=rounded ]
-     h1_1 [ label="<h1>", shape=box, style=rounded ]
-     h1_2 [ label="<h1>", shape=box, style=rounded ]
-     h1_3 [ label="<h1>", shape=box, style=rounded ]
+     h1   [ label="<h1>", shape=box, style=rounded ]
      h2_1 [ label="<h2>", shape=box, style=rounded ]
      h2_2 [ label="<h2>", shape=box, style=rounded ]
      h2_3 [ label="<h2>", shape=box, style=rounded ]
-     h2_4 [ label="<h2>", shape=box, style=rounded ]
+     h3_1 [ label="<h3>", shape=box, style=rounded ]
+     h3_2 [ label="<h3>", shape=box, style=rounded ]
+     h3_3 [ label="<h3>", shape=box, style=rounded ]
+     h3_4 [ label="<h3>", shape=box, style=rounded ]
      p_1 [ label="<p>", shape=box, style=rounded ]
      p_2 [ label="<p>", shape=box, style=rounded ]
      p_3 [ label="<p>", shape=box, style=rounded ]
@@ -559,27 +562,28 @@ Illustration avec sections
 .. rst-class:: big
 .. code-block:: html
 
+   <h1>Ma dissertation</h1>
    <section>
-     <h1>Thèse</h1>
+     <h2>Thèse</h2>
      <p>Paragraphe d'introduction</p>
      <section>
-       <h2>Argument 1</h2>
+       <h3>Argument 1</h3>
        <p>...</p> <p>...</p> <p>...</p>
      </section><section>
-       <h2>Argument 2</h2>
+       <h3>Argument 2</h3>
        <p>...</p> <p>...</p> <p>...</p>
      </section>
    </section><section>
-     <h1>Antithèse</h1>
+     <h2>Antithèse</h2>
      <section>
-       <h2>Contre-argument 1</h2>
+       <h3>Contre-argument 1</h3>
        <p>...</p> <p>...</p> <p>...</p>
      </section><section>
-       <h2>Contre-argument 2</h2>
+       <h3>Contre-argument 2</h3>
        <p>...</p> <p>...</p> <p>...</p>
      </section>
    </section><section>
-   <h1>Synthèse</h1>
+   <h2>Synthèse</h2>
      <p>...</p> <p>...</p> <p>...</p>
    </section>
 
@@ -593,32 +597,34 @@ Arbre avec des sections explicites
    graph {
      node  [ shape=elipse, style=filled ]
 
+     body -- h1 -- "Ma dissertation"
      body -- sec1
-     sec1 -- h1_1 -- "Thèse"
+     sec1 -- h2_1 -- "Thèse"
      sec1 -- p_1 -- "...1"
      sec1 -- sec2
-     sec2 -- h2_1 -- "Argument 1"
+     sec2 -- h3_1 -- "Argument 1"
      sec2 -- p_2 -- "...2"
      sec2 -- p_3 -- "...3"
      sec1 -- sec3
-     sec3 -- h2_2 -- "Argument 2"
+     sec3 -- h3_2 -- "Argument 2"
      sec3 -- p_4 -- "...4"
      sec3 -- p_5 -- "...5"
      body -- sec4
-     sec4 -- h1_2 -- "Anti-thèse"
+     sec4 -- h2_2 -- "Anti-thèse"
      sec4 -- sec5
-     sec5 -- h2_3 -- "Contre-argument 1"
+     sec5 -- h3_3 -- "Contre-argument 1"
      sec5 -- p_6 -- "...6"
      sec5 -- p_7 -- "...7"
      sec4 -- sec6
-     sec6 -- h2_4 -- "Contre-argument 2"
+     sec6 -- h3_4 -- "Contre-argument 2"
      sec6 -- p_8 -- "...8"
      sec6 -- p_9 -- "...9"
      body -- sec7
-     sec7 -- h1_3 -- "Synthèse"
+     sec7 -- h2_3 -- "Synthèse"
      sec7 -- p_10 -- "...10"
 
      body [ label="<body>", shape=box, style=rounded ]
+     h1   [ label="<h1>", shape=box, style=rounded ]
      sec1 [ label="<section>", shape=box, style=rounded ]
      sec2 [ label="<section>", shape=box, style=rounded ]
      sec3 [ label="<section>", shape=box, style=rounded ]
@@ -626,13 +632,13 @@ Arbre avec des sections explicites
      sec5 [ label="<section>", shape=box, style=rounded ]
      sec6 [ label="<section>", shape=box, style=rounded ]
      sec7 [ label="<section>", shape=box, style=rounded ]
-     h1_1 [ label="<h1>", shape=box, style=rounded ]
-     h1_2 [ label="<h1>", shape=box, style=rounded ]
-     h1_3 [ label="<h1>", shape=box, style=rounded ]
      h2_1 [ label="<h2>", shape=box, style=rounded ]
      h2_2 [ label="<h2>", shape=box, style=rounded ]
      h2_3 [ label="<h2>", shape=box, style=rounded ]
-     h2_4 [ label="<h2>", shape=box, style=rounded ]
+     h3_1 [ label="<h3>", shape=box, style=rounded ]
+     h3_2 [ label="<h3>", shape=box, style=rounded ]
+     h3_3 [ label="<h3>", shape=box, style=rounded ]
+     h3_4 [ label="<h3>", shape=box, style=rounded ]
      p_1 [ label="<p>", shape=box, style=rounded ]
      p_2 [ label="<p>", shape=box, style=rounded ]
      p_3 [ label="<p>", shape=box, style=rounded ]
@@ -690,13 +696,21 @@ Redondance et compatibilité
 RMQ: l'emboîtement des sections suffit à déterminer leur niveau,
 donc l'information portée par le numéro de titre est *redondante*.
 
-→ en HTML5, on peut n'utiliser que `<h1>`:html: à tous les niveaux,
+→ en HTML5, on peut en théorie n'utiliser que `<h1>`:html: à tous les niveaux,
 
   * les navigateurs compatibles adapteront la typographie
     en fonction de la « profondeur ».
 
-⚠ cependant, ceci n'est pas compatible avec les anciens navigateurs,
-sauf à fournir une feuille de style précise.
+⚠ cependant, en pratique on évitera de le faire, car
+
+  * ce n'est pas compatible avec les anciens navigateurs,
+  * certains outils (moteurs de recherche, lecteurs d'écran)
+    attendent un *unique* ``h1`` dans la page.
+
+.. note::
+
+   Pour ces raisons,
+   le valideur HTML du W3C émet un *warning* lorsqu'une page contient plusieurs ``h1``.
 
 
 
@@ -705,6 +719,7 @@ Illustration
 .. rst-class:: big
 .. code-block:: html
 
+   <h1>Ma dissertation</h1>
    <section>
      <h1>Thèse</h1>
      <p>Paragraphe d'introduction</p>

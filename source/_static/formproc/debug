@@ -21,8 +21,14 @@ HTML_FOOT = u"""
 """
 
 EXAMPLE_FORM = u"""
-    <h2>Exemple de formulaire</h2>
+    <h2>Exemple de formulaire (GET)</h2>
     <form action="" method="GET">
+      <div><label>Nom: <input name="fname"></label></div>
+      <div><label>Prénom: <input name="gname"></label></div>
+      <div><button>Envoyer</button></div>
+    </form>
+    <h2>Exemple de formulaire (POST)</h2>
+    <form action="?" method="POST">
       <div><label>Nom: <input name="fname"></label></div>
       <div><label>Prénom: <input name="gname"></label></div>
       <div><button>Envoyer</button></div>

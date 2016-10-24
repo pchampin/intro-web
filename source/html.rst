@@ -332,7 +332,7 @@ Valideur
 
 Le W3C fournit un service de validation en ligne :
 
-  http://validator.w3.org/
+http://validator.w3.org/
 
 Son utilisation vous est *vivement* recommandée.
 
@@ -498,8 +498,9 @@ Sections en HTML
 Arbre avec des sections implicites
 ``````````````````````````````````
 
-.. rst-class:: big
-.. graphviz::
+.. container:: big
+
+ .. graphviz::
 
    graph {
      node  [ shape=elipse, style=filled ]
@@ -591,8 +592,9 @@ Illustration avec sections
 
 Arbre avec des sections explicites
 ``````````````````````````````````
-.. rst-class:: big
-.. graphviz::
+.. container:: big
+
+ .. graphviz::
 
    graph {
      node  [ shape=elipse, style=filled ]
@@ -1833,9 +1835,9 @@ Pour aller plus loin
 ++++++++++++++++++++
 
 * `<caption>`:html:\ : légende du tableau (premier fils de `<table>`:html:)
-* `<thead>`:html:\ : ensemble de lignes (`<row>`:html:) constituant l'en-tête (par ex. intitulés de colonnes)
-* `<tbody>`:html:\ : ensemble de lignes (`<row>`:html:) constituant le corps (données à proprement parler)
-* `<tfoot>`:html:\ : ensemble de lignes (`<row>`:html:) constituant le pied (par ex. rappel des intitulés de colonnes, ou somme des valeurs par colonne)
+* `<thead>`:html:\ : ensemble de lignes (`<tr>`:html:) constituant l'en-tête (par ex. intitulés de colonnes)
+* `<tbody>`:html:\ : ensemble de lignes (`<tr>`:html:) constituant le corps (données à proprement parler)
+* `<tfoot>`:html:\ : ensemble de lignes (`<tr>`:html:) constituant le pied (par ex. rappel des intitulés de colonnes, ou somme des valeurs par colonne)
 * `<colgroup>`:html: et `<col>`:html: permettent d'identifier les colonnes (par exemple pour les besoins du CSS)
 
 Pour plus de détails, voir http://www.w3.org/TR/html5/tabular-data.html#table-model .
@@ -2339,13 +2341,13 @@ Dans un nouveau document, créer un formulaire
 en expérimentant les différents types de champs
 avec le processeur fourni à l'adresse suivante  :
 
-  http://champin.net/enseignement/intro-web/_static/formproc/debug
+http://champin.net/enseignement/intro-web/_static/formproc/debug
 
-.. slide:: Fin des `seance10`:ref:
+.. slide:: Fin des `Séance 10 et 11<seance10>`:ref:
    :level: 2
    :class: nav-seance
 
-   Vers la `seance12`:ref:.
+   Vers la `Séance 12 <seance12>`:ref:.
 
 .. _exo_form_debug:
 

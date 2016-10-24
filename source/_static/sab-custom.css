@@ -243,11 +243,11 @@ p.graphviz {
 
 /**** big elements handling ****/
 
-p.big.graphviz {
-    max-width: none;
+.big.container {
+    max-width: 100%;
     overflow: auto;
 }
 
-.big.graphviz img {
+.big.container > * {
     max-width: none;
 }

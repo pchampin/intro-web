@@ -95,7 +95,7 @@ Valideur
 
 Comme pour le HTML, le W3C fournit un service en ligne de validation de CSS :
 
-  http://jigsaw.w3.org/css-validator/
+http://jigsaw.w3.org/css-validator/
 
 Son utilisation vous est *vivement* recommandée.
 
@@ -774,7 +774,7 @@ Elle peut prendre les valeurs suivantes.
   mais des ascenseurs sont affichés pour le faire défiler.
 
 * `auto`:css: : le navigateur choisit la solution qui lui semble la plus appropriée.
-  En général, il n'affiche que les ascenseurs qui sont nécessaires.
+
 
 Exemples d'utilisation de :css:`overflow`
 `````````````````````````````````````````

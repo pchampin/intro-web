@@ -1,4 +1,4 @@
-s.. intro-web master file, created by
+.. intro-web master file, created by
    sphinx-quickstart on Wed Sep 26 08:53:42 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.

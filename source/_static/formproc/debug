@@ -43,6 +43,7 @@ def application(environ, start_response):
         for key in form.keys():
             val = form.getvalue(key)
             val = repr(val).replace("<", "&lt;")
+	    key = key.decode('utf8')
             RESULT += u"      <tr><th>%s</th><td>%s</td></tr>\n" % (key, val)
         RESULT += u"    </table>\n"
     else:

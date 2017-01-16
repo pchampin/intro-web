@@ -57,6 +57,22 @@ Histoire du Web
 partielle et subjective...
 
 
+Paul Otlet (1868-1944)
+----------------------
+
+.. figure:: _static/otlet.jpg
+   :height: 20ex
+
+   Source image `Wikimedia commons`__
+
+   `Mondothèque`__, `Traité de documentation`__ (1934)
+
+__ https://commons.wikimedia.org/wiki/File:Paul_Otlet_%C3%A0_son_bureau_(cropped).jpg
+__ https://fr.wikipedia.org/wiki/Paul_Otlet#Visionnaire_d.27Internet
+__ http://archive.org/stream/OtletTraitDocumentationUgent
+
+
+
 Vannevar Bush (1880-1974)
 -------------------------
 

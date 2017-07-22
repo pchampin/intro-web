@@ -805,8 +805,639 @@ Exemples d'utilisation de :css:`overflow`
    </tr>
  </table>
 
+.. index::
+   double: affichage; inline
+   double: affichage; block
+
+.. _block:
+.. _inline:
+
+Mode d'affichage
+++++++++++++++++
+
+Il existe deux grands types d'éléments :
+
+* Les éléments de type `inline`:css:,
+* Les éléments de type `block`:css:.
 
 
+Les éléments `inline`:css:
+--------------------------
+
+* Ils s'inscrivent dans le flux du texte.
+
+* Leur taille est déterminée par leur contenu.
+
+  + Les propriétés `width`:css: et `height`:css: sont sans effet sur eux.
+
+* Exemples : `<a>`:html:, `<em>`:html:...
+
+
+Les éléments `block`:css:
+-------------------------
+
+* Ils sont précédés et suivis d'un retour à la ligne.
+
+* Ils prennent toute la largeur disponible,
+  et uniquement la hauteur nécessaire.
+
+  + Mais on peut changer leur taille
+    avec les propriétés `width`:css: et `height`:css:.
+
+* Exemples :  `<p>`:html:, `<section>`:html:, `<h1>`:html:, ...
+
+
+.. index:: .display, .vertical-align
+
+Changer le mode d'affichage
+---------------------------
+
+* `display`:css:\ : inline, block, inline-block, none
+
+  + Un élément avec `display:inline-block`:css: se comporte
+    comme un élément `inline` avec ses voisins (pas de retour à la ligne),
+    mais comme un élément `block` pour son contenu (taille ajustable).
+
+  + Un élément avec `display:none`:css: ne sera pas affiché.
+    Ce mode est utile en conjonction avec la directive `@media <media>`:ref:.
+
+* `vertical-align`:css:\ :
+
+  + Cette propriété permet de spécifier
+    comment des éléments inline ou inline-block s'alignent verticalement
+    par rapport au flux du texte.
+
+  + Pour plus de détails, voir
+    http://www.w3.org/wiki/CSS/Properties/vertical-align .
+
+
+Positionnement Flexbox
+++++++++++++++++++++++
+
+Ce modèle de boîtes `flexibles` se compose :
+
+* d'un conteneur dont la propriété `display`:css: sera :
+
+  - `flex`:css: pour qu'il se comporte comme un élément de type `block`
+  
+  - `inline-flex`:css: pour qu'il se comporte comme un élément de type `inline-block`
+  
+* d'items flex qui sont les enfants directs du conteneur
+
+.. figure:: _static/flex.svg
+   :class: float-right
+   :width: 100%
+
+.. note:: Flexbox est plutôt bien reconnu par les différents navigateurs mais l'utilisation d'Autoprefixer (https://autoprefixer.github.io) peut s'avérer utile pour ajouter d'éventuels préfixes propriétaires.
+
+.. index:: .flex-direction
+
+`flex-direction`:css:\  : propriété du conteneur (1)
+----------------------------------------------------
+
+Elle donne la direction et le sens de l'axe principal
+
+* `row`:css: horizontal orienté de droite à gauche (valeur par défaut)
+  
+* `row-reverse`:css: horizontal orienté de gauche à droite
+  
+* `column`:css: vertical orienté de haut en bas
+  
+* `column-reverse`:css: vertical orienté de bas en haut
+
+Exemples d'utilisation de `flex-direction`:css:
+```````````````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+   <section>
+     <h6>
+       row
+     </h6>
+       <div style="display: flex; flex-direction: row">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+     </section>
+     <section>
+     <h6>
+       row-reverse
+     </h6>
+       <div style="display: flex; flex-direction: row-reverse">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+     </section>
+     <section>
+     <h6>
+       column
+     </h6>
+       <div style="display: flex; flex-direction: column">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+     </section>
+     <section>
+     <h6>
+       column-reverse
+     </h6>
+       <div style="display: flex; flex-direction: column-reverse">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+   </section>
+ </section>
+ 
+.. index:: .justify-content
+ 
+`justify-content`:css: : propriété du conteneur (2)
+---------------------------------------------------
+  
+Elle gère l'alignement des items sur l'axe principal
+
+* `flex-start`:css: (valeur par défaut)
+  
+* `flex-end`:css: 
+  
+* `center`:css: 
+  
+* `space-between`:css: 
+  
+* `space-around`:css:
+
+Exemples d'utilisation de `justify-content`:css:
+````````````````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+   <section>
+     <h6>
+       flex-start
+     </h6>
+       <div style="display: flex; justify-content: flex-start">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+   </section>
+   <section>
+     <h6>
+       flex-end
+     </h6>
+     <div style="display: flex; justify-content: flex-end">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+   </section>
+   <section>
+     <h6>
+       center
+     </h6>
+     <div style="display: flex; justify-content: center">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+   </section>
+   <section>
+     <h6>
+       space-around
+     </h6>
+     <div style="display: flex; justify-content: space-around">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+   </section>
+   <section>
+     <h6>
+       space-between
+     </h6>
+     <div style="display: flex; justify-content: space-between">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+   </section>
+ </section>
+
+
+.. index:: .align-items
+ 
+`align-items`:css:\  : propriétés du conteneur (3)
+--------------------------------------------------
+  
+Elle gère l'alignement des items sur l'axe secondaire
+
+  - `stretch`:css: (valeur par défaut)
+  
+  - `flex-start`:css: 
+  
+  - `flex-end`:css: 
+  
+  - `center`:css: 
+  
+  - `baseline`:css:
+
+Exemples d'utilisation de :css:`align-items`
+````````````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+    <section>
+     <h6>
+       stretch
+     </h6>
+     <div style="display: flex; align-items: stretch; height: 3em;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       flex-start
+     </h6>
+     <div style="display: flex; align-items: flex-start; height: 3em;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       flex-end
+     </h6>
+     <div style="display: flex; align-items: flex-end; height: 3em;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       center
+     </h6>
+     <div style="display: flex; align-items: center; height: 3em;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+       </div>
+    </section>
+    <section>
+     <h6>
+       baseline
+     </h6>
+     <div style="display: flex; align-items: baseline; height: 3em;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+     </div>
+    </section>
+ </section>
+ 
+.. index:: .flex-wrap
+ 
+`flex-wrap`:css:\  : propriétés du conteneur (4)
+------------------------------------------------
+  
+Elle définit si les items peuvent passer à la ligne
+
+* `nowrap`:css: (valeur par défaut)
+  
+* `wrap`:css: 
+  
+* `wrap-reverse`:css: 
+
+
+Exemples d'utilisation de :css:`flex-wrap`
+``````````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+    <section>
+     <h6>
+       nowrap
+     </h6>
+     <div style="display: flex; flex-wrap: nowrap;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       wrap
+     </h6>
+     <div style="display: flex;flex-wrap: wrap;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       wrap-reverse
+     </h6>
+     <div style="display: flex;flex-wrap: wrap-reverse;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+    </section>
+ </section>
+
+
+.. index:: .align-content
+
+`align-content`:css:\  : propriétés du conteneur (5)
+----------------------------------------------------
+  
+Elle ne s'applique qu'aux conteneurs qui autorisent le retour à la ligne. Elle gère l'alignement des lignes.
+
+
+  - `flex-start`:css: (valeur par défaut)
+  
+  - `flex-end`:css: 
+  
+  - `center`:css: 
+  
+  - `stretch`:css: 
+  
+  - `space-between`:css: 
+  
+  - `space-around`:css: 
+
+
+Exemples d'utilisation de :css:`align-content`
+``````````````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+    <section>
+     <h6>
+       flex-start
+     </h6>
+     <div style="display: flex; flex-wrap: wrap; align-content: flex-start;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       flex-end
+     </h6>
+     <div style="display: flex;flex-wrap: wrap; align-content: flex-end;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+    </section>
+    <section>
+     <h6>
+       center
+     </h6>
+     <div style="display: flex;flex-wrap: wrap; align-content: center;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+    </section>     
+    <section>
+     <h6>
+       stretch
+     </h6>
+     <div style="display: flex; flex-wrap: wrap; align-content: stretch;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+     </div>
+     </section>     
+     <section>
+     <h6>
+       space-between
+     </h6>
+     <div style="display: flex;flex-wrap: wrap; align-content: space-between;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+      </div>
+     </section>     
+     <section>
+     <h6>
+       space-around
+     </h6>
+     <div style="display: flex;flex-wrap: wrap; align-content: space-around;">
+         <div class="item1">item1</div>
+         <div class="item2">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+         <div class="item2">item5</div>
+         <div class="item3">item6</div>
+         <div class="item1">item7</div>
+         <div class="item2">item8</div>
+      </div>
+     </section>
+ </section>
+
+.. index:: .align-self
+
+`align-selft`:css:\  : propriétés d'item (1)
+--------------------------------------------
+  
+Elle permet de modifier individuellement l'alignement d'item(s) sur l'axe secondaire par rapport au reste des items du conteneur.
+
+
+* `flex-start`:css: 
+  
+* `flex-end`:css: 
+  
+* `center`:css: 
+  
+* `stretch`:css: 
+  
+* `baseline`:css: 
+
+
+Exemples d'utilisation de :css:`align-self`
+```````````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+    <section>
+     <h6 >
+       flex-start / flex-end
+     </h6>
+     <div style="display: flex; align-items: flex-end;">
+         <div class="item1">item1</div>
+         <div class="item2" style="align-self: flex-start">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+     </div>
+     </section>
+     <section>
+     <h6 >
+       flex-end / flex-start
+     </h6>
+     <div style="display: flex;align-items: flex-start;">
+         <div class="item1">item1</div>
+         <div class="item2" style="align-self: flex-end">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+     </div>
+     </section>
+     <section>
+     <h6 >
+       center / flex-start
+     </h6>
+     <div style="display: flex;align-items: flex-start;">
+         <div class="item1">item1</div>
+         <div class="item2" style="align-self: center">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+     </div>
+   </section>
+   <section>
+     <h6 >
+       stretch / flex-start
+     </h6>
+     <div style="display: flex; align-items: flex-start;">
+         <div class="item1">item1</div>
+         <div class="item2" style="align-self: stretch">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+     </div>
+   </section>
+   <section>
+     <h6>
+       baseline / flex-start
+     </h6>
+     <div style="display: flex;align-items: flex-start;">
+         <div class="item1">item1</div>
+         <div class="item2" style="align-self: baseline;text-decoration:underline">item2</div>
+         <div class="item3" style="align-self: baseline;text-decoration:underline">item3</div>
+         <div class="item1">item4</div>
+     </div>
+   </section>
+ </section>
+ 
+.. index:: .order
+ 
+`order`:css:\  : propriétés d'item (2)
+--------------------------------------
+  
+Elle permet de réorganiser les items
+
+
+  - `order`:css: : valeur (valeur par défaut 0)
+
+
+Exemples d'utilisation de :css:`order`
+``````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+    <section>
+     <h6>
+       .item2 {order: -1;}
+     </h6>
+     <div style="display: flex; align-items: flex-end;">
+         <div class="item1">item1</div>
+         <div class="item2" style="order: -1">item2</div>
+         <div class="item3">item3</div>
+         <div class="item1">item4</div>
+     </div>
+   </section>
+ </section>
+ 
+.. index:: .flex
+ 
+`flex`:css:\  : propriétés d'item (3)
+-------------------------------------
+  
+Elle permet de définir simplement si un élément doit être flexible (1) ou non (0).
+
+
+Exemples d'utilisation de :css:`flex`
+`````````````````````````````````````
+
+.. raw:: html
+
+ <section class="flexboxes">
+   <section style="width:100%">
+     <div style="display: flex;">
+         <div class="item1">item1</div>
+         <div class="item2" style="flex:1;">item2 (flex:1)</div>
+         <div class="item3">item3</div>
+     </div>
+   </section>
+ </section>
+ 
+ .. index:: .se-documenter
+ 
+Se documenter
+-------------
+
+Tutoriel :
+
+* https://www.alsacreations.com/tuto/lire/1493-CSS3-Flexbox-Layout-module.html
+
+Livre :
+
+* CSS 3 Flexbox: Plongez dans les CSS modernes par Raphaël Goetter - Eyrolles.
 
 Positionnement flottant
 +++++++++++++++++++++++
@@ -1270,72 +1901,6 @@ Il convient de distinguer
   qui doivent être incluses dans la feuille de style *via* `background`:css:.
 
 .. TODO rajouter les entrées d'index sur border et sur background
-
-
-.. index::
-   double: affichage; inline
-   double: affichage; block
-
-.. _block:
-.. _inline:
-
-Mode d'affichage
-++++++++++++++++
-
-Il existe deux grands types d'éléments :
-
-* Les éléments de type `inline`:css:,
-* Les éléments de type `block`:css:.
-
-
-Les éléments `inline`:css:
---------------------------
-
-* Ils s'inscrivent dans le flux du texte.
-
-* Leur taille est déterminée par leur contenu.
-
-  + Les propriétés `width`:css: et `height`:css: sont sans effet sur eux.
-
-* Exemples : `<a>`:html:, `<em>`:html:...
-
-
-Les éléments `block`:css:
--------------------------
-
-* Ils sont précédés et suivis d'un retour à la ligne.
-
-* Ils prennent toute la largeur disponible,
-  et uniquement la hauteur nécessaire.
-
-  + Mais on peut changer leur taille
-    avec les propriétés `width`:css: et `height`:css:.
-
-* Exemples :  `<p>`:html:, `<section>`:html:, `<h1>`:html:, ...
-
-
-.. index:: .display, .vertical-align
-
-Changer le mode d'affichage
----------------------------
-
-* `display`:css:\ : inline, block, inline-block, none
-
-  + Un élément avec `display:inline-block`:css: se comporte
-    comme un élément `inline` avec ses voisins (pas de retour à la ligne),
-    mais comme un élément `block` pour son contenu (taille ajustable).
-
-  + Un élément avec `display:none`:css: ne sera pas affiché.
-    Ce mode est utile en conjonction avec la directive `@media <media>`:ref:.
-
-* `vertical-align`:css:\ :
-
-  + Cette propriété permet de spécifier
-    comment des éléments inline ou inline-block s'alignent verticalement
-    par rapport au flux du texte.
-
-  + Pour plus de détails, voir
-    http://www.w3.org/wiki/CSS/Properties/vertical-align .
 
 
 

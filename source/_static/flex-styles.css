@@ -1,0 +1,50 @@
+section.flexboxes
+{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.flexboxes section
+{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 10rem;
+}
+
+section.flexboxes h6
+{
+  margin-top: 0.5rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+section.flexboxes section > div
+{
+  border: 1px solid black;
+  height: 5rem;
+}
+
+.item1
+{
+  background-color: #AAFFCC; 
+  font-size:0.8rem;
+}
+
+.item2
+{
+  background-color: #FFEEAA;
+}
+
+.item3
+{
+  background-color: #AAEEFF;
+  font-size:1.2rem;
+}

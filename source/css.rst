@@ -1897,15 +1897,16 @@ Propriété synthétique `background`:css:
 
   `background`:css:\ : (valeur1) (valeur2) (valeur3) ...
 
-  où les valeurs correspondent à :
+  où les valeurs correspondent à  `background-color`:css:,
+  `background-image`:css:,
+  `background-repeat`:css:,
+  `background-attachment`:css:,
+  `background-position`:css:,
+  et d'autres__
 
-  + `background-color`:css:
-  + `background-image`:css:
-  + `background-repeat`:css:
-  + `background-attachment`:css:
-  + `background-position`:css:
+  __ https://developer.mozilla.org/en-US/docs/Web/CSS/background
 
-  Certaines valeurs peuvent être omises, mais l'ordre doit être respecté.
+  Certaines valeurs peuvent être omises.
 
 * On peut également combiner plusieurs images de fond
   en séparant les listes de valeurs par des virgules.
@@ -1917,9 +1918,9 @@ Exemple
 
    body {
       background :
+        blue,
         url("sun.png") no-repeat fixed top right,
         url("moon.png") repeat-y top left ;
-      background-color : blue ;
    }
    h1 {
       text-align : center ;

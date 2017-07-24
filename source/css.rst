@@ -2130,25 +2130,25 @@ NB : ceci peut également être spécifié dans un unique fichier CSS :
 Types de média
 ++++++++++++++
 
-+-----------+
-| aural     |
-+-----------+
-| braille   |
-+-----------+
-| handheld  |
-+-----------+
-| print     |
-+-----------+
-| projection|
-+-----------+
-| screen    |
-+-----------+
-| tty       |
-+-----------+
-| tv        |
-+-----------+
++--------+
+| all    |
++--------+
+| print  |
++--------+
+| screen |
++--------+
+| speech |
++--------+
+
+.. note::
+
+   Cette liste est celle du futur standard
+   `Media Queries Level 4`_.
+   D'autres types de média étaient définis dans d'anciennes versions,
+   mais sont aujourd'hui considérées comme obsolètes.
 
 
+.. index:: responsive
 
 Adaptation à la taille du média
 +++++++++++++++++++++++++++++++
@@ -2161,20 +2161,75 @@ par exemple :
 
    @media (max-width:320px) { ... }
    @media (min-width:321px) and (max-width:640px) { ... }
-   @media (min-width:641px) { ... }
+   @media (min-aspect-ratio:16/9) { ... }
 
 .. note::
 
-   On peut bien sûr garder avoir des règles *hors* de toute section `@media`:css:,
+   On peut bien sûr (et on doit)
+   garder des règles *hors* de toute section `@media`:css:,
    qui s'appliquent à *toutes* les situations.
    Les sections `@media`:css: ne sont là que pour *ajuster* la présentation générale
    à un contexte particulier.
 
+Appareils mobiles
++++++++++++++++++
+
+Les appareils mobiles (smartphones notament)
+"trichent" en simulant un écran plus grand que la réalité,
+afin d'afficher sans (trop de) problème les pages non *responsive*.
+
+Il est possible (et souhaitable)
+de désactiver ce comportement,
+lorsqu'on souhaite avoir un meilleur contrôle de l'affichage sur ces appareils.
+
+La balise `<meta name="viewport">`:html:
+----------------------------------------
+
+La balise suivante (dans le `<head>`:html:)
+force le navigateur à utiliser la largeur réelle de l'appareil.
+
+.. code-block:: html
+
+    <meta name="viewport" content="width=device-width">
+
+.. nextslide::
+
+On peut également limiter le niveau de zoom,
+
+.. code-block:: html
+
+    <meta name="viewport" content=
+    "width=device-width, minimum-scale=0.5, maximum-scale=2">
+
+voire empêcher totalement l'utilisateur de zoomer.
+
+.. code-block:: html
+
+    <meta name="viewport" content=
+    "width=device-width, user-scalable=no">
+
+
+La directive CSS `@viewport`:css:
+---------------------------------
+
+À l'avenir,
+la balise `<meta name="viewport">`:html:
+doit être remplacée par une directive CSS `@viewport`:css:,
+définie par la spécification `CSS Device Adaptation Module Level 1`_.
+
+Cependant, pour l'instant,
+cette directive est `très peu supportée par les navigateurs`__,
+il est donc préférable d'utiliser la balise `<meta>`:html:.
+
+__ http://caniuse.com/#feat=css-deviceadaptation
+
 Pour en savoir plus...
 ++++++++++++++++++++++
 
-* consulter `CSS3 Media Queries`_
+* la spécification `Media Queries Level 4`_
+* la spécification `CSS Device Adaptation Module Level 1`_
 * `testez votre configuration`_
 
-.. _CSS3 Media Queries: http://dev.w3.org/csswg/css3-mediaqueries/
+.. _Media Queries Level 4: https://www.w3.org/TR/mediaqueries-4/
+.. _CSS Device Adaptation Module Level 1: https://www.w3.org/TR/css-device-adapt-1/
 .. _testez votre configuration: _static/test-media.html

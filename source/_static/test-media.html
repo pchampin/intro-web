@@ -8,16 +8,9 @@
 
       .hidden span { display: none }
 
-      @media aural      { #media-aural { display: inline } }
-      @media braille    { #media-braille    { display: inline } }
-      @media embossed   { #media-embossed   { display: inline } }
-      @media handheld   { #media-handheld   { display: inline } }
       @media print      { #media-print      { display: inline } }
-      @media projection { #media-projection { display: inline } }
       @media screen     { #media-screen     { display: inline } }
       @media speech     { #media-speech     { display: inline } }
-      @media tty        { #media-tty        { display: inline } }
-      @media tv         { #media-tv { display: inline } }
 
       @media (max-width: 500px)                          { #width-s  { display: inline } }
       @media (min-width: 501px)  and (max-width: 1000px) { #width-m  { display: inline } }
@@ -74,16 +67,9 @@
     <h1>Test CSS media</h1>
     <table>
       <tr><th>Media</th><td class="hidden">
-          <span id="media-aural">aural (deprecated)</span>
-          <span id="media-braille">braille</span>
-          <span id="media-embossed">embossed</span>
-          <span id="media-handheld">handheld</span>
           <span id="media-print">print</span>
-          <span id="media-projection">projection</span>
           <span id="media-screen">screen</span>
           <span id="media-speech">speech</span>
-          <span id="media-tty">tty</span>
-          <span id="media-tv">tv</span>
       </td></tr>
       <tr><th>Width</th><td class="hidden">
           <span id="width-s">500px or less</span>

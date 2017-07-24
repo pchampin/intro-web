@@ -323,6 +323,8 @@ Le WYSIWYG n'est pas idéal pour HTML :
   * c'est CSS qui doit être utilisé pour décrire leur *présentation*.
 
 
+.. index:: responsive
+
 Et enfin...
 -----------
 

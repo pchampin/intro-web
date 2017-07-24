@@ -497,6 +497,14 @@ Exemples
    ul ul li { font-size: 80%; }
 
 
+Entrainement
+------------
+
+`CSS Diner`_ (jusqu'au niveau 14)
+
+.. _CSS Diner: http://flukeout.github.io/
+
+
 
 Exercice
 --------
@@ -621,12 +629,25 @@ La manière dont CSS détermine la priorité (`cascading`:eng:) sont complexes,
 mais elles satisfont la plupart du temps cette intuition.
 
 
+Entrainement
+------------
 
-Exercice
---------
++ `CSS Diner`_ (à partir du niveau 15)
++ `Coloriage magique 1`__
++ `Coloriage magique 2`__
+
+__ http://jsbin.com/bubuwo/edit?css,output
+__ http://jsbin.com/qezajux/edit?css,output
+
+.. warning:: Les coloriages magiques utilisent des sélecteurs non vus en cours.
+
+   Pour une liste exhaustive, consultez http://www.w3.org/TR/css3-selectors/ .
+
 
 .. TODO
 
+  Exercice
+  --------
 
 
 .. slide:: Suite la `seance5`:ref:
@@ -634,7 +655,6 @@ Exercice
    :class: nav-seance
 
    * `Liens et images en HTML <liens>`:ref:
-
 
 
 .. _position:
@@ -1498,9 +1518,11 @@ Exemples d'utilisation de :css:`flex`
 Se documenter
 -------------
 
-Tutoriel :
+Tutoriels :
 
 * https://www.alsacreations.com/tuto/lire/1493-CSS3-Flexbox-Layout-module.html
+* http://flexboxfroggy.com/
+  
 
 Livre :
 
@@ -2056,40 +2078,6 @@ mais faîtes en sorte que
 * les liens déjà visités aient la même couleur que les autres ;
 * les liens aient des couleurs de fond alternées ;
 * les liens soient suivis d'une flèche.
-
-
-
-Perfectionnement CSS
---------------------
-
-Voici quelques exercices pour réviser les sélecteurs CSS.
-
-* `Pour travailler les flexboxes`__
-
-__ http://flexboxfroggy.com/
-
-* `CSS Diner`__
-
-__ http://flukeout.github.io/
-
-Dans les deux exercices suivants,
-vous devez compléter ``grille.css`` conformément aux directives données en commentaire,
-pour voir apparaître une image dans ``grille.html``.
-
-Casse-tête CSS
---------------
-
-* `Coloriage magique 1`__
-* `Coloriage magique 2`__
-
-__ _static/exo_css_ut7/selecteurs-civ/
-__ _static/exo_css_ut7/selecteurs-smb/
-
-Merci à `UT7 <http://ut7.fr/>`_ pour les deux derniers exercices !
-
-.. warning:: Les coloriages magiques utilisent des sélecteurs non vus en cours.
-
-   Pour une liste exhaustive, consultez http://www.w3.org/TR/css3-selectors/ .
 
 
 

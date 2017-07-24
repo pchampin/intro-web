@@ -970,7 +970,7 @@ mais limitées pour
 
   * des interfaces plus interactives,
 
-  * le *responsive design*.
+  * le `responsive design`:eng:.
 
 
 Positionnement Flexbox
@@ -2175,7 +2175,7 @@ Appareils mobiles
 
 Les appareils mobiles (smartphones notament)
 "trichent" en simulant un écran plus grand que la réalité,
-afin d'afficher sans (trop de) problème les pages non *responsive*.
+afin d'afficher sans (trop de) problème les pages non `responsive`:eng:.
 
 Il est possible (et souhaitable)
 de désactiver ce comportement,

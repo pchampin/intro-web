@@ -358,7 +358,7 @@ Vos outils
 
   + ce cours,
   + https://devdocs.io/
-    (aggrégateur de documentations, responsive, `disponible hors-ligne`__).
+    (aggrégateur de documentations, `responsive`:eng:, `disponible hors-ligne`__).
 
 __ https://devdocs.io/offline
 

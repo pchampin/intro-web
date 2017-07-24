@@ -871,6 +871,76 @@ Changer le mode d'affichage
     http://www.w3.org/wiki/CSS/Properties/vertical-align .
 
 
+.. index:: .float
+
+Positionnement flottant
++++++++++++++++++++++++
+
+Par défaut, les images appartiennent au flux de texte. Ainsi ::
+
+  La Joconde <img src="_static/monalisa.jpg"
+                  alt="Portrait de Mona Lisa">
+  est probablement le tableau le plus connu au monde.
+
+sera affiché comme suit :
+
+.. raw:: html
+
+ <p class="rendered" style="font-size: 100% ! important">
+  La Joconde <img src="_static/monalisa.jpg"
+                  alt="Portrait de Mona Lisa">
+  est probablement le tableau le plus connu au monde.
+ </p>
+
+.. nextslide::
+   :increment:
+
+La propriété :css:`float`,
+qui peut prendre comme valeur `left`:css: ou `right`:css:,
+fait « flotter » un élément au bord de la page.
+
+Ainsi, avec le CSS suivant :
+
+.. code-block:: css
+
+   img { float: right; }
+
+le HTML précédent s'affichera ainsi :
+
+.. raw:: html
+
+ <p class="rendered floatingimg" style="font-size: 100% ! important">
+  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
+  probablement le tableau le plus connu au monde.
+ </p>
+
+.. note::
+
+   Surtout utilisée pour les images,
+   cette propriété peut également être utilisée pour tout type de figure
+   (tableaux, notamment)
+   ou certains contenus textuels (`<aside>`:html:).
+
+
+.. _position2:
+
+Positionnement avancé
+=====================
+
+Motivation
+++++++++++
+
+Les techniques de positionnement vues jusqu'ici (marges, flottants)
+sont bien adapté à du texte simple,
+mais limitées pour
+
+  * des mises en pages plus complexes,
+
+  * des interfaces plus interactives,
+
+  * le *responsive design*.
+
+
 Positionnement Flexbox
 ++++++++++++++++++++++
 
@@ -1434,58 +1504,6 @@ Tutoriel :
 Livre :
 
 * CSS 3 Flexbox: Plongez dans les CSS modernes par Raphaël Goetter - Eyrolles.
-
-Positionnement flottant
-+++++++++++++++++++++++
-
-Par défaut, les images appartiennent au flux de texte. Ainsi ::
-
-  La Joconde <img src="_static/monalisa.jpg"
-                  alt="Portrait de Mona Lisa">
-  est probablement le tableau le plus connu au monde.
-
-sera affiché comme suit :
-
-.. raw:: html
-
- <p class="rendered" style="font-size: 100% ! important">
-  La Joconde <img src="_static/monalisa.jpg"
-                  alt="Portrait de Mona Lisa">
-  est probablement le tableau le plus connu au monde.
- </p>
-
-
-
-.. index:: .float
-
-Positionnement flottant (2)
----------------------------
-
-La propriété :css:`float`,
-qui peut prendre comme valeur `left`:css: ou `right`:css:,
-fait « flotter » un élément au bord de la page.
-
-Ainsi, avec le CSS suivant :
-
-.. code-block:: css
-
-   img { float: right; }
-
-le HTML précédent s'affichera ainsi :
-
-.. raw:: html
-
- <p class="rendered floatingimg" style="font-size: 100% ! important">
-  La Joconde <img src="_static/monalisa.jpg" alt="Portrait de Mona Lisa"> est
-  probablement le tableau le plus connu au monde.
- </p>
-
-.. note::
-
-   Surtout utilisée pour les images,
-   cette propriété peut également être utilisée pour tout type de figure
-   (tableaux, notamment)
-   ou certains contenus textuels (`<aside>`:html:).
 
 
 .. index:: .position, .top, .right, .bottom, .left

@@ -55,6 +55,7 @@ Séance 6
 * `Livre dont vous êtes le héros <donjon>`:ref:
 * `Organisation des fichiers <orga_fichiers>`:ref:
 * `Marge et positionnement <position>`:ref:
+* `Positionnement avancé <position2>`:ref:
 
 .. _seance7:
 

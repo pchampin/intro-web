@@ -603,7 +603,8 @@ Considérons :
 
 .. code-block:: css
 
-  em { font-style: italic }
+  em { font-style: italic;
+       color: red }
 
   .summary em { font-style: normal;
                 font-weight: bold }
@@ -621,12 +622,22 @@ Réponse
 .. raw:: html
 
    <p class="summary rendered">This summary
-   is <em style="font-style: normal; font-weight: bold">short</em>.</p>
+   is <em style="font-style: normal; font-weight: bold; color: red">short</em>.</p>
 
-Intuitivement, la règle *la plus spécifique* a toujours la priorité.
+* La règle *la plus spécifique* a toujours la priorité.
+* En cas de spécifité égale,
+  c'est la dernière règle (dans l'ordre du.des fichier.s) qui s'applique.
+* Chaque attribut CSS est traité séparémement
+  (`color`:css: dans l'exemple ci-dessus).
 
-La manière dont CSS détermine la priorité (`cascading`:eng:) sont complexes,
-mais elles satisfont la plupart du temps cette intuition.
+.. hint::
+
+   Lorsqu'on utilie des sélecteurs complexes,
+   la spécificité relative des différentes règles n'est pas toujours très intuitives.
+   Attention donc à rester aussi simple que possible (KISS_).
+
+
+.. _KISS: https://en.wikipedia.org/wiki/KISS_principle
 
 
 Entrainement

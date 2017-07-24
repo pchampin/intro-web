@@ -351,7 +351,15 @@ Vos outils
 ++++++++++
 
 * un éditeur de texte (e.g. Notepad++) pour éditer vos fichiers HTML,
-* un navigateur moderne pour les visualiser.
+* un navigateur moderne pour les visualiser,
+* une documentation de HTML/CSS, par exemple :
+
+  + ce cours,
+  + https://devdocs.io/
+    (aggrégateur de documentations, responsive, `disponible hors-ligne`__).
+
+__ https://devdocs.io/offline
+
 
 
 

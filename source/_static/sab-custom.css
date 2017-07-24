@@ -1,4 +1,5 @@
 @import url("alternative-styles.css");
+@import url("flex-styles.css");
 
 /**** slide credits ****/
 
@@ -102,7 +103,6 @@ section.rendered {
     box-shadow: 3px 3px 5px #bbb;
 }
 
-
 ul.css-values {
     display: inline;
 }
@@ -126,7 +126,14 @@ table.css-values td {
     padding: 2px 2px 16px;
 }
 
+section.flexboxes section{
+    display: flex; 
+    justify-content: space-around;
+}
 
+section.flexboxes > div{
+    border: 1px solid black;
+}
 
 /**** fixing some bugs in 'nature' theme ****/
 

@@ -636,6 +636,8 @@ Réponse
    la spécificité relative des différentes règles n'est pas toujours très intuitives.
    Attention donc à rester aussi simple que possible (KISS_).
 
+   Pour plus d'info: https://css-tricks.com/specifics-on-css-specificity/
+
 
 .. _KISS: https://en.wikipedia.org/wiki/KISS_principle
 

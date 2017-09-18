@@ -113,11 +113,11 @@ Exemples :
 
 .. code-block:: html
 
-   <X>Emboîtement <Y>correct</Y></X>.
+   <p>Emboîtement <em>correct</em></p>
 
 .. code-block:: html
 
-  <X>Emboîtement <Y>incorrect</X></Y>.
+  <p>Emboîtement <em>incorrect</p></em>
 
 
 

@@ -793,7 +793,7 @@ et leur mise en forme *par défaut*.
 ================== ====================== ============
  :html:`<em>`       emphase                italique
  :html:`<strong>`   emphase forte          gras
- :html:`<dfn>`      définition             aucun
+ :html:`<dfn>`      définition             italique
  :html:`<cite>`     titre d'ouvrage        italique
  :html:`<q>`        citation               guillemets
 ================== ====================== ============

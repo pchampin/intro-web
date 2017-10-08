@@ -1911,7 +1911,9 @@ Propriété synthétique `background`:css:
   Certaines valeurs peuvent être omises.
 
 * On peut également combiner plusieurs images de fond
-  en séparant les listes de valeurs par des virgules.
+  en séparant les listes de valeurs par des virgules. Mais, si l'on
+  souhaite également une couleur de fond, elle sera précisée à la fin 
+  de la liste des propriétés.
 
 Exemple
 -------
@@ -1920,9 +1922,9 @@ Exemple
 
    body {
       background :
-        blue,
         url("sun.png") no-repeat fixed top right,
-        url("moon.png") repeat-y top left ;
+        url("moon.png") repeat-y top left,
+        blue ;
    }
    h1 {
       text-align : center ;
@@ -1968,9 +1970,9 @@ __ _static/exo_css_boxes/sujet.zip
    :width: 50%
    :target: _static/exo_css_boxes/sujet.png
 
-   Exercice conçu par Isabelle Gonçalves, et inspiré du `Site du Zéro`_.
+   Exercice conçu par Isabelle Gonçalves, et inspiré d'un exercice sur `OpenClassrooms`_.
 
-.. _Site du Zéro: http://fr.openclassrooms.com/
+.. _OpenClassrooms: https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/tp-creation-d-un-site-pas-a-pas
 
 
 

@@ -1003,9 +1003,9 @@ Ce modèle de boîtes `flexibles` se compose :
 
 Elle donne la direction et le sens de l'axe principal
 
-* `row`:css: horizontal orienté de droite à gauche (valeur par défaut)
+* `row`:css: horizontal orienté de gauche à droite (valeur par défaut)
   
-* `row-reverse`:css: horizontal orienté de gauche à droite
+* `row-reverse`:css: horizontal orienté de droite à gauche
   
 * `column`:css: vertical orienté de haut en bas
   

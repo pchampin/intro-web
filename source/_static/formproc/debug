@@ -21,33 +21,38 @@ HTML_FOOT = u"""
 """
 
 EXAMPLE_FORM = u"""
-    <h2>Exemple de formulaire (GET)</h2>
-    <form action="" method="GET">
+    <h2>Exemple de formulaire</h2>
+    <form action="debug" method="GET">
       <div><label>Nom: <input name="fname"></label></div>
       <div><label>Prénom: <input name="gname"></label></div>
-      <div><button>Envoyer</button></div>
+      <div><button>Envoyer</button>
+           via <select onchange="document.forms[0].method = this.value;">
+	      <option>get</option><option>post</option>
+	   </select></div>
     </form>
-    <h2>Exemple de formulaire (POST)</h2>
-    <form action="?" method="POST">
-      <div><label>Nom: <input name="fname"></label></div>
-      <div><label>Prénom: <input name="gname"></label></div>
-      <div><button>Envoyer</button></div>
-    </form>
+    <script defer>
+      (function() {
+        var select = document.getElementsByTagName("select")[0];
+        document.forms[0].method = select.value;
+      })();
+    </script>
 """
 
 def application(environ, start_response):
     form = FieldStorage(fp=environ['wsgi.input'], environ=environ)
     RESULT = u"\n    <h2>Données reçues</h2>\n"
+    RESULT += u"    <table>\n"
+    RESULT += u"    <tr><th>MÉTHODE</th><td>%s</td></tr>\n" \
+            % (environ['REQUEST_METHOD'],)
     if form:
-        RESULT += u"    <table>\n"
         for key in form.keys():
             val = form.getvalue(key)
             val = repr(val).replace("<", "&lt;")
 	    key = key.decode('utf8')
             RESULT += u"      <tr><th>%s</th><td>%s</td></tr>\n" % (key, val)
-        RESULT += u"    </table>\n"
     else:
-        RESULT += u"    <p>Aucune donnée reçue...</p>\n"
+        RESULT += u"    <tr><th colspan=\"2\">Aucune donnée reçue...</th></tr>\n"
+    RESULT += u"    </table>\n"
             
     status = '200 OK'
     response_headers = [('Content-type','text/html')]

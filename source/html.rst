@@ -1993,9 +1993,9 @@ Par exemple :
 .. code-block:: html
 
    <table>
-     <tr><td><label for="name">Nom :</td>
+     <tr><td><label for="name">Nom :</label></td>
          <td><input id="name"></td></tr>
-     <tr><td><label for="gname">Prénom :</td>
+     <tr><td><label for="gname">Prénom :</label></td>
          <td><input id="gname"></td></tr>
    </table>
 
@@ -2003,9 +2003,9 @@ Par exemple :
 
   <div class="rendered">
    <table>
-     <tr><td><label for="name">Nom :</td>
+     <tr><td><label for="name">Nom :</label></td>
          <td><input id="name"></td></tr>
-     <tr><td><label for="gname">Prénom :</td>
+     <tr><td><label for="gname">Prénom :</label></td>
          <td><input id="gname"></td></tr>
    </table>
   </div>
@@ -2013,15 +2013,15 @@ Par exemple :
 
 .. index:: @placeholder
 
-Importance de lier le libellé au champs
+Importance de lier le libellé au champ
 ```````````````````````````````````````
 
-L'association du libellé au champs explicite la sémantique du document,
+L'association du libellé au champ explicite la sémantique du document,
 ce qui permet notamment d'améliorer :
 
 * l'ergonomie :
 
-  lorsqu'on clique sur un libellé, c'est le champs qui prend le focus ;
+  lorsqu'on clique sur un libellé, c'est le champ qui prend le focus ;
 
 * l'accessibilité :
 
@@ -2037,8 +2037,8 @@ ce qui permet notamment d'améliorer :
 
      <table>
      <tr>
-       <td><label for="name2">Nom :</td>
-       <td><label for="gname2">Prénom :</td>
+       <td><label for="name2">Nom :</label></td>
+       <td><label for="gname2">Prénom :</label></td>
      </tr>
      <tr>
        <td><input id="name2"></td>
@@ -2059,7 +2059,7 @@ ce qui permet notamment d'améliorer :
        <td colspan="2"><input id="addr_country" style="width:100%"></td>
      </tr>
      <tr>
-       <td><label for="phone">Téléphone :</td>
+       <td><label for="phone">Téléphone :</label></td>
        <td><input id="phone"></td>
      </tr>
      </table>
@@ -2070,7 +2070,7 @@ ce qui permet notamment d'améliorer :
 Alternative au libellé
 ``````````````````````
 
-Pour les champs de type ``text`` ou ``password``,
+Pour les champ de type ``text`` ou ``password``,
 une alternative au libellé consiste à utiliser l'attribut `placeholder`:html:\ :
 
 .. code-block:: html

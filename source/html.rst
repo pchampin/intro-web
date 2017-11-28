@@ -267,14 +267,14 @@ __ http://www.w3.org/standards/webdesign/accessibility
 .. note::
 
    Considérez que votre page web peut être visualisée sur
-   
+
    * un ordinateur fixe (grand écran, clavier, souris)
    * un ordinateur portable (écran moyen, clavier, touchpad)
    * une tablette (écran moyen à petit, écran tactile, clavier éventuellement)
    * un smartphone (petit écran tactile, accéléromètre?, voix?)
    * un téléviseur (très grand écran, télécommande)
    * un terminal pour non-voyant (lecteur d'écran, afficheur braille)
-   
+
 
 
 
@@ -457,7 +457,7 @@ Exercice
 #. Téléchargez le `modèle HTML`__ correspondant à l'exemple,
    et recopiez votre code à l'intérieur de la balise `<body>`:html: .
    Ce modèle contient un lien vers la feuille de style appropriée.
-  
+
    __ _static/exo_structure/modele.html
 
 Dans les deux cas, ne tenez pas compte pour l'instant
@@ -851,7 +851,7 @@ Exemple
    La boucle <code>while</code> affiche <samp>1 2 3 4</samp>,
    soient toutes les valeurs prises par <var>i</var>.
   </p>
-   
+
 .. raw:: html
 
   <p class="rendered alt">
@@ -888,7 +888,7 @@ Exemple
    Je <del>ne</del> connais
    <del>rien à</del><ins>bien</ins> HTML.
   </p>
-   
+
 .. raw:: html
 
   <p class="rendered alt">
@@ -956,7 +956,7 @@ Liste non ordonnée
     <li>sucre</li>
     <li>céréales</li>
     <li>lait</li>
-  </ul> 
+  </ul>
 
 .. raw:: html
 
@@ -965,7 +965,7 @@ Liste non ordonnée
     <li>sucre</li>
     <li>céréales</li>
     <li>lait</li>
-  </ul> 
+  </ul>
  </section>
 
 
@@ -981,7 +981,7 @@ Liste ordonnée
     <li>sucre</li>
     <li>céréales</li>
     <li>lait</li>
-  </ol> 
+  </ol>
 
 .. raw:: html
 
@@ -990,7 +990,7 @@ Liste ordonnée
     <li>sucre</li>
     <li>céréales</li>
     <li>lait</li>
-  </ol> 
+  </ol>
  </section>
 
 
@@ -1019,7 +1019,7 @@ Styles alternatifs pour les listes
     <li>sucre</li>
     <li>céréales</li>
     <li>lait</li>
-  </ul> 
+  </ul>
  </section>
 
 .. raw:: html
@@ -1029,7 +1029,7 @@ Styles alternatifs pour les listes
     <li>sucre</li>
     <li>céréales</li>
     <li>lait</li>
-  </ol> 
+  </ol>
  </section>
 
 
@@ -1077,8 +1077,8 @@ URLs
 
 * Comme pour les fichiers,
   on peut spécifier une URL *relativement* à une autre.
-  
-.. warning:: 
+
+.. warning::
 
    Malgré cette similitude,
    les ressources ne correspondent *pas toujours* à des fichiers.
@@ -1137,7 +1137,7 @@ avec chacune des URLs relatives de droite.
 |                                    | * ../../there     |
 |                                    | * /somewhere/else |
 +------------------------------------+-------------------+
-   
+
 Exercices (suite)
 `````````````````
 
@@ -1203,7 +1203,7 @@ Images et droit d'auteur
 Ce qu'il faut faire :
 
 * vérifier les droits associés
-  
+
   - au besoin, en contactant le propriétaire,
 
 * citer les sources.
@@ -1375,7 +1375,7 @@ Exemple
    │ ├ style.css
    │ ├ img1.png
    │ └ ...
-   ├ index.html 
+   ├ index.html
    ├ page1.html
    ├ page2.html
    │
@@ -1564,21 +1564,21 @@ Leur utilisation est donc déconseillée.
 Commentaires
 ++++++++++++
 
-En HTML, tout texte commençant par `<!--`:html: 
+En HTML, tout texte commençant par `<!--`:html:
 et se terminant par `-->`:html:
 est considéré comme un commentaire.
 Tout ce qu'il contient (texte et balises) sera ignoré.
 
 .. code-block:: html
 
-   hello <!-- 
+   hello <!--
      <strong>wonderful</strong>
    --> world
 
 .. raw:: html
 
  <p class="rendered">
-   hello <!-- 
+   hello <!--
      <strong>wonderful</strong>
    --> world
  </p>
@@ -1738,7 +1738,7 @@ les cellules de données (`data cells`:eng:).
 Tableau en HTML
 ---------------
 
-Les différents éléments d'un tableau sont représentés par 
+Les différents éléments d'un tableau sont représentés par
 
 =========== ================
 table       `<table>`:html:
@@ -1993,9 +1993,9 @@ Par exemple :
 .. code-block:: html
 
    <table>
-     <tr><td><label for="name">Nom :</td>
+     <tr><td><label for="name">Nom :</label></td>
          <td><input id="name"></td></tr>
-     <tr><td><label for="gname">Prénom :</td>
+     <tr><td><label for="gname">Prénom :</label></td>
          <td><input id="gname"></td></tr>
    </table>
 
@@ -2003,9 +2003,9 @@ Par exemple :
 
   <div class="rendered">
    <table>
-     <tr><td><label for="name">Nom :</td>
+     <tr><td><label for="name">Nom :</label></td>
          <td><input id="name"></td></tr>
-     <tr><td><label for="gname">Prénom :</td>
+     <tr><td><label for="gname">Prénom :</label></td>
          <td><input id="gname"></td></tr>
    </table>
   </div>
@@ -2013,15 +2013,15 @@ Par exemple :
 
 .. index:: @placeholder
 
-Importance de lier le libellé au champs
+Importance de lier le libellé au champ
 ```````````````````````````````````````
 
-L'association du libellé au champs explicite la sémantique du document,
+L'association du libellé au champ explicite la sémantique du document,
 ce qui permet notamment d'améliorer :
 
 * l'ergonomie :
 
-  lorsqu'on clique sur un libellé, c'est le champs qui prend le focus ;
+  lorsqu'on clique sur un libellé, c'est le champ qui prend le focus ;
 
 * l'accessibilité :
 
@@ -2037,8 +2037,8 @@ ce qui permet notamment d'améliorer :
 
      <table>
      <tr>
-       <td><label for="name2">Nom :</td>
-       <td><label for="gname2">Prénom :</td>
+       <td><label for="name2">Nom :</label></td>
+       <td><label for="gname2">Prénom :</label></td>
      </tr>
      <tr>
        <td><input id="name2"></td>
@@ -2059,7 +2059,7 @@ ce qui permet notamment d'améliorer :
        <td colspan="2"><input id="addr_country" style="width:100%"></td>
      </tr>
      <tr>
-       <td><label for="phone">Téléphone :</td>
+       <td><label for="phone">Téléphone :</label></td>
        <td><input id="phone"></td>
      </tr>
      </table>
@@ -2350,4 +2350,3 @@ http://champin.net/enseignement/intro-web/_static/formproc/debug
    Vers la `Séance 12 <seance12>`:ref:.
 
 .. _exo_form_debug:
-

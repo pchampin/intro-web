@@ -12,7 +12,7 @@ Version: |version|
 
 .. include:: credits.rst.inc
 
-             
+
 Comment utiliser ce support
 +++++++++++++++++++++++++++
 
@@ -39,14 +39,14 @@ Table des matières
    intro
    html
    css
-   
+   iut
+
 * :ref:`genindex`
-   
+
 
 Remerciements
 +++++++++++++
- 
+
 Ce support de cours a été initié par `Pierre-Antoine Champin <http://champin.net/>`_.
 
 Merci à Amélie Cordier, Isabelle Gonçalves et Michael Mrissa pour leurs nombreuses remarques et contributions.
-

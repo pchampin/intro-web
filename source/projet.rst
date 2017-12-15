@@ -26,7 +26,8 @@ sur un écran d'ordinateur et sur un smartphone.
 
 Vous fournirez (selon les modalités définies par votre enseignant⋅e) :
 
-* l'URL à laquelle son projet est accessible,
+* l'URL à laquelle son projet est accessible
+  (par exemple dans votre `public_html <iut>`:doc:),
 * l'URL d'un dépôt GIT (par exemple sur github_, gitlab_ ou bitbucket_)
   contenant les fichiers du projet (et démontrant un minimum d'utilisation), et
 * une archive contenant tous les fichiers du projet,

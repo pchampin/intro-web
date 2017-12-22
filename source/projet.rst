@@ -49,7 +49,7 @@ Quelques indications
   à condition de *citer vous sources* (URL d'origine en commentaire).
 
 * Pensez-bien à utiliser les valideurs du W3C pour le code `HTML`_ et `CSS`_\ ;
-  un site ne passant pas le valideur recevra une note **en dessous de la moyenne** !
+  un site ne passant pas le valideur (sans erreur *ni warning*) recevra une note **en dessous de la moyenne** !
 
 * Comme tout site marchand, votre projet devra avoir un aspect uniforme d'une
   page à l'autre.

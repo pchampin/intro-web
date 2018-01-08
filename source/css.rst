@@ -327,7 +327,7 @@ Bonne pratique
 
 .. code-block:: css
 
-   font-family: MyNiftyFont, Times New Roman, serif
+   font-family: MyNiftyFont, "Times New Roman", serif
 
 
 

@@ -18,7 +18,7 @@ Un ensemble de réseaux informatiques locaux utilisant les mêmes protocoles de 
 
 .. figure:: _static/InternetMonde.*
     :height: 15ex
-           
+
     Image © portices.fr__
 
 __ http://www.portices.fr/formation/Res/Internet/Res/InternetMonde.gif
@@ -146,7 +146,7 @@ The WWW Consortium (W3C)
 
 .. figure:: _static/logo-w3c.png
    :alt: logo W3C
- 
+
    http://www.w3.org/
 
    “Lead the web to its full potential”
@@ -226,7 +226,7 @@ HTTP (terminologie)
   un ordinateur/smartphone/tablette... utilisé pour afficher des ressources.
 
 .. figure:: _static/client-server.png
-   :height: 8ex  
+   :height: 8ex
 
    Source image http://commons.wikimedia.org/wiki/File:Client-server-model.svg
 
@@ -272,7 +272,7 @@ HTML
 HTML (suite)
 ------------
 
-.. rst-class:: small 
+.. rst-class:: small
 
 * HTML Tags (1991)
 * HTML+ (1993) : tables, formulaires

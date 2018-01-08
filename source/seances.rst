@@ -140,7 +140,7 @@ Projet
 
          * avec des styles bien différents pour chaque type de balise,
            afin qu'ils voient s'ils se trompent et comprennent le rôle
-           de chaque 
+           de chaque
 
          * également, le CSS pourrait faire du positionnement un peu sophistiqué
            (article sur plusieur colonnes, aside en flottant...),
@@ -180,7 +180,7 @@ Projet
 
          * balise dans contenu ("auto-fermante")
          * positionnement des images avec CSS (display inline/block, float)
-       * 
+       *
     #. HTML avancé
 
        * balise vidéo
@@ -202,7 +202,7 @@ Projet
 
          * soit en leur laissant écrire le CSS
          * soit en leur donnant un CSS un peu sophistiqué,
-           par exemple avec des :nth-child, 
+           par exemple avec des :nth-child,
            ce qui fera une transition avec le chapitre suivant
 
        * tables avancées

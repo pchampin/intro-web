@@ -983,9 +983,9 @@ Ce modèle de boîtes `flexibles` se compose :
 * d'un conteneur dont la propriété `display`:css: sera :
 
   - `flex`:css: pour qu'il se comporte comme un élément de type `block`
-  
+
   - `inline-flex`:css: pour qu'il se comporte comme un élément de type `inline-block`
-  
+
 * d'items flex qui sont les enfants directs du conteneur
 
 .. nextslide::
@@ -1004,11 +1004,11 @@ Ce modèle de boîtes `flexibles` se compose :
 Elle donne la direction et le sens de l'axe principal
 
 * `row`:css: horizontal orienté de gauche à droite (valeur par défaut)
-  
+
 * `row-reverse`:css: horizontal orienté de droite à gauche
-  
+
 * `column`:css: vertical orienté de haut en bas
-  
+
 * `column-reverse`:css: vertical orienté de bas en haut
 
 Exemples d'utilisation de `flex-direction`:css:
@@ -1058,22 +1058,22 @@ Exemples d'utilisation de `flex-direction`:css:
        </div>
    </section>
  </section>
- 
+
 .. index:: .justify-content
- 
+
 `justify-content`:css: : propriété du conteneur (2)
 ---------------------------------------------------
-  
+
 Elle gère l'alignement des items sur l'axe principal
 
 * `flex-start`:css: (valeur par défaut)
-  
-* `flex-end`:css: 
-  
-* `center`:css: 
-  
-* `space-between`:css: 
-  
+
+* `flex-end`:css:
+
+* `center`:css:
+
+* `space-between`:css:
+
 * `space-around`:css:
 
 Exemples d'utilisation de `justify-content`:css:
@@ -1136,20 +1136,20 @@ Exemples d'utilisation de `justify-content`:css:
 
 
 .. index:: .align-items
- 
+
 `align-items`:css:\  : propriétés du conteneur (3)
 --------------------------------------------------
-  
+
 Elle gère l'alignement des items sur l'axe secondaire
 
   - `stretch`:css: (valeur par défaut)
-  
-  - `flex-start`:css: 
-  
-  - `flex-end`:css: 
-  
-  - `center`:css: 
-  
+
+  - `flex-start`:css:
+
+  - `flex-end`:css:
+
+  - `center`:css:
+
   - `baseline`:css:
 
 Exemples d'utilisation de :css:`align-items`
@@ -1209,19 +1209,19 @@ Exemples d'utilisation de :css:`align-items`
      </div>
     </section>
  </section>
- 
+
 .. index:: .flex-wrap
- 
+
 `flex-wrap`:css:\  : propriétés du conteneur (4)
 ------------------------------------------------
-  
+
 Elle définit si les items peuvent passer à la ligne
 
 * `nowrap`:css: (valeur par défaut)
-  
-* `wrap`:css: 
-  
-* `wrap-reverse`:css: 
+
+* `wrap`:css:
+
+* `wrap-reverse`:css:
 
 
 Exemples d'utilisation de :css:`flex-wrap`
@@ -1282,21 +1282,21 @@ Exemples d'utilisation de :css:`flex-wrap`
 
 `align-content`:css:\  : propriétés du conteneur (5)
 ----------------------------------------------------
-  
+
 Elle ne s'applique qu'aux conteneurs qui autorisent le retour à la ligne. Elle gère l'alignement des lignes.
 
 
   - `flex-start`:css: (valeur par défaut)
-  
-  - `flex-end`:css: 
-  
-  - `center`:css: 
-  
-  - `stretch`:css: 
-  
-  - `space-between`:css: 
-  
-  - `space-around`:css: 
+
+  - `flex-end`:css:
+
+  - `center`:css:
+
+  - `stretch`:css:
+
+  - `space-between`:css:
+
+  - `space-around`:css:
 
 
 Exemples d'utilisation de :css:`align-content`
@@ -1346,7 +1346,7 @@ Exemples d'utilisation de :css:`align-content`
          <div class="item3">item6</div>
          <div class="item1">item7</div>
      </div>
-    </section>     
+    </section>
     <section>
      <h6>
        stretch
@@ -1360,7 +1360,7 @@ Exemples d'utilisation de :css:`align-content`
          <div class="item3">item6</div>
          <div class="item1">item7</div>
      </div>
-     </section>     
+     </section>
      <section>
      <h6>
        space-between
@@ -1374,7 +1374,7 @@ Exemples d'utilisation de :css:`align-content`
          <div class="item3">item6</div>
          <div class="item1">item7</div>
       </div>
-     </section>     
+     </section>
      <section>
      <h6>
        space-around
@@ -1395,19 +1395,19 @@ Exemples d'utilisation de :css:`align-content`
 
 `align-self`:css:\  : propriétés d'item (1)
 --------------------------------------------
-  
+
 Elle permet de modifier individuellement l'alignement d'item(s) sur l'axe secondaire par rapport au reste des items du conteneur.
 
 
-* `flex-start`:css: 
-  
-* `flex-end`:css: 
-  
-* `center`:css: 
-  
-* `stretch`:css: 
-  
-* `baseline`:css: 
+* `flex-start`:css:
+
+* `flex-end`:css:
+
+* `center`:css:
+
+* `stretch`:css:
+
+* `baseline`:css:
 
 
 Exemples d'utilisation de :css:`align-self`
@@ -1472,12 +1472,12 @@ Exemples d'utilisation de :css:`align-self`
      </div>
    </section>
  </section>
- 
+
 .. index:: .order
- 
+
 `order`:css:\  : propriétés d'item (2)
 --------------------------------------
-  
+
 Elle permet de réorganiser les items
 
 
@@ -1502,12 +1502,12 @@ Exemples d'utilisation de :css:`order`
      </div>
    </section>
  </section>
- 
+
 .. index:: .flex
- 
+
 `flex`:css:\  : propriétés d'item (3)
 -------------------------------------
-  
+
 Elle permet de définir simplement si un élément doit être flexible (1) ou non (0).
 
 
@@ -1525,9 +1525,9 @@ Exemples d'utilisation de :css:`flex`
      </div>
    </section>
  </section>
- 
+
 .. index:: .se-documenter
- 
+
 Se documenter
 -------------
 
@@ -1535,7 +1535,7 @@ Tutoriels :
 
 * https://www.alsacreations.com/tuto/lire/1493-CSS3-Flexbox-Layout-module.html
 * http://flexboxfroggy.com/
-  
+
 
 Livre :
 
@@ -1912,7 +1912,7 @@ Propriété synthétique `background`:css:
 
 * On peut également combiner plusieurs images de fond
   en séparant les listes de valeurs par des virgules. Mais, si l'on
-  souhaite également une couleur de fond, elle sera précisée à la fin 
+  souhaite également une couleur de fond, elle sera précisée à la fin
   de la liste des propriétés.
 
 Exemple
@@ -2068,7 +2068,7 @@ Ces valeurs peuvent notamment être de la forme :
 * `"texte"`:css: : affichera le texte tel quel
 * `url("url-image")`:css: : affichera l'image dont l'URL est passée en paramètres
 
-.. TODO 
+.. TODO
 
    Compteurs
    +++++++++

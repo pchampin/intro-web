@@ -126,6 +126,10 @@ table.css-values td {
     padding: 2px 2px 16px;
 }
 
+.slides section.flexboxes {
+    font-size: 60%;
+}
+
 section.flexboxes section{
     display: flex; 
     justify-content: space-around;

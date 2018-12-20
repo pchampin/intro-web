@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # -*- coding=utf-8 -*-
 from cgi import FieldStorage
 
@@ -78,10 +79,16 @@ def application(environ, start_response):
         HTML_FOOT] )
 
 if __name__ == "__main__":
-   from wsgiref.simple_server import make_server
+    import os
+    if os.environ.get("AS_WSGI"):
+        from wsgiref.simple_server import make_server
 
-   httpd = make_server('', 1234, application)
-   print "Serving HTTP on port 1234..."
+        httpd = make_server('', 1234, application)
+        print "Serving HTTP on port 1234..."
 
-   # Respond to requests until process is killed
-   httpd.serve_forever()
+        # Respond to requests until process is killed
+        httpd.serve_forever()
+    else:
+        from wsgiref.handlers import CGIHandler
+        CGIHandler().run(application)
+

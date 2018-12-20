@@ -1,5 +1,5 @@
-Options ExecCGI
+Options +ExecCGI
 
 <Files debug>
-  SetHandler wsgi-script
+  SetHandler cgi-script
 </Files>

@@ -1,7 +1,7 @@
 :orphan:
 
 ===========
-Projet 2017
+Projet 2018
 ===========
 
 L'objectif de votre projet est de produire, en binôme,
@@ -32,7 +32,7 @@ Vous fournirez (selon les modalités définies par votre enseignant⋅e) :
   contenant les fichiers du projet (et démontrant un minimum d'utilisation), et
 * une archive contenant tous les fichiers du projet,
 
-avant le **29/12/2017 23:59**.
+avant le **30/12/2017 23:59**.
 tout retard entraînera un malus sur la note.
 
 .. _github: https://github.com

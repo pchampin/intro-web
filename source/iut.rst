@@ -42,24 +42,16 @@ __ https://filezilla-project.org/
 Alternative
 +++++++++++
 
-* Créez un projet sur la forge GitLab de l'université : https://forge.univ-lyon1.fr/
+* Créez un projet sur la forge GitLab de l'université : https://forge.univ-lyon1.fr/,
+  en sélectionnant *Create from template*,
+  et en choisissant le modèle "Pages/Plain HTML".
 
-* Ajoutez à votre projet un fichier nommé `.gitlab-ci.yml` contenant le texte suivant ::
-
-    pages:
-    stage: deploy
-    script:
-      - mkdir .public
-      - mv * .public
-      - mv .public public
-    artifacts:
-      paths:
-        - public/
-    only:
-    - master
+* Clonez ce projet sur votre machine,
+  et ajoutez à vos fichiers (HTML, CSS, images...) dans le répertoire `public`.
+  Faite ensuite un *commit* et un *push*.
 
 * Depuis la page de votre projet sur la forge,
-  consultez (dans le menu de droite) ``Setting > Pages``;
+  consultez (dans le menu de gauche) ``Setting > Pages``;
   vous devriez voir un message de la forme :
 
     Congratulations! Your pages are served under:

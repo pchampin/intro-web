@@ -32,7 +32,7 @@ Vous fournirez (selon les modalités définies par votre enseignant⋅e) :
   contenant les fichiers du projet (et démontrant un minimum d'utilisation), et
 * une archive contenant tous les fichiers du projet,
 
-avant le **30/12/2017 23:59**.
+avant le **30/12/2019 23:59**.
 tout retard entraînera un malus sur la note.
 
 .. _github: https://github.com

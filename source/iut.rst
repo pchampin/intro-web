@@ -14,6 +14,13 @@ http://iutdoua-web.univ-lyon1.fr/~votrelogin
 
 où ``votrelogin`` correspond à votre identifiant étudiant (pxxxxxxx).
 
+.. important::
+
+    Ce site n'est accessible que depuis le réseau filaire de l'université.
+
+    Pour y accéder depuis Eduroam ou depuis chez vous,
+    vous devrez utiliser un VPN.
+
 
 Accéder à votre répertoire en FTP
 +++++++++++++++++++++++++++++++++
@@ -31,3 +38,34 @@ Les paramètres de connexion sont les suivants :
 * Mode d'auth. : Demander le mot de passe
 
 __ https://filezilla-project.org/
+
+Alternative
++++++++++++
+
+* Créez un projet sur la forge GitLab de l'université : https://forge.univ-lyon1.fr/
+
+* Ajoutez à votre projet un fichier nommé `.gitlab-ci.yml` contenant le texte suivant ::
+
+    pages:
+    stage: deploy
+    script:
+      - mkdir .public
+      - mv * .public
+      - mv .public public
+    artifacts:
+      paths:
+        - public/
+    only:
+    - master
+
+* Depuis la page de votre projet sur la forge,
+  consultez (dans le menu de droite) ``Setting > Pages``;
+  vous devriez voir un message de la forme :
+
+    Congratulations! Your pages are served under:
+   
+    http://votre_identifiant.pages.univ-lyon1.fr/votre_projet
+
+* Chaque fois que vous ferez un *push* sur la branche ``master``,
+  ce site sera automatiquement mis à jour (avec éventuellement un petit délais).
+

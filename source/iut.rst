@@ -61,3 +61,7 @@ Alternative
 * Chaque fois que vous ferez un *push* sur la branche ``master``,
   ce site sera automatiquement mis à jour (avec éventuellement un petit délais).
 
+* NB: par défaut, ce site n'est accessible qu'aux personnes authentifiées (avec un compte Lyon1).
+  Il est possible de le rendre public en allant dans ``Settings > General > Visibility, project features, permissions``,
+  et en changeant la valeur de ``Pages access control`` à ``Everyone``.
+  

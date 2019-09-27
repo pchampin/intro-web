@@ -372,12 +372,12 @@ Autres propriétés
        <li><span style="text-decoration: line-through">line-through</span></li>
        </ul></li>
    <li><tt class="literal code css">text-transform</tt> :
-       <ul class="css-values" style="display: inline-block">
-       <li style="text-transform: none">none</li>
-       <li style="text-transform: capitalize">capitalize</li>
-       <li style="text-transform: uppercase">uppercase</li>
-       <li style="text-transform: lowercase">lowercase</li>
-       </ul>
+       <ul class="css-values" style="display: inline">
+       <li>none       <span style="text-transform: none"      >(Par exemple)</span></li>
+       <li>capitalize <span style="text-transform: capitalize">(Par exemple)</span></li>
+       <li>uppercase  <span style="text-transform: uppercase" >(Par exemple)</span></li>
+       <li>lowercase  <span style="text-transform: lowercase" >(Par exemple)</span></li>
+       </ul></li>
    <li><tt class="literal code css">text-align</tt> : <ul class="css-values">
        <li>left</li>
        <li>center</li>

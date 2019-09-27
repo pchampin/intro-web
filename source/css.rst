@@ -255,9 +255,7 @@ Propriétés sur la police
        <li style="font-variant: small-caps">small-caps</li>
        </ul>
        <ul>
-         <li> NB: les small-caps sont plus petite que les majuscules :
-           <span style="font-variant: small-caps"
-           >Pierre-Antoine Champin</span></li>
+         <li> Exemple : Pierre-Antoine <span style="font-variant: small-caps">Champin</span></li>
        </ul></li>
    <li><tt class="literal code css">font-family</tt> :
        <ul class="css-values"><li>(voir ci-après)</ul></li>
@@ -381,9 +379,6 @@ Autres propriétés
        <li style="text-transform: uppercase">uppercase</li>
        <li style="text-transform: lowercase">lowercase</li>
        </ul>
-       <ul><li>NB: <span style="text-transform: uppercase">uppercase</span> est
-       différent de <span style="font-variant:
-       small-caps">small-caps</span></ul></li>
    <li><tt class="literal code css">text-align</tt> : <ul class="css-values">
        <li>left</li>
        <li>center</li>
@@ -400,6 +395,10 @@ Autres propriétés
         ><span style="background-color: #FF8">après</span>)</li>
   </ul>
 
+.. note::
+
+  Notez que ``text-transform: uppercase``
+  n'a pas exactement le même effet que ``font-variant: small-caps``.
 
 
 

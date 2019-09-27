@@ -158,8 +158,8 @@ Exemple :
 
 .. code-block:: css
 
-   em { font-style: italic }
-   /* le contenu des balises <em> devrait être en italique */
+   em { font-weight: bold }
+   /* le contenu des balises <em> devrait être en gras */
 
 
 
@@ -170,9 +170,9 @@ Plusieurs règles similaires peuvent coexister :
 
 .. code-block:: css
 
-    em   { font-style: italic }
+    em   { font-weight: bold }
     em   { color: blue }
-    cite { font-style: italic }
+    cite { font-weight: bold }
     cite { color: blue }
 
 
@@ -185,8 +185,8 @@ en séparant les couples propriété-valeur par un point-virgule (« ; »).
 
 .. code-block:: css
 
-    em   { font-style: italic ; color: blue }
-    cite { font-style: italic ; color: blue }
+    em   { font-weight: bold ; color: blue }
+    cite { font-weight: bold ; color: blue }
 
 Regroupement par contenu
 ------------------------
@@ -196,7 +196,7 @@ en séparant les sélecteurs par une virgule (« , »).
 
 .. code-block:: css
 
-    em, cite { font-style: italic ; color: blue }
+    em, cite { font-weight: bold ; color: blue }
 
 Sensibilité aux espaces
 -----------------------
@@ -209,8 +209,8 @@ On peut donc en ajouter autant que nécessaire pour faciliter la mise en page.
     em,
     cite
     {
-        font-style : italic ;
-        color      : blue   ;
+        font-weight : bold ;
+        color       : blue   ;
     }
 
 NB : on peut également rajouter un point-virgule

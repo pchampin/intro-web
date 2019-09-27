@@ -236,7 +236,6 @@ Propriétés sur la police
        <ul class="css-values">
        <li style="font-style: normal">normal</li>
        <li style="font-style: italic">italic</li>
-       <li style="font-style: oblique">oblique</li>
        </ul></li>
    <li><tt class="literal code css">font-weight</tt> :
        <ul class="css-values">

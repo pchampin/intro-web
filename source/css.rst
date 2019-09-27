@@ -383,7 +383,7 @@ Autres propriétés
        <li>center</li>
        <li>right</li>
        <li>justify</li>
-       </ul>
+       </ul>(voir ci-après)</li>
    <li><tt class="literal code css">color</tt> :
        (<span style="color: red">voir</span>
         <span style="color: green">ci-</span
@@ -400,6 +400,30 @@ Autres propriétés
   n'a pas exactement le même effet que ``font-variant: small-caps``.
 
 
+
+Alignement du texte
++++++++++++++++++++
+
+.. raw:: html
+
+  <div style="max-width: 32em">
+    <p style="text-align: left">
+      <span style="opacity: 0.66">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+      Ceci est un exemple de texte
+      aligné à gauche.
+    <p style="text-align: center">
+      <span style="opacity: 0.66">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+      Ceci est un exemple de texte
+      centré.
+    <p style="text-align: right">
+      <span style="opacity: 0.66">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+      Ceci est un exemple de texte
+      aligné à droite.
+    <p style="text-align: justify">
+      <span style="opacity: 0.66">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+      Ceci est un exemple de texte
+      justifié.
+  </div>
 
 .. index:: couleur, rgb
 

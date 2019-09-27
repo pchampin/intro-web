@@ -365,12 +365,11 @@ Autres propriétés
 
   <ul>
    <li><tt class="literal code css">text-decoration</tt> :
-       <ul class="css-values" style="display: block">
+       <ul class="css-values" style="display: inline">
        <li><span style="text-decoration: none">none</span></li>
        <li><span style="text-decoration: underline">underline</span></li>
        <li><span style="text-decoration: overline">overline</span></li>
        <li><span style="text-decoration: line-through">line-through</span></li>
-       <li><span style="text-decoration: blink">blink</span></li>
        </ul></li>
    <li><tt class="literal code css">text-transform</tt> :
        <ul class="css-values" style="display: inline-block">

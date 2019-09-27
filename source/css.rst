@@ -326,8 +326,13 @@ Bonne pratique
 * et en terminant toujours pas une police générique.
 
 .. code-block:: css
+  :emphasize-lines: 4
 
-   font-family: MyNiftyFont, "Times New Roman", serif
+  @font-face { font-family: MyNiftyFont; src: /*...*/ }
+
+  em {
+    font-family: MyNiftyFont, "Times New Roman", serif;
+  }
 
 
 
